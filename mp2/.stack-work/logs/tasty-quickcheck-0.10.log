@@ -1,0 +1,6 @@
+Configuring tasty-quickcheck-0.10...
+Preprocessing library for tasty-quickcheck-0.10..
+Building library for tasty-quickcheck-0.10..
+[1 of 1] Compiling Test.Tasty.QuickCheck ( Test/Tasty/QuickCheck.hs, .stack-work/dist/x86_64-osx/Cabal-2.4.0.1/build/Test/Tasty/QuickCheck.o )
+Installing library in /Users/kathie/.stack/snapshots/x86_64-osx/lts-13.2/8.6.3/lib/x86_64-osx-ghc-8.6.3/tasty-quickcheck-0.10-EiNdY2ZO4bXGIIrRFPODM8
+Registering library for tasty-quickcheck-0.10..

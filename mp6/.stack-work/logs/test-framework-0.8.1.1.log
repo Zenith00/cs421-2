@@ -1,0 +1,69 @@
+Configuring test-framework-0.8.1.1...
+Preprocessing library for test-framework-0.8.1.1..
+Building library for test-framework-0.8.1.1..
+[ 1 of 24] Compiling Test.Framework.Improving ( Test/Framework/Improving.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Test/Framework/Improving.o )
+
+[;1mTest/Framework/Improving.hs:9:1: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wunused-imports[0m[0m[;1m][0m[0m[;1m
+    The import of ‘Control.Applicative’ is redundant
+      except perhaps to import instances from ‘Control.Applicative’
+    To import instances alone, use: import Control.Applicative()[0m[0m
+[;1m[34m  |[0m[0m
+[;1m[34m9 |[0m[0m [;1m[35mimport Control.Applicative[0m[0m
+[;1m[34m  |[0m[0m[;1m[35m ^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m
+[0m[0m[0m[ 2 of 24] Compiling Test.Framework.Runners.Console.Colors ( Test/Framework/Runners/Console/Colors.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Test/Framework/Runners/Console/Colors.o )
+[ 3 of 24] Compiling Test.Framework.Runners.Console.ProgressBar ( Test/Framework/Runners/Console/ProgressBar.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Test/Framework/Runners/Console/ProgressBar.o )
+[ 4 of 24] Compiling Test.Framework.Runners.Console.Utilities ( Test/Framework/Runners/Console/Utilities.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Test/Framework/Runners/Console/Utilities.o )
+[ 5 of 24] Compiling Test.Framework.Runners.Processors ( Test/Framework/Runners/Processors.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Test/Framework/Runners/Processors.o )
+[ 6 of 24] Compiling Test.Framework.Runners.ThreadPool ( Test/Framework/Runners/ThreadPool.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Test/Framework/Runners/ThreadPool.o )
+[ 7 of 24] Compiling Test.Framework.Utilities ( Test/Framework/Utilities.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Test/Framework/Utilities.o )
+
+[;1mTest/Framework/Utilities.hs:7:1: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wunused-imports[0m[0m[;1m][0m[0m[;1m
+    The import of ‘Data.Monoid’ is redundant
+      except perhaps to import instances from ‘Data.Monoid’
+    To import instances alone, use: import Data.Monoid()[0m[0m
+[;1m[34m  |[0m[0m
+[;1m[34m7 |[0m[0m [;1m[35mimport Data.Monoid[0m[0m
+[;1m[34m  |[0m[0m[;1m[35m ^^^^^^^^^^^^^^^^^^[0m[0m
+[0m[0m[0m[ 8 of 24] Compiling Test.Framework.Seed ( Test/Framework/Seed.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Test/Framework/Seed.o )
+[ 9 of 24] Compiling Test.Framework.Runners.TimedConsumption ( Test/Framework/Runners/TimedConsumption.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Test/Framework/Runners/TimedConsumption.o )
+[10 of 24] Compiling Test.Framework.Runners.TestPattern ( Test/Framework/Runners/TestPattern.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Test/Framework/Runners/TestPattern.o )
+[11 of 24] Compiling Test.Framework.Runners.Console.Table ( Test/Framework/Runners/Console/Table.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Test/Framework/Runners/Console/Table.o )
+[12 of 24] Compiling Test.Framework.Options ( Test/Framework/Options.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Test/Framework/Options.o )
+[13 of 24] Compiling Test.Framework.Runners.Options ( Test/Framework/Runners/Options.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Test/Framework/Runners/Options.o )
+[14 of 24] Compiling Test.Framework.Core ( Test/Framework/Core.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Test/Framework/Core.o )
+[15 of 24] Compiling Test.Framework.Runners.Core ( Test/Framework/Runners/Core.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Test/Framework/Runners/Core.o )
+
+[;1mTest/Framework/Runners/Core.hs:19:1: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wunused-imports[0m[0m[;1m][0m[0m[;1m
+    The import of ‘Data.Monoid’ is redundant
+      except perhaps to import instances from ‘Data.Monoid’
+    To import instances alone, use: import Data.Monoid()[0m[0m
+[;1m[34m   |[0m[0m
+[;1m[34m19 |[0m[0m [;1m[35mimport Data.Monoid[0m[0m
+[;1m[34m   |[0m[0m[;1m[35m ^^^^^^^^^^^^^^^^^^[0m[0m
+[0m[0m[0m[16 of 24] Compiling Test.Framework.Runners.XML.JUnitWriter ( Test/Framework/Runners/XML/JUnitWriter.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Test/Framework/Runners/XML/JUnitWriter.o )
+[17 of 24] Compiling Test.Framework.Runners.Statistics ( Test/Framework/Runners/Statistics.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Test/Framework/Runners/Statistics.o )
+
+[;1mTest/Framework/Runners/Statistics.hs:13:1: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wunused-imports[0m[0m[;1m][0m[0m[;1m
+    The import of ‘Data.Monoid’ is redundant
+      except perhaps to import instances from ‘Data.Monoid’
+    To import instances alone, use: import Data.Monoid()[0m[0m
+[;1m[34m   |[0m[0m
+[;1m[34m13 |[0m[0m [;1m[35mimport Data.Monoid[0m[0m
+[;1m[34m   |[0m[0m[;1m[35m ^^^^^^^^^^^^^^^^^^[0m[0m
+[0m[0m[0m[18 of 24] Compiling Test.Framework.Runners.XML ( Test/Framework/Runners/XML.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Test/Framework/Runners/XML.o )
+[19 of 24] Compiling Test.Framework.Runners.Console.Statistics ( Test/Framework/Runners/Console/Statistics.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Test/Framework/Runners/Console/Statistics.o )
+[20 of 24] Compiling Test.Framework.Runners.API ( Test/Framework/Runners/API.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Test/Framework/Runners/API.o )
+[21 of 24] Compiling Test.Framework.Runners.Console.Run ( Test/Framework/Runners/Console/Run.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Test/Framework/Runners/Console/Run.o )
+[22 of 24] Compiling Test.Framework.Runners.Console ( Test/Framework/Runners/Console.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Test/Framework/Runners/Console.o )
+
+[;1mTest/Framework/Runners/Console.hs:26:1: [;1m[35mwarning:[0m[0m[;1m [[;1m[35m-Wunused-imports[0m[0m[;1m][0m[0m[;1m
+    The import of ‘Data.Monoid’ is redundant
+      except perhaps to import instances from ‘Data.Monoid’
+    To import instances alone, use: import Data.Monoid()[0m[0m
+[;1m[34m   |[0m[0m
+[;1m[34m26 |[0m[0m [;1m[35mimport Data.Monoid[0m[0m
+[;1m[34m   |[0m[0m[;1m[35m ^^^^^^^^^^^^^^^^^^[0m[0m
+[0m[0m[0m[23 of 24] Compiling Test.Framework.Providers.API ( Test/Framework/Providers/API.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Test/Framework/Providers/API.o )
+[24 of 24] Compiling Test.Framework   ( Test/Framework.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Test/Framework.o )
+Installing library in /Users/kathie/.stack/snapshots/x86_64-osx/lts-10.3/8.2.2/lib/x86_64-osx-ghc-8.2.2/test-framework-0.8.1.1-Fho7Iyq5laWJi7hjVSvhUg
+Registering library for test-framework-0.8.1.1..

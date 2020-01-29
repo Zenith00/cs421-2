@@ -1,0 +1,613 @@
+
+==================== FINAL INTERFACE ====================
+2019-04-19 21:51:43.662169 UTC
+
+interface main:Spec 8063
+  interface hash: 2f0b4a7ab6e481907176f25030eb67d2
+  ABI hash: 5bd25fabc7083ad459443b0503b3bc1b
+  export-list hash: ce62216ee3a35f65aaecac483143ec89
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 31dfe7143f2a78574f4fec01fd15d00e
+  opt_hash: 6faf2de08de32d19db9870899d88e59a
+  hpc_hash: 93b885adfe0da089cdf634904fd59f71
+  plugin_hash: ad164012d6b1e14942349d58b1132007
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Spec.main
+  Spec.runTest
+  Spec.runTests
+  Spec.scoreMP
+  Spec.showTR
+  Spec.Score{Spec.Exception Spec.Fail Spec.Pass Spec.Timeout}
+  Spec.TestResult
+module dependencies: Main Scheme.Core Scheme.Eval Scheme.Parse
+                     Scheme.Runtime Tests
+package dependencies: array-0.5.3.0 base-4.12.0.0* binary-0.8.6.0
+                      bytestring-0.10.8.2 containers-0.6.0.1 deepseq-1.4.4.0
+                      ghc-prim-0.5.3 hashable-1.2.7.0 integer-gmp-1.0.2.0 mtl-2.2.2
+                      parsec-3.1.13.0 text-1.2.3.1 transformers-0.5.5.0
+                      unordered-containers-0.2.9.0
+orphans: hashable-1.2.7.0:Data.Hashable.Generic
+         text-1.2.3.1:Data.Text.Lazy text-1.2.3.1:Data.Text
+         binary-0.8.6.0:Data.Binary.Generic
+         bytestring-0.10.8.2:Data.ByteString.Builder
+         text-1.2.3.1:Data.Text.Show
+         transformers-0.5.5.0:Control.Monad.Trans.Error
+         base-4.12.0.0:GHC.Float base-4.12.0.0:GHC.Base
+family instance modules: base-4.12.0.0:Control.Applicative
+                         base-4.12.0.0:Data.Complex base-4.12.0.0:Data.Functor.Compose
+                         base-4.12.0.0:Data.Functor.Const
+                         base-4.12.0.0:Data.Functor.Identity
+                         base-4.12.0.0:Data.Functor.Product base-4.12.0.0:Data.Functor.Sum
+                         base-4.12.0.0:Data.Monoid base-4.12.0.0:Data.Semigroup
+                         base-4.12.0.0:Data.Semigroup.Internal base-4.12.0.0:Data.Version
+                         base-4.12.0.0:Data.Void base-4.12.0.0:GHC.Exts
+                         base-4.12.0.0:GHC.Generics base-4.12.0.0:GHC.IO.Exception
+                         containers-0.6.0.1:Data.IntMap.Internal
+                         containers-0.6.0.1:Data.IntSet.Internal
+                         containers-0.6.0.1:Data.Map.Internal
+                         containers-0.6.0.1:Data.Sequence.Internal
+                         containers-0.6.0.1:Data.Set.Internal containers-0.6.0.1:Data.Tree
+                         text-1.2.3.1:Data.Text text-1.2.3.1:Data.Text.Lazy
+                         unordered-containers-0.2.9.0:Data.HashMap.Base
+import  -/  base-4.12.0.0:Control.Exception 9037ab3ff61dd8119bebad992e069fdd
+import  -/  base-4.12.0.0:Control.Exception.Base db78b15f30645b3d13d0d4e45713d93a
+import  -/  base-4.12.0.0:Data.Either 946a3435d06773e1dbcad1ba5dc18a2c
+import  -/  base-4.12.0.0:Data.Foldable 00188ddf89c975fee76bdfad479443c1
+import  -/  base-4.12.0.0:Data.Maybe 1e8e1362415df45376dffd98f8a47766
+import  -/  base-4.12.0.0:Data.Traversable 257e9f3b6739f5bfbaaf0ac0abb0ddc5
+import  -/  base-4.12.0.0:GHC.Base cc906f98291a1b830546e99a96674547
+import  -/  base-4.12.0.0:GHC.Exception.Type 5ef1ba37cab5eae77ed746c8e9d4d934
+import  -/  base-4.12.0.0:GHC.IO edc9355d7dbab399fd5d385cd5bb457d
+import  -/  base-4.12.0.0:GHC.IO.Exception 93698c4949c2bbf15fd7c864b5701916
+import  -/  base-4.12.0.0:GHC.Num 847723f2584d989dac1eada133ac3fb8
+import  -/  base-4.12.0.0:GHC.Real f7dad82c1d43d80823865d3e6c6636e0
+import  -/  base-4.12.0.0:GHC.Show 4e438f26d903388cc6c2c5d64ed01b98
+import  -/  base-4.12.0.0:Prelude 5c01365ec01f83bd405ac01cbb9a8d76
+import  -/  base-4.12.0.0:System.Exit 9bdfd82d04c0a0b8d920842d9c4e961d
+import  -/  base-4.12.0.0:System.IO 7d8c7a747c93b42b043d691b66e1809e
+import  -/  base-4.12.0.0:System.Timeout 566f547ca1235b78add71f4701ca93dd
+import  -/  ghc-prim-0.5.3:GHC.Classes e0d9c979f6368701f34fa421754d2cce
+import  -/  ghc-prim-0.5.3:GHC.Types 57064c9f957b09bc2e360061ad5cae0b
+import  -/  Tests fffec3344ae6fa5dd85c208e91a2dd34
+  exports: d2c2af5bb5c564a1546a0936718085cd
+  allTests 9c9691ae4772570a57f5bc09da2e76ee
+1557d3474dbb08abf2c7857a05c2d1b2
+  $fShowScore :: GHC.Show.Show Spec.Score
+  DFunId
+  {- Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ Spec.Score
+                  Spec.$fShowScore_$cshowsPrec
+                  Spec.$fShowScore_$cshow
+                  Spec.$fShowScore_$cshowList -}
+1557d3474dbb08abf2c7857a05c2d1b2
+  $fShowScore1 :: Spec.Score -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (Spec.$fShowScore_$cshowsPrec Spec.$fShowScore2) -}
+562eb224ecee60227d1bfa00a5c3c8e0
+  $fShowScore10 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackAppendCString#
+                   GHC.Show.showList__4
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+343e508464f631211062f28e5c53c60e
+  $fShowScore2 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 0#) -}
+1615f5fbb54f50c727544576d1bc447d
+  $fShowScore3 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Spec.$fShowScore4) -}
+e944fa1a58448a9d10d2d837f253163a
+  $fShowScore4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Timeout"#) -}
+6390215f07b8fd1c2592087cd26cc029
+  $fShowScore5 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Spec.$fShowScore6) -}
+0b564050b5293d43651ff99e3b7093ae
+  $fShowScore6 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Exception"#) -}
+3b4530d11fa8e6128c64936f314f2383
+  $fShowScore7 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Fail "#) -}
+8c9dc347ecc7ca551fa57bd45afe6a28
+  $fShowScore8 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Spec.$fShowScore9) -}
+b45ee1fde18c197f5ce9e1e3b0363617
+  $fShowScore9 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Pass"#) -}
+1557d3474dbb08abf2c7857a05c2d1b2
+  $fShowScore_$cshow :: Spec.Score -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: (\ (x :: Spec.Score) ->
+                 case x of wild {
+                   Spec.Pass -> Spec.$fShowScore8
+                   Spec.Fail b1
+                   -> GHC.CString.unpackAppendCString#
+                        Spec.$fShowScore7
+                        (case b1 of wild1 {
+                           [] -> Spec.$fShowScore10
+                           : x1 xs
+                           -> GHC.Types.:
+                                @ GHC.Types.Char
+                                GHC.Show.showList__3
+                                (case x1 of wild2 {
+                                   GHC.Types.False
+                                   -> GHC.Base.++
+                                        @ GHC.Types.Char
+                                        GHC.Show.$fShowBool4
+                                        (Spec.$fShowScore_showl xs)
+                                   GHC.Types.True
+                                   -> GHC.Base.++
+                                        @ GHC.Types.Char
+                                        GHC.Show.$fShowBool2
+                                        (Spec.$fShowScore_showl xs) }) })
+                   Spec.Exception -> Spec.$fShowScore5
+                   Spec.Timeout -> Spec.$fShowScore3 }) -}
+1557d3474dbb08abf2c7857a05c2d1b2
+  $fShowScore_$cshowList :: [Spec.Score] -> GHC.Show.ShowS
+  {- Arity: 2, Strictness: <S,1*U><L,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (ls :: [Spec.Score]) (s :: GHC.Base.String) ->
+                 GHC.Show.showList__ @ Spec.Score Spec.$fShowScore1 ls s) -}
+1557d3474dbb08abf2c7857a05c2d1b2
+  $fShowScore_$cshowsPrec ::
+    GHC.Types.Int -> Spec.Score -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <L,1*U(U)><S,1*U><L,U>,
+     Unfolding: (\ (ds :: GHC.Types.Int)
+                   (ds1 :: Spec.Score)
+                   (eta :: GHC.Base.String) ->
+                 case ds1 of wild {
+                   Spec.Pass -> GHC.Base.++ @ GHC.Types.Char Spec.$fShowScore8 eta
+                   Spec.Fail b1
+                   -> case ds of wild1 { GHC.Types.I# x ->
+                      let {
+                        p :: GHC.Show.ShowS {- Arity: 1, Strictness: <L,U> -}
+                        = \ (x1 :: GHC.Base.String)[OneShot] ->
+                          GHC.CString.unpackAppendCString#
+                            Spec.$fShowScore7
+                            (case b1 of wild2 {
+                               [] -> GHC.CString.unpackAppendCString# GHC.Show.showList__4 x1
+                               : x2 xs
+                               -> GHC.Types.:
+                                    @ GHC.Types.Char
+                                    GHC.Show.showList__3
+                                    (let {
+                                       eta1 :: GHC.Base.String
+                                       = let {
+                                           lvl12 :: [GHC.Types.Char]
+                                           = GHC.Types.: @ GHC.Types.Char GHC.Show.showList__2 x1
+                                         } in
+                                         letrec {
+                                           showl :: [GHC.Types.Bool] -> GHC.Base.String
+                                             {- Arity: 1, Strictness: <S,1*U> -}
+                                           = \ (ds2 :: [GHC.Types.Bool]) ->
+                                             case ds2 of wild3 {
+                                               [] -> lvl12
+                                               : y ys
+                                               -> GHC.Types.:
+                                                    @ GHC.Types.Char
+                                                    GHC.Show.showList__1
+                                                    (case y of wild4 {
+                                                       GHC.Types.False
+                                                       -> GHC.Base.++
+                                                            @ GHC.Types.Char
+                                                            GHC.Show.$fShowBool4
+                                                            (showl ys)
+                                                       GHC.Types.True
+                                                       -> GHC.Base.++
+                                                            @ GHC.Types.Char
+                                                            GHC.Show.$fShowBool2
+                                                            (showl ys) }) }
+                                         } in
+                                         showl xs
+                                     } in
+                                     case x2 of wild3 {
+                                       GHC.Types.False
+                                       -> GHC.Base.++ @ GHC.Types.Char GHC.Show.$fShowBool4 eta1
+                                       GHC.Types.True
+                                       -> GHC.Base.++
+                                            @ GHC.Types.Char
+                                            GHC.Show.$fShowBool2
+                                            eta1 }) })
+                      } in
+                      case GHC.Prim.>=# x 11# of lwild {
+                        DEFAULT -> p eta
+                        1#
+                        -> GHC.Types.:
+                             @ GHC.Types.Char
+                             GHC.Show.$fShow(,)4
+                             (p (GHC.Types.: @ GHC.Types.Char GHC.Show.$fShow(,)2 eta)) } }
+                   Spec.Exception
+                   -> GHC.Base.++ @ GHC.Types.Char Spec.$fShowScore5 eta
+                   Spec.Timeout
+                   -> GHC.Base.++ @ GHC.Types.Char Spec.$fShowScore3 eta }) -}
+f94e4b67464e5856f46bc555fc224fb6
+  $fShowScore_showl :: [GHC.Types.Bool] -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U>m2 -}
+dbf5b3f6b8f39d093113356cfd552a29
+  $tc'Exception :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   15035622027493907476##
+                   12345434843984727547##
+                   Spec.$trModule
+                   Spec.$tc'Exception2
+                   0#
+                   Spec.$tc'Exception1) -}
+2020884de158c5f06f030fb690f3464a
+  $tc'Exception1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m1, Inline: [~] -}
+d902c9eadde92147209ec518e1371e1b
+  $tc'Exception2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Spec.$tc'Exception3) -}
+b36eec7e2df0a857c32d3cad9f8a0679
+  $tc'Exception3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'Exception"#) -}
+6d1cadcd734dc5a76f715b46a6ccb70d
+  $tc'Fail :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   1363342517379375383##
+                   8518193621234823512##
+                   Spec.$trModule
+                   Spec.$tc'Fail2
+                   0#
+                   Spec.$tc'Fail1) -}
+e010a7cb141a858c89e5f9ad28097e55
+  $tc'Fail1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
+3106154c2ce382d72605b3bef7a3062d
+  $tc'Fail2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Spec.$tc'Fail3) -}
+c889f29b1a564a7e00e19b11d6a25d15
+  $tc'Fail3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'Fail"#) -}
+64dbc980163264b83f215d78e208fe1b
+  $tc'Pass :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   15255024874728459935##
+                   17921751767438552232##
+                   Spec.$trModule
+                   Spec.$tc'Pass1
+                   0#
+                   Spec.$tc'Exception1) -}
+5b85ba91a84ec00bd6ae52fab67e8ba2
+  $tc'Pass1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Spec.$tc'Pass2) -}
+dc57a1b8aac8f06014abd63698ec860f
+  $tc'Pass2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'Pass"#) -}
+3bf16763dca10e7f1381a70831668981
+  $tc'Timeout :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   2761109850364097889##
+                   15505820395801567728##
+                   Spec.$trModule
+                   Spec.$tc'Timeout1
+                   0#
+                   Spec.$tc'Exception1) -}
+1bcc7bd7975e2ab3dff1420fb3c920ef
+  $tc'Timeout1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Spec.$tc'Timeout2) -}
+afc6ee5df7286b897f623a385aa993bc
+  $tc'Timeout2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'Timeout"#) -}
+b486003f738449b6a118f450815fa186
+  $tcScore :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   1988988226168615167##
+                   9184179908129446891##
+                   Spec.$trModule
+                   Spec.$tcScore1
+                   0#
+                   GHC.Types.krep$*) -}
+3e6843eb028639781169b8e9259f5ddf
+  $tcScore1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Spec.$tcScore2) -}
+7879c937922ce7ce89feb54babe7a780
+  $tcScore2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Score"#) -}
+59ba8c460b5dd4dfdfdeb2ae58fb12d3
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module Spec.$trModule3 Spec.$trModule1) -}
+7e0992cdd7abf33877c90578be34fa5b
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Spec.$trModule2) -}
+f6c953644e452e0217b487d58e5681b6
+  $trModule2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Spec"#) -}
+e785b7de443768a14ac40d25b54089f3
+  $trModule3 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Spec.$trModule4) -}
+16752b56ee7b2816fb8214ad3719d7bc
+  $trModule4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("main"#) -}
+cac9e8eebb160112e873fbd32f77f291
+  $wgo :: [Spec.TestResult] -> GHC.Prim.Int# -> GHC.Prim.Int#
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,U>, Inline: [2] -}
+861d53e8632c1c85ee5c8e998b8682d9
+  $wscoreMP :: [Spec.TestResult] -> GHC.Prim.Int#
+  {- Arity: 1, Strictness: <S,U>, Inline: [2],
+     Unfolding: (\ (w :: [Spec.TestResult]) ->
+                 case Spec.$wgo w 0# of ww { DEFAULT ->
+                 case GHC.List.$wlenAcc
+                        @ (Spec.Score, GHC.Base.String)
+                        w
+                        0# of ww2 {
+                   DEFAULT -> GHC.Classes.divInt# (GHC.Prim.*# ww 100#) ww2
+                   -1#
+                   -> case GHC.Prim.*# ww 100# of wild1 {
+                        DEFAULT -> GHC.Classes.divInt# wild1 -1#
+                        -9223372036854775808#
+                        -> case GHC.Real.overflowError ret_ty GHC.Prim.Int# of {} }
+                   0# -> case GHC.Real.divZeroError ret_ty GHC.Prim.Int# of {} } }) -}
+e6a1deaa38b1a20ffb66751933f8cdf8
+  $wshowTR :: Spec.Score -> GHC.Base.String -> GHC.Base.String
+  {- Arity: 2, Strictness: <S,1*U><L,U>, Inline: [2],
+     Unfolding: (\ (ww :: Spec.Score) (ww1 :: GHC.Base.String) ->
+                 case ww of wild {
+                   Spec.Pass
+                   -> GHC.Base.++
+                        @ GHC.Types.Char
+                        Spec.$fShowScore8
+                        (GHC.CString.unpackAppendCString# Spec.showTR1 ww1)
+                   Spec.Fail b1
+                   -> GHC.Base.++
+                        @ GHC.Types.Char
+                        (GHC.CString.unpackAppendCString#
+                           Spec.$fShowScore7
+                           (case b1 of wild1 {
+                              [] -> Spec.$fShowScore10
+                              : x xs
+                              -> GHC.Types.:
+                                   @ GHC.Types.Char
+                                   GHC.Show.showList__3
+                                   (case x of wild2 {
+                                      GHC.Types.False
+                                      -> GHC.Base.++
+                                           @ GHC.Types.Char
+                                           GHC.Show.$fShowBool4
+                                           (Spec.$fShowScore_showl xs)
+                                      GHC.Types.True
+                                      -> GHC.Base.++
+                                           @ GHC.Types.Char
+                                           GHC.Show.$fShowBool2
+                                           (Spec.$fShowScore_showl xs) }) }))
+                        (GHC.CString.unpackAppendCString# Spec.showTR1 ww1)
+                   Spec.Exception
+                   -> GHC.Base.++
+                        @ GHC.Types.Char
+                        Spec.$fShowScore5
+                        (GHC.CString.unpackAppendCString# Spec.showTR1 ww1)
+                   Spec.Timeout
+                   -> GHC.Base.++
+                        @ GHC.Types.Char
+                        Spec.$fShowScore3
+                        (GHC.CString.unpackAppendCString# Spec.showTR1 ww1) }) -}
+1557d3474dbb08abf2c7857a05c2d1b2
+  data Score = Pass | Fail [GHC.Types.Bool] | Exception | Timeout
+5ff004575abf9c2119ee4e84f08e2852
+  type TestResult = (Spec.Score, GHC.Base.String)
+f146ef309edaa4f45905f291667eedeb
+  main :: GHC.Types.IO ()
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Spec.main1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
+068b25365f6222b184e647f50738e203
+  main1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 case (GHC.IO.Handle.Text.hPutStr'
+                         GHC.IO.Handle.FD.stdout
+                         (GHC.Types.[] @ GHC.Types.Char)
+                         GHC.Types.True)
+                        `cast`
+                      (GHC.Types.N:IO[0] <()>_R)
+                        s of ds1 { (#,#) ipv ipv1 ->
+                 case (GHC.IO.Handle.Text.hPutStr'
+                         GHC.IO.Handle.FD.stdout
+                         Spec.main6
+                         GHC.Types.True)
+                        `cast`
+                      (GHC.Types.N:IO[0] <()>_R)
+                        ipv of ds2 { (#,#) ipv2 ipv3 ->
+                 case (GHC.IO.Handle.Text.hPutStr'
+                         GHC.IO.Handle.FD.stdout
+                         Spec.main4
+                         GHC.Types.True)
+                        `cast`
+                      (GHC.Types.N:IO[0] <()>_R)
+                        ipv2 of ds3 { (#,#) ipv4 ipv5 ->
+                 case Spec.main3 Tests.allTests ipv4 of ds4 { (#,#) ipv6 ipv7 ->
+                 let {
+                   $w$j :: GHC.Prim.State# GHC.Prim.RealWorld
+                           -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+                     <join 1> {- Arity: 1, Strictness: <S,U>, Inline: [2] -}
+                   = \ (w :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                     case (GHC.IO.Handle.Text.hPutStr'
+                             GHC.IO.Handle.FD.stdout
+                             (GHC.Types.[] @ GHC.Types.Char)
+                             GHC.Types.True)
+                            `cast`
+                          (GHC.Types.N:IO[0] <()>_R)
+                            w of ds5 { (#,#) ipv8 ipv9 ->
+                     Spec.main2 ipv7 ipv8 }
+                 } in
+                 letrec {
+                   go :: [Spec.TestResult]
+                         -> GHC.Prim.State# GHC.Prim.RealWorld
+                         -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+                     <join 2> {- Arity: 2, Strictness: <S,1*U><S,U> -}
+                   = \ (ds :: [Spec.TestResult])
+                       (eta :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                     case ds of wild {
+                       [] -> $w$j eta
+                       : y ys
+                       -> case (GHC.IO.Handle.Text.hPutStr'
+                                  GHC.IO.Handle.FD.stdout
+                                  (Spec.showTR y)
+                                  GHC.Types.True)
+                                 `cast`
+                               (GHC.Types.N:IO[0] <()>_R)
+                                 eta of ds5 { (#,#) ipv8 ipv9 ->
+                          go ys ipv8 } }
+                 } in
+                 go ipv7 ipv6 } } } }) -}
+7d631c74554ce1654308bf903f3717ff
+  main2 ::
+    [Spec.TestResult]
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 2, Strictness: <L,U><S,U> -}
+a7536524c1ca603eae5f06b1e09c1de4
+  main3 ::
+    [([GHC.Types.Bool], GHC.Base.String)]
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          [(Spec.Score, GHC.Base.String)] #)
+  {- Arity: 2, Strictness: <S,1*U><S,U> -}
+0b494f32a1f2bf99f520233d5e0b57bf
+  main4 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Spec.main5) -}
+abc452eac7f829c5e4461bd5c1cadf97
+  main5 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("============="#) -}
+7bd015b3410015063bf43b29021be2dd
+  main6 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Spec.main7) -}
+98072d471cbc29b34a9de9f042f1c30b
+  main7 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Running Tests"#) -}
+75c70896f6058c2c96946e76a03e9481
+  main8 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1,
+     Unfolding: (GHC.TopHandler.runMainIO1
+                   @ ()
+                   Spec.main1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R))) -}
+1b90baa86c64a2bc84a398b8da07641f
+  runTest :: [GHC.Types.Bool] -> GHC.Types.IO Spec.Score
+  {- Arity: 2, Strictness: <L,U><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Spec.runTest1
+                  `cast`
+                (<[GHC.Types.Bool]>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <Spec.Score>_R)) -}
+49663c59caf0e897de894c5e83797581
+  runTest1 ::
+    [GHC.Types.Bool]
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, Spec.Score #)
+  {- Arity: 2, Strictness: <L,U><S,U>,
+     Unfolding: (\ (tests :: [GHC.Types.Bool])
+                   (s :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 case System.Timeout.$wtimeout
+                        @ Spec.Score
+                        1000000#
+                        (\ (s1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                         case GHC.Prim.catch#
+                                @ (Data.Either.Either GHC.Exception.Type.SomeException Spec.Score)
+                                @ GHC.Exception.Type.SomeException
+                                (\ (s2 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                                 case GHC.Prim.seq#
+                                        @ Spec.Score
+                                        @ GHC.Prim.RealWorld
+                                        (let {
+                                           exit :: Spec.Score <join 0> = Spec.Fail tests
+                                         } in
+                                         letrec {
+                                           go :: [GHC.Types.Bool] -> Spec.Score
+                                             <join 1> {- Arity: 1, Strictness: <S,1*U> -}
+                                           = \ (ds :: [GHC.Types.Bool]) ->
+                                             case ds of wild {
+                                               [] -> Spec.Pass
+                                               : y ys
+                                               -> case y of wild1 {
+                                                    GHC.Types.False -> exit
+                                                    GHC.Types.True -> go ys } }
+                                         } in
+                                         go tests)
+                                        s2 of ds1 { (#,#) ipv ipv1 ->
+                                 (# ipv,
+                                    Data.Either.Right
+                                      @ GHC.Exception.Type.SomeException
+                                      @ Spec.Score
+                                      ipv1 #) })
+                                Spec.runTest2
+                                s1 of ds1 { (#,#) ipv ipv1 ->
+                         (# ipv,
+                            case ipv1 of wild {
+                              Data.Either.Left x -> Spec.Exception
+                              Data.Either.Right y -> y } #) })
+                          `cast`
+                        (Sym (GHC.Types.N:IO[0] <Spec.Score>_R))
+                        s of ds1 { (#,#) ipv ipv1 ->
+                 (# ipv,
+                    case ipv1 of wild {
+                      GHC.Maybe.Nothing -> Spec.Timeout GHC.Maybe.Just x -> x } #) }) -}
+3c33eeca9430ca589d417e1a36917eac
+  runTest2 ::
+    GHC.Exception.Type.SomeException
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Either.Either GHC.Exception.Type.SomeException Spec.Score #)
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,U><S,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (e1 :: GHC.Exception.Type.SomeException)[OneShot]
+                   (eta1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                 (# eta1,
+                    Data.Either.Left
+                      @ GHC.Exception.Type.SomeException
+                      @ Spec.Score
+                      e1 #)) -}
+39c2de8c20f8021d07fc8a6c40bdb900
+  runTests :: GHC.Types.IO [Spec.TestResult]
+  {- Arity: 1,
+     Unfolding: InlineRule (0, True, True)
+                Spec.runTests1
+                  `cast`
+                (Sym (GHC.Types.N:IO[0] <[(Spec.Score, GHC.Base.String)]>_R)) -}
+6c0c7a7d36d714047b49347c6272a612
+  runTests1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          [(Spec.Score, GHC.Base.String)] #)
+  {- Arity: 1, Unfolding: (Spec.main3 Tests.allTests) -}
+44d18782f0a7b9656df9b632e5d970e8
+  scoreMP :: [Spec.TestResult] -> GHC.Types.Int
+  {- Arity: 1, Strictness: <S,U>m, Inline: [2],
+     Unfolding: InlineRule (1, True, False)
+                (\ (w :: [Spec.TestResult]) ->
+                 case Spec.$wscoreMP w of ww { DEFAULT -> GHC.Types.I# ww }) -}
+a1a76a834bf5df35fc70eb96d8bced0a
+  showTR :: Spec.TestResult -> GHC.Base.String
+  {- Arity: 1, Strictness: <S(SL),1*U(1*U,U)>, Inline: [2],
+     Unfolding: InlineRule (1, True, False)
+                (\ (w :: Spec.TestResult) ->
+                 case w of ww { (,) ww1 ww2 -> Spec.$wshowTR ww1 ww2 }) -}
+3f9db1431dba468cafbe346fdcf36590
+  showTR1 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: (": "#) -}
+instance [safe] GHC.Show.Show [Spec.Score] = Spec.$fShowScore
+trusted: safe
+require own pkg trusted: False
+module header:
+  Nothing
+declaration docs:
+arg docs:
+

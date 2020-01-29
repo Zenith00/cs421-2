@@ -1,0 +1,6 @@
+Configuring test-framework-quickcheck2-0.3.0.4...
+Preprocessing library for test-framework-quickcheck2-0.3.0.4..
+Building library for test-framework-quickcheck2-0.3.0.4..
+[1 of 1] Compiling Test.Framework.Providers.QuickCheck2 ( Test/Framework/Providers/QuickCheck2.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Test/Framework/Providers/QuickCheck2.o )
+Installing library in /Users/kathie/.stack/snapshots/x86_64-osx/lts-10.3/8.2.2/lib/x86_64-osx-ghc-8.2.2/test-framework-quickcheck2-0.3.0.4-1NANPiSMy4MJVV5lPC58Rb
+Registering library for test-framework-quickcheck2-0.3.0.4..

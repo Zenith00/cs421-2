@@ -1,0 +1,2536 @@
+
+==================== FINAL INTERFACE ====================
+2019-04-26 21:26:53.682678 UTC
+
+interface main:Tests 8022
+  interface hash: 6f279d95f5dc758dc6f682fe79dc3b8a
+  ABI hash: 185072773fcde383c4cfe9522d7b08ed
+  export-list hash: d42f38fe9bda2a42279341d02fbbf1ff
+  orphan hash: e28920df3023dc0618cc09818e763d19
+  flag hash: 88c8c79ccf1ef6764d9675a81fd06bb8
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Tests.inferFV
+  Tests.inferRun
+  Tests.tests_infer_all
+  Tests.tests_infer_app
+  Tests.tests_infer_cond
+  Tests.tests_infer_const
+  Tests.tests_infer_fun
+  Tests.tests_infer_let
+  Tests.tests_infer_op
+  Tests.tests_infer_rec
+  Tests.tests_infer_var
+  Tests.tests_unify_all
+  Tests.tests_unify_comp
+  Tests.tests_unify_decomp
+  Tests.tests_unify_del
+  Tests.tests_unify_elim
+  Tests.tests_unify_error
+  Tests.tests_unify_orient
+  Tests.unifyRun
+module dependencies:
+package dependencies: array-0.5.2.0 base-4.10.1.0*
+                      containers-0.5.10.2 deepseq-1.4.3.0 ghc-prim-0.5.1.1
+                      integer-gmp-1.0.1.0 mp6-type-infer-0.1.0.0
+orphans: base-4.10.1.0:GHC.Float base-4.10.1.0:GHC.Base
+family instance modules: base-4.10.1.0:Control.Applicative
+                         base-4.10.1.0:Data.Complex base-4.10.1.0:Data.Either
+                         base-4.10.1.0:Data.Functor.Compose base-4.10.1.0:Data.Functor.Const
+                         base-4.10.1.0:Data.Functor.Identity
+                         base-4.10.1.0:Data.Functor.Product base-4.10.1.0:Data.Functor.Sum
+                         base-4.10.1.0:Data.List.NonEmpty base-4.10.1.0:Data.Monoid
+                         base-4.10.1.0:Data.Semigroup base-4.10.1.0:Data.Type.Equality
+                         base-4.10.1.0:Data.Version base-4.10.1.0:Data.Void
+                         base-4.10.1.0:GHC.Exts base-4.10.1.0:GHC.Generics
+                         base-4.10.1.0:GHC.IO.Exception base-4.10.1.0:GHC.TypeLits
+                         base-4.10.1.0:GHC.TypeNats containers-0.5.10.2:Data.Map.Internal
+                         containers-0.5.10.2:Data.Set.Internal
+import  -/  base-4.10.1.0:GHC.Base 782fd99b5e36f3698a26179a49afca64
+import  -/  base-4.10.1.0:Prelude 31945b7d0084063347fc52506d3a4020
+import  -/  containers-0.5.10.2:Data.Map.Strict 194f5b0a9785a91a43562790aa6787fc
+import  -/  containers-0.5.10.2:Data.Map.Strict.Internal 90deec3a59296f433f9f1dc7cc1632b6
+import  -/  mp6-type-infer-0.1.0.0:Common 96525dafafa987517b11778b8f4e142a
+import  -/  mp6-type-infer-0.1.0.0:Infer 7014f112cafeeaa4b7bba1c1738a444e
+import  -/  mp6-type-infer-0.1.0.0:Parser bc64ccd1eae189a8de98868e52cda392
+94f0a5bc12c22ff0871c419c08e20a29
+  $sfromList ::
+    [(GHC.Base.String, a)] -> Data.Map.Internal.Map GHC.Base.String a
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: (\ @ a (ds :: [(GHC.Base.String, a)]) ->
+                 case ds of wild {
+                   [] -> Data.Map.Internal.Tip @ GHC.Base.String @ a
+                   : ds1 ds2
+                   -> case ds1 of wild1 { (,) kx x ->
+                      case ds2 of wild2 {
+                        []
+                        -> case x of x1 { DEFAULT ->
+                           case kx of dt { DEFAULT ->
+                           Data.Map.Internal.Bin
+                             @ GHC.Base.String
+                             @ a
+                             1#
+                             dt
+                             x1
+                             (Data.Map.Internal.Tip @ GHC.Base.String @ a)
+                             (Data.Map.Internal.Tip @ GHC.Base.String @ a) } }
+                        : ipv ipv1
+                        -> case ipv of wild3 { (,) ky ds3 ->
+                           case GHC.Classes.$fOrd[]_$s$ccompare1 kx ky of wild4 {
+                             DEFAULT
+                             -> case x of x0 { DEFAULT ->
+                                case kx of dt { DEFAULT ->
+                                Tests.$sfromList1
+                                  @ a
+                                  (Data.Map.Internal.Bin
+                                     @ GHC.Base.String
+                                     @ a
+                                     1#
+                                     dt
+                                     x0
+                                     (Data.Map.Internal.Tip @ GHC.Base.String @ a)
+                                     (Data.Map.Internal.Tip @ GHC.Base.String @ a))
+                                  wild2 } }
+                             GHC.Types.LT
+                             -> case x of x0 { DEFAULT ->
+                                case kx of dt { DEFAULT ->
+                                Tests.$wpoly_go8
+                                  @ a
+                                  1#
+                                  (Data.Map.Internal.Bin
+                                     @ GHC.Base.String
+                                     @ a
+                                     1#
+                                     dt
+                                     x0
+                                     (Data.Map.Internal.Tip @ GHC.Base.String @ a)
+                                     (Data.Map.Internal.Tip @ GHC.Base.String @ a))
+                                  wild2 } } } } } } }) -}
+efa4e55d5d8a2eb33e1683a0aa9cfaf3
+  $sfromList1 ::
+    Data.Map.Internal.Map GHC.Base.String a
+    -> [(GHC.Base.String, a)]
+    -> Data.Map.Internal.Map GHC.Base.String a
+  {- Arity: 2, Strictness: <S,1*U><S,1*U> -}
+2423d64ea8fcbeb14d5d6e0bc2c8d9a2
+  $sinsert_$sgo8 ::
+    GHC.Base.String
+    -> a1
+    -> Data.Map.Internal.Map GHC.Base.String a1
+    -> Data.Map.Internal.Map GHC.Base.String a1
+  {- Arity: 3, Strictness: <S,1*U><S,1*U><S,1*U> -}
+49557782ba3d6dacec97913700fa1eb4
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module Tests.$trModule3 Tests.$trModule1) -}
+5ae67da78053259c64a6076146e0016d
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Tests.$trModule2) -}
+0d33e7acad12b4e37f524765691d47e9
+  $trModule2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Tests"#) -}
+2c1e8e0cde47216a5b69dcd1396f3d9a
+  $trModule3 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Tests.$trModule4) -}
+93166380ccfd3fffa012bd367978eabf
+  $trModule4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("main"#) -}
+a28ac2f12917d0c185e7963099769a13
+  $winferFV ::
+    GHC.Base.String
+    -> GHC.Base.String
+    -> (# Common.FVCounter -> Common.FVRes GHC.Base.String #)
+  {- Arity: 2, Strictness: <L,1*U><L,1*U>, Inline: [0],
+     Unfolding: (\ (w :: GHC.Base.String) (w1 :: GHC.Base.String) ->
+                 let {
+                   lvl :: Data.Map.Internal.Map
+                            GHC.Base.String ([GHC.Types.Int], Common.MonoTy)
+                   = case (Parser.happyNewToken
+                             @ (Parser.HappyStk
+                                  (Parser.HappyAbsSyn
+                                     GHC.Types.Any
+                                     GHC.Types.Any
+                                     GHC.Types.Any
+                                     GHC.Types.Any
+                                     GHC.Types.Any
+                                     GHC.Types.Any
+                                     GHC.Types.Any
+                                     GHC.Types.Any
+                                     GHC.Types.Any
+                                     GHC.Types.Any
+                                     GHC.Types.Any
+                                     GHC.Types.Any
+                                     GHC.Types.Any
+                                     GHC.Types.Any
+                                     GHC.Types.Any
+                                     [(GHC.Base.String, ([GHC.Types.Int], Common.MonoTy))]
+                                     [(GHC.Base.String, ([GHC.Types.Int], Common.MonoTy))]
+                                     (GHC.Base.String, ([GHC.Types.Int], Common.MonoTy))
+                                     ([GHC.Types.Int], Common.MonoTy)
+                                     Common.MonoTy
+                                     Common.MonoTy
+                                     Common.MonoTy))
+                             @ (Parser.HappyAbsSyn
+                                  GHC.Types.Any
+                                  GHC.Types.Any
+                                  GHC.Types.Any
+                                  GHC.Types.Any
+                                  GHC.Types.Any
+                                  GHC.Types.Any
+                                  GHC.Types.Any
+                                  GHC.Types.Any
+                                  GHC.Types.Any
+                                  GHC.Types.Any
+                                  GHC.Types.Any
+                                  GHC.Types.Any
+                                  GHC.Types.Any
+                                  GHC.Types.Any
+                                  GHC.Types.Any
+                                  [(GHC.Base.String, ([GHC.Types.Int], Common.MonoTy))]
+                                  [(GHC.Base.String, ([GHC.Types.Int], Common.MonoTy))]
+                                  (GHC.Base.String, ([GHC.Types.Int], Common.MonoTy))
+                                  ([GHC.Types.Int], Common.MonoTy)
+                                  Common.MonoTy
+                                  Common.MonoTy
+                                  Common.MonoTy)
+                             Parser.parseEnv2
+                             (Parser.notHappyAtAll
+                                @ [Parser.HappyState
+                                     Parser.Token
+                                     (Parser.HappyStk
+                                        (Parser.HappyAbsSyn
+                                           GHC.Types.Any
+                                           GHC.Types.Any
+                                           GHC.Types.Any
+                                           GHC.Types.Any
+                                           GHC.Types.Any
+                                           GHC.Types.Any
+                                           GHC.Types.Any
+                                           GHC.Types.Any
+                                           GHC.Types.Any
+                                           GHC.Types.Any
+                                           GHC.Types.Any
+                                           GHC.Types.Any
+                                           GHC.Types.Any
+                                           GHC.Types.Any
+                                           GHC.Types.Any
+                                           [(GHC.Base.String, ([GHC.Types.Int], Common.MonoTy))]
+                                           [(GHC.Base.String, ([GHC.Types.Int], Common.MonoTy))]
+                                           (GHC.Base.String, ([GHC.Types.Int], Common.MonoTy))
+                                           ([GHC.Types.Int], Common.MonoTy)
+                                           Common.MonoTy
+                                           Common.MonoTy
+                                           Common.MonoTy)
+                                      -> [Parser.Token]
+                                      -> Parser.HappyIdentity
+                                           (Parser.HappyAbsSyn
+                                              GHC.Types.Any
+                                              GHC.Types.Any
+                                              GHC.Types.Any
+                                              GHC.Types.Any
+                                              GHC.Types.Any
+                                              GHC.Types.Any
+                                              GHC.Types.Any
+                                              GHC.Types.Any
+                                              GHC.Types.Any
+                                              GHC.Types.Any
+                                              GHC.Types.Any
+                                              GHC.Types.Any
+                                              GHC.Types.Any
+                                              GHC.Types.Any
+                                              GHC.Types.Any
+                                              [(GHC.Base.String, ([GHC.Types.Int], Common.MonoTy))]
+                                              [(GHC.Base.String, ([GHC.Types.Int], Common.MonoTy))]
+                                              (GHC.Base.String, ([GHC.Types.Int], Common.MonoTy))
+                                              ([GHC.Types.Int], Common.MonoTy)
+                                              Common.MonoTy
+                                              Common.MonoTy
+                                              Common.MonoTy))])
+                             (Parser.notHappyAtAll
+                                @ (Parser.HappyStk
+                                     (Parser.HappyAbsSyn
+                                        GHC.Types.Any
+                                        GHC.Types.Any
+                                        GHC.Types.Any
+                                        GHC.Types.Any
+                                        GHC.Types.Any
+                                        GHC.Types.Any
+                                        GHC.Types.Any
+                                        GHC.Types.Any
+                                        GHC.Types.Any
+                                        GHC.Types.Any
+                                        GHC.Types.Any
+                                        GHC.Types.Any
+                                        GHC.Types.Any
+                                        GHC.Types.Any
+                                        GHC.Types.Any
+                                        [(GHC.Base.String, ([GHC.Types.Int], Common.MonoTy))]
+                                        [(GHC.Base.String, ([GHC.Types.Int], Common.MonoTy))]
+                                        (GHC.Base.String, ([GHC.Types.Int], Common.MonoTy))
+                                        ([GHC.Types.Int], Common.MonoTy)
+                                        Common.MonoTy
+                                        Common.MonoTy
+                                        Common.MonoTy)))
+                             (Parser.lexer w))
+                            `cast`
+                          (Parser.N:HappyIdentity[0]
+                               <Parser.HappyAbsSyn
+                                  GHC.Types.Any
+                                  GHC.Types.Any
+                                  GHC.Types.Any
+                                  GHC.Types.Any
+                                  GHC.Types.Any
+                                  GHC.Types.Any
+                                  GHC.Types.Any
+                                  GHC.Types.Any
+                                  GHC.Types.Any
+                                  GHC.Types.Any
+                                  GHC.Types.Any
+                                  GHC.Types.Any
+                                  GHC.Types.Any
+                                  GHC.Types.Any
+                                  GHC.Types.Any
+                                  [(GHC.Base.String, ([GHC.Types.Int], Common.MonoTy))]
+                                  [(GHC.Base.String, ([GHC.Types.Int], Common.MonoTy))]
+                                  (GHC.Base.String, ([GHC.Types.Int], Common.MonoTy))
+                                  ([GHC.Types.Int], Common.MonoTy)
+                                  Common.MonoTy
+                                  Common.MonoTy
+                                  Common.MonoTy>_R) of wild {
+                       DEFAULT
+                       -> case Parser.notHappyAtAll
+                          ret_ty (Data.Map.Internal.Map
+                                    GHC.Base.String ([GHC.Types.Int], Common.MonoTy))
+                          of {}
+                       Parser.HappyAbsSyn23 z
+                       -> Tests.$sfromList @ ([GHC.Types.Int], Common.MonoTy) z }
+                 } in
+                 let {
+                   lvl1 :: Parser.HappyIdentity
+                             (Parser.HappyAbsSyn
+                                GHC.Types.Any
+                                Common.Exp
+                                Common.Exp
+                                Common.Exp
+                                Common.Exp
+                                Common.Exp
+                                Common.Exp
+                                Common.Exp
+                                Common.Binop
+                                Common.Binop
+                                Common.Monop
+                                Common.Const
+                                GHC.Types.Any
+                                GHC.Types.Any
+                                GHC.Types.Any
+                                GHC.Types.Any
+                                GHC.Types.Any
+                                GHC.Types.Any
+                                GHC.Types.Any
+                                GHC.Types.Any
+                                GHC.Types.Any
+                                GHC.Types.Any)
+                   = Parser.happyNewToken
+                       @ (Parser.HappyStk
+                            (Parser.HappyAbsSyn
+                               GHC.Types.Any
+                               Common.Exp
+                               Common.Exp
+                               Common.Exp
+                               Common.Exp
+                               Common.Exp
+                               Common.Exp
+                               Common.Exp
+                               Common.Binop
+                               Common.Binop
+                               Common.Monop
+                               Common.Const
+                               GHC.Types.Any
+                               GHC.Types.Any
+                               GHC.Types.Any
+                               GHC.Types.Any
+                               GHC.Types.Any
+                               GHC.Types.Any
+                               GHC.Types.Any
+                               GHC.Types.Any
+                               GHC.Types.Any
+                               GHC.Types.Any))
+                       @ (Parser.HappyAbsSyn
+                            GHC.Types.Any
+                            Common.Exp
+                            Common.Exp
+                            Common.Exp
+                            Common.Exp
+                            Common.Exp
+                            Common.Exp
+                            Common.Exp
+                            Common.Binop
+                            Common.Binop
+                            Common.Monop
+                            Common.Const
+                            GHC.Types.Any
+                            GHC.Types.Any
+                            GHC.Types.Any
+                            GHC.Types.Any
+                            GHC.Types.Any
+                            GHC.Types.Any
+                            GHC.Types.Any
+                            GHC.Types.Any
+                            GHC.Types.Any
+                            GHC.Types.Any)
+                       Parser.parseExp2
+                       (Parser.notHappyAtAll
+                          @ [Parser.HappyState
+                               Parser.Token
+                               (Parser.HappyStk
+                                  (Parser.HappyAbsSyn
+                                     GHC.Types.Any
+                                     Common.Exp
+                                     Common.Exp
+                                     Common.Exp
+                                     Common.Exp
+                                     Common.Exp
+                                     Common.Exp
+                                     Common.Exp
+                                     Common.Binop
+                                     Common.Binop
+                                     Common.Monop
+                                     Common.Const
+                                     GHC.Types.Any
+                                     GHC.Types.Any
+                                     GHC.Types.Any
+                                     GHC.Types.Any
+                                     GHC.Types.Any
+                                     GHC.Types.Any
+                                     GHC.Types.Any
+                                     GHC.Types.Any
+                                     GHC.Types.Any
+                                     GHC.Types.Any)
+                                -> [Parser.Token]
+                                -> Parser.HappyIdentity
+                                     (Parser.HappyAbsSyn
+                                        GHC.Types.Any
+                                        Common.Exp
+                                        Common.Exp
+                                        Common.Exp
+                                        Common.Exp
+                                        Common.Exp
+                                        Common.Exp
+                                        Common.Exp
+                                        Common.Binop
+                                        Common.Binop
+                                        Common.Monop
+                                        Common.Const
+                                        GHC.Types.Any
+                                        GHC.Types.Any
+                                        GHC.Types.Any
+                                        GHC.Types.Any
+                                        GHC.Types.Any
+                                        GHC.Types.Any
+                                        GHC.Types.Any
+                                        GHC.Types.Any
+                                        GHC.Types.Any
+                                        GHC.Types.Any))])
+                       (Parser.notHappyAtAll
+                          @ (Parser.HappyStk
+                               (Parser.HappyAbsSyn
+                                  GHC.Types.Any
+                                  Common.Exp
+                                  Common.Exp
+                                  Common.Exp
+                                  Common.Exp
+                                  Common.Exp
+                                  Common.Exp
+                                  Common.Exp
+                                  Common.Binop
+                                  Common.Binop
+                                  Common.Monop
+                                  Common.Const
+                                  GHC.Types.Any
+                                  GHC.Types.Any
+                                  GHC.Types.Any
+                                  GHC.Types.Any
+                                  GHC.Types.Any
+                                  GHC.Types.Any
+                                  GHC.Types.Any
+                                  GHC.Types.Any
+                                  GHC.Types.Any
+                                  GHC.Types.Any)))
+                       (Parser.lexer w1)
+                 } in
+                 (# \ (s :: Common.FVCounter) ->
+                    case lvl1
+                           `cast`
+                         (Parser.N:HappyIdentity[0]
+                              <Parser.HappyAbsSyn
+                                 GHC.Types.Any
+                                 Common.Exp
+                                 Common.Exp
+                                 Common.Exp
+                                 Common.Exp
+                                 Common.Exp
+                                 Common.Exp
+                                 Common.Exp
+                                 Common.Binop
+                                 Common.Binop
+                                 Common.Monop
+                                 Common.Const
+                                 GHC.Types.Any
+                                 GHC.Types.Any
+                                 GHC.Types.Any
+                                 GHC.Types.Any
+                                 GHC.Types.Any
+                                 GHC.Types.Any
+                                 GHC.Types.Any
+                                 GHC.Types.Any
+                                 GHC.Types.Any
+                                 GHC.Types.Any>_R) of wild {
+                      DEFAULT
+                      -> case Parser.notHappyAtAll
+                         ret_ty (Common.FVRes GHC.Base.String)
+                         of {}
+                      Parser.HappyAbsSyn9 z
+                      -> let {
+                           tau :: Common.MonoTy = Common.TyVar s
+                         } in
+                         case Infer.infer lvl z tau of wild1 {
+                           Common.ValidState i
+                           -> case i (case s of wild2 { GHC.Types.I# x ->
+                                      GHC.Types.I# (GHC.Prim.+# x 1#) }) of wild2 {
+                                Common.ValidRes v s'
+                                -> Common.ValidRes
+                                     @ GHC.Base.String
+                                     (let {
+                                        tau' :: Common.MonoTy = Common.liftMonoTy v tau
+                                      } in
+                                      Common.stringOfMonoTy (Common.canonize tau') tau')
+                                     s'
+                                Common.ErrorRes e -> Common.ErrorRes @ GHC.Base.String e }
+                           Common.ErrorState e
+                           -> Common.ErrorRes @ GHC.Base.String e } } #)) -}
+e632b20c55a93a072e24a05c62b97f09
+  $wpoly_go8 ::
+    GHC.Prim.Int#
+    -> Data.Map.Internal.Map GHC.Base.String a
+    -> [(GHC.Base.String, a)]
+    -> Data.Map.Internal.Map GHC.Base.String a
+  {- Arity: 3, Strictness: <L,U><S,1*U><S,1*U>, Inline: [0] -}
+2cb8de5b6c49beb7a089ee70d6832ec9
+  inferFV ::
+    GHC.Base.String
+    -> GHC.Base.String -> Common.FVState GHC.Base.String
+  {- Arity: 2, Strictness: <L,1*U><L,1*U>m1, Inline: [0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: GHC.Base.String) (w1 :: GHC.Base.String) ->
+                 case Tests.$winferFV w w1 of ww { Unit# ww1 ->
+                 Common.ValidState @ GHC.Base.String ww1 }) -}
+189d7c81b2aaf3c719e6415b42a34ed7
+  inferRun :: GHC.Base.String -> GHC.Base.String -> GHC.Base.String
+  {- Arity: 2, Strictness: <L,1*U><L,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (s1 :: GHC.Base.String) (s2 :: GHC.Base.String) ->
+                 case Tests.inferFV s1 s2 of wild {
+                   Common.ValidState f
+                   -> case f Tests.inferRun3 of wild1 {
+                        Common.ValidRes s' ds -> s' Common.ErrorRes ds -> Tests.inferRun1 }
+                   Common.ErrorState e -> Tests.inferRun1 }) -}
+69b5dffd20b1d605fa613e340ef81c32
+  inferRun1 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Tests.inferRun2) -}
+56c7b1a0cbe7e95cb6fab7cddc2b3043
+  inferRun2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("error"#) -}
+b57ff5dcce0317cdc12f72b3e9c9a4ab
+  inferRun3 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 0#) -}
+8c5d022f84b969200e997a45e37f6112
+  tests_infer_all ::
+    [(GHC.Base.String,
+      [(GHC.Base.String, GHC.Base.String, GHC.Types.Int)])]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.String,
+                      [(GHC.Base.String, GHC.Base.String, GHC.Types.Int)])
+                   Tests.tests_infer_all29
+                   Tests.tests_infer_all1) -}
+89d20e88157d887c1ed58672e1efdc2b
+  tests_infer_all1 ::
+    [(GHC.Base.String,
+      [(GHC.Base.String, GHC.Base.String, GHC.Types.Int)])]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.String,
+                      [(GHC.Base.String, GHC.Base.String, GHC.Types.Int)])
+                   Tests.tests_infer_all26
+                   Tests.tests_infer_all2) -}
+2e1d286365fd7645e2250cc7efd5925e
+  tests_infer_all10 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("let rec expression"#) -}
+56fec009d4645cfeeea9fad026acdb22
+  tests_infer_all11 ::
+    ([GHC.Types.Char],
+     [(GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)])
+  {- Strictness: m,
+     Unfolding: ((Tests.tests_infer_all12, Tests.tests_infer_app)) -}
+8d66bb60e3db44519ceaba37d19adb89
+  tests_infer_all12 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   Tests.tests_infer_all13) -}
+d379a506b1d35c8c85b7ecbaa074402c
+  tests_infer_all13 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("app"#) -}
+609ddfea6896a458fdebacf41ca673a4
+  tests_infer_all14 ::
+    ([GHC.Types.Char],
+     [(GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)])
+  {- Strictness: m,
+     Unfolding: ((Tests.tests_infer_all15, Tests.tests_infer_fun)) -}
+ca4d1b7db73cf5c3f3378789fb7f30d4
+  tests_infer_all15 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   Tests.tests_infer_all16) -}
+85b3230b1e0ee018915219d184d397ff
+  tests_infer_all16 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("functions"#) -}
+0c3cdca06365b291645ce5c23ad71486
+  tests_infer_all17 ::
+    ([GHC.Types.Char],
+     [(GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)])
+  {- Strictness: m,
+     Unfolding: ((Tests.tests_infer_all18, Tests.tests_infer_cond)) -}
+c39c796807479645dc6e55305dd31d52
+  tests_infer_all18 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   Tests.tests_infer_all19) -}
+8e57b4f5a7070940986445a550ced4a2
+  tests_infer_all19 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("conditional"#) -}
+a5ccdbf10fd2edf4d9a99a89571e815e
+  tests_infer_all2 ::
+    [(GHC.Base.String,
+      [(GHC.Base.String, GHC.Base.String, GHC.Types.Int)])]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.String,
+                      [(GHC.Base.String, GHC.Base.String, GHC.Types.Int)])
+                   Tests.tests_infer_all23
+                   Tests.tests_infer_all3) -}
+a160520b576e63d23a2d9602664667dc
+  tests_infer_all20 ::
+    ([GHC.Types.Char],
+     [(GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)])
+  {- Strictness: m,
+     Unfolding: ((Tests.tests_infer_all21, Tests.tests_infer_op)) -}
+56ea73dc6e656227659ce4df02cfe79f
+  tests_infer_all21 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   Tests.tests_infer_all22) -}
+6a7433e034c6933045078729213b95bc
+  tests_infer_all22 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("ops"#) -}
+1f55926f4cd53ce47f13984e2d0acda2
+  tests_infer_all23 ::
+    ([GHC.Types.Char],
+     [(GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)])
+  {- Strictness: m,
+     Unfolding: ((Tests.tests_infer_all24, Tests.tests_infer_let)) -}
+2590b257e636aa121587d44c3b1c767a
+  tests_infer_all24 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   Tests.tests_infer_all25) -}
+721062642bd0ccc1218754ad90aab93f
+  tests_infer_all25 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("let expression"#) -}
+8d7de98e7fa5b105c897521003fc4bc7
+  tests_infer_all26 ::
+    ([GHC.Types.Char],
+     [(GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)])
+  {- Strictness: m,
+     Unfolding: ((Tests.tests_infer_all27, Tests.tests_infer_var)) -}
+908df31793599d1a6a1669061393e89f
+  tests_infer_all27 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   Tests.tests_infer_all28) -}
+7af9f39927ee776f224b75992532f990
+  tests_infer_all28 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("vars"#) -}
+62b0c1e21d2a154a1cde75ef888e8b11
+  tests_infer_all29 ::
+    ([GHC.Types.Char],
+     [(GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)])
+  {- Strictness: m,
+     Unfolding: ((Tests.tests_infer_all30, Tests.tests_infer_const)) -}
+5a11a22242167ab295cd764ba9fa9c26
+  tests_infer_all3 ::
+    [(GHC.Base.String,
+      [(GHC.Base.String, GHC.Base.String, GHC.Types.Int)])]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.String,
+                      [(GHC.Base.String, GHC.Base.String, GHC.Types.Int)])
+                   Tests.tests_infer_all20
+                   Tests.tests_infer_all4) -}
+f2b9d72ec49bbf056ab52ef25725966e
+  tests_infer_all30 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   Tests.tests_infer_all31) -}
+f5b9d7048f3db47f4d2b08f02b526d15
+  tests_infer_all31 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("constants"#) -}
+815b848a422315931a98416240910801
+  tests_infer_all4 ::
+    [(GHC.Base.String,
+      [(GHC.Base.String, GHC.Base.String, GHC.Types.Int)])]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.String,
+                      [(GHC.Base.String, GHC.Base.String, GHC.Types.Int)])
+                   Tests.tests_infer_all17
+                   Tests.tests_infer_all5) -}
+6612559e66e8f9ba92b2242291cb95a7
+  tests_infer_all5 ::
+    [(GHC.Base.String,
+      [(GHC.Base.String, GHC.Base.String, GHC.Types.Int)])]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.String,
+                      [(GHC.Base.String, GHC.Base.String, GHC.Types.Int)])
+                   Tests.tests_infer_all14
+                   Tests.tests_infer_all6) -}
+38b997078defff5b5409124fb63c3f14
+  tests_infer_all6 ::
+    [(GHC.Base.String,
+      [(GHC.Base.String, GHC.Base.String, GHC.Types.Int)])]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.String,
+                      [(GHC.Base.String, GHC.Base.String, GHC.Types.Int)])
+                   Tests.tests_infer_all11
+                   Tests.tests_infer_all7) -}
+68dfb511f964a51f25a295a0606352f5
+  tests_infer_all7 ::
+    [(GHC.Base.String,
+      [(GHC.Base.String, GHC.Base.String, GHC.Types.Int)])]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.String,
+                      [(GHC.Base.String, GHC.Base.String, GHC.Types.Int)])
+                   Tests.tests_infer_all8
+                   (GHC.Types.[]
+                      @ (GHC.Base.String,
+                         [(GHC.Base.String, GHC.Base.String, GHC.Types.Int)]))) -}
+5a9804500b8d06a07d1bb70900448d00
+  tests_infer_all8 ::
+    ([GHC.Types.Char],
+     [(GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)])
+  {- Strictness: m,
+     Unfolding: ((Tests.tests_infer_all9, Tests.tests_infer_rec)) -}
+6fbf04b16cef3ab3e4e50cea0b9c0a81
+  tests_infer_all9 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   Tests.tests_infer_all10) -}
+2c0b09540d154b5801d4864df13c2ca3
+  tests_infer_app ::
+    [(GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)
+                   Tests.tests_infer_app41
+                   Tests.tests_infer_app1) -}
+8061162312557d09a6aaa786bb9b733e
+  tests_infer_app1 ::
+    [(GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)
+                   Tests.tests_infer_app37
+                   Tests.tests_infer_app2) -}
+b2f27597abb80a99fa57080ca884841c
+  tests_infer_app10 :: GHC.Base.String
+  {- Unfolding: (case Tests.$winferFV
+                        Tests.tests_infer_app13
+                        Tests.tests_infer_app11 of ww { Unit# ww1 ->
+                 case ww1 Tests.inferRun3 of wild {
+                   Common.ValidRes s' ds -> s'
+                   Common.ErrorRes ds -> Tests.inferRun1 } }) -}
+f0ad61c137ed0221c69eddfef08ad73b
+  tests_infer_app11 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   Tests.tests_infer_app12) -}
+0695eafe80809e7fe634b483fcfcad13
+  tests_infer_app12 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("f g"#) -}
+15d0cb7f4da9bb72d97f1f7057ae384f
+  tests_infer_app13 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   Tests.tests_infer_app14) -}
+4fbb8d77ec442b1b6eaad297ab02d2d9
+  tests_infer_app14 :: GHC.Prim.Addr#
+  {- HasNoCafRefs,
+     Unfolding: ("(f -> 0 . 1 . (0 -> 1) -> 0 -> 1, g -> int -> int)"#) -}
+b62c5aa2571143a617128ab963e2ab5c
+  tests_infer_app15 ::
+    (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)
+  {- Strictness: m,
+     Unfolding: ((Tests.tests_infer_app16, Tests.inferRun1,
+                  Tests.tests_infer_rec14)) -}
+540e46a9e119a4006ade0399f9854dc8
+  tests_infer_app16 :: GHC.Base.String
+  {- Unfolding: (case Tests.$winferFV
+                        Tests.tests_infer_app19
+                        Tests.tests_infer_app17 of ww { Unit# ww1 ->
+                 case ww1 Tests.inferRun3 of wild {
+                   Common.ValidRes s' ds -> s'
+                   Common.ErrorRes ds -> Tests.inferRun1 } }) -}
+43c5da9911c8608364157a60c3cf6dff
+  tests_infer_app17 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   Tests.tests_infer_app18) -}
+e767172e059d3f0cc2a10fc18c7a7bcf
+  tests_infer_app18 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("f 0 false"#) -}
+e86d705029ea3744852b3cbe5d0dde1b
+  tests_infer_app19 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   Tests.tests_infer_app20) -}
+fdccb0e1bf9964981ffb3b7247e56b4f
+  tests_infer_app2 ::
+    [(GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)
+                   Tests.tests_infer_app33
+                   Tests.tests_infer_app3) -}
+89072713fc8d4fbc2a4efa415607594c
+  tests_infer_app20 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("(f -> 0 -> 0 -> 0)"#) -}
+4e6426131ab01e7475417f88f432b5f0
+  tests_infer_app21 ::
+    (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)
+  {- Strictness: m,
+     Unfolding: ((Tests.tests_infer_app22, Tests.tests_infer_rec20,
+                  Tests.tests_infer_rec19)) -}
+00bf69d8681e162b6172282fc11bb3b8
+  tests_infer_app22 :: GHC.Base.String
+  {- Unfolding: (case Tests.$winferFV
+                        Tests.tests_infer_app25
+                        Tests.tests_infer_app23 of ww { Unit# ww1 ->
+                 case ww1 Tests.inferRun3 of wild {
+                   Common.ValidRes s' ds -> s'
+                   Common.ErrorRes ds -> Tests.inferRun1 } }) -}
+c4dc9dcc91a1d67a76848742131c6b78
+  tests_infer_app23 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   Tests.tests_infer_app24) -}
+de2470966cc8563fa792b3ca6e0088a2
+  tests_infer_app24 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("f 0"#) -}
+a52b8ba76be67f4069d2144773b4f801
+  tests_infer_app25 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   Tests.tests_infer_app26) -}
+410d7f8e2cc594ab34b1bf9e8e88a778
+  tests_infer_app26 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("(f -> 0 -> 0)"#) -}
+a165d02d4c2ec34c7a4788ead0dc4882
+  tests_infer_app27 ::
+    (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)
+  {- Strictness: m,
+     Unfolding: ((Tests.tests_infer_app28, Tests.tests_infer_rec20,
+                  Tests.tests_infer_rec14)) -}
+1be49d8f06e124384962bc74680e8e2d
+  tests_infer_app28 :: GHC.Base.String
+  {- Unfolding: (case Tests.$winferFV
+                        Tests.tests_infer_app31
+                        Tests.tests_infer_app29 of ww { Unit# ww1 ->
+                 case ww1 Tests.inferRun3 of wild {
+                   Common.ValidRes s' ds -> s'
+                   Common.ErrorRes ds -> Tests.inferRun1 } }) -}
+522eb4b97ca46238e96f31e8c10321c0
+  tests_infer_app29 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   Tests.tests_infer_app30) -}
+db6b912b759c6b79d76473f74a4b239d
+  tests_infer_app3 ::
+    [(GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)
+                   Tests.tests_infer_app27
+                   Tests.tests_infer_app4) -}
+c657ed1a37449a89bd2925877f540297
+  tests_infer_app30 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("g 1 2"#) -}
+6c27a7bfb1b3fc1f28b7ea0332bfa6e3
+  tests_infer_app31 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   Tests.tests_infer_app32) -}
+0c94349dee58cb039d7059dee89dbe24
+  tests_infer_app32 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("(g -> int -> int -> int)"#) -}
+0b530a8e6a1762741b81ff841d412ca2
+  tests_infer_app33 ::
+    (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)
+  {- Strictness: m,
+     Unfolding: ((Tests.tests_infer_app34, Tests.tests_infer_rec20,
+                  Tests.tests_infer_rec14)) -}
+641ecd94805b2a428aed6ab33a7e9e2a
+  tests_infer_app34 :: GHC.Base.String
+  {- Unfolding: (case Tests.$winferFV
+                        Tests.tests_infer_rec11
+                        Tests.tests_infer_app35 of ww { Unit# ww1 ->
+                 case ww1 Tests.inferRun3 of wild {
+                   Common.ValidRes s' ds -> s'
+                   Common.ErrorRes ds -> Tests.inferRun1 } }) -}
+5f22c1e50766f3ce1a9518ff3f9180cf
+  tests_infer_app35 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   Tests.tests_infer_app36) -}
+b26f658f40c989910df371ff6068b8b9
+  tests_infer_app36 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("(fun x -> x + 1) 6"#) -}
+133c245a865dd1406dbe64983e2a908b
+  tests_infer_app37 ::
+    (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)
+  {- Strictness: m,
+     Unfolding: ((Tests.tests_infer_app38, Tests.inferRun1,
+                  Tests.tests_infer_rec14)) -}
+1fe47aaeda085e40434c466e5876296f
+  tests_infer_app38 :: GHC.Base.String
+  {- Unfolding: (case Tests.$winferFV
+                        Tests.tests_infer_app39
+                        Tests.tests_infer_app23 of ww { Unit# ww1 ->
+                 case ww1 Tests.inferRun3 of wild {
+                   Common.ValidRes s' ds -> s'
+                   Common.ErrorRes ds -> Tests.inferRun1 } }) -}
+83a88221f824f8d1d623e5e09cfd2b1a
+  tests_infer_app39 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   Tests.tests_infer_app40) -}
+65a4da127f6960ce46c6a0b059584ed6
+  tests_infer_app4 ::
+    [(GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)
+                   Tests.tests_infer_app21
+                   Tests.tests_infer_app5) -}
+68b0faf0c9d7bd1086868c39afab3eab
+  tests_infer_app40 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("(f -> string -> int)"#) -}
+22a372c184be0bf9dba9721fb0406e74
+  tests_infer_app41 ::
+    (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)
+  {- Strictness: m,
+     Unfolding: ((Tests.tests_infer_app42, Tests.tests_infer_rec20,
+                  Tests.tests_infer_rec19)) -}
+0e722cc2d316b2c58bbb9f51660a01ad
+  tests_infer_app42 :: GHC.Base.String
+  {- Unfolding: (case Tests.$winferFV
+                        Tests.tests_infer_app43
+                        Tests.tests_infer_app23 of ww { Unit# ww1 ->
+                 case ww1 Tests.inferRun3 of wild {
+                   Common.ValidRes s' ds -> s'
+                   Common.ErrorRes ds -> Tests.inferRun1 } }) -}
+2c2ab99ab5431ad5f6097b81b52ee21f
+  tests_infer_app43 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   Tests.tests_infer_app44) -}
+abe8fa6af1c5ba69b3ed8a1593eb01a7
+  tests_infer_app44 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("(f -> int -> int)"#) -}
+51f15fefbbdae6c4803046fca0eb07e5
+  tests_infer_app5 ::
+    [(GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)
+                   Tests.tests_infer_app15
+                   Tests.tests_infer_app6) -}
+6e8ff236d578edb9007dc350c74dc6c8
+  tests_infer_app6 ::
+    [(GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)
+                   Tests.tests_infer_app7
+                   (GHC.Types.[]
+                      @ (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int))) -}
+07a8ff359508f858fde20382df226c6e
+  tests_infer_app7 ::
+    (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)
+  {- Strictness: m,
+     Unfolding: ((Tests.tests_infer_app10, Tests.tests_infer_app8,
+                  Tests.tests_infer_rec19)) -}
+cd03fe395d19d190803b9bb259fb0d11
+  tests_infer_app8 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   Tests.tests_infer_app9) -}
+3181daef98133bef9327e9887f670b1f
+  tests_infer_app9 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("(int -> int)"#) -}
+60c4ddaa2541d03734939d9712fcf2c9
+  tests_infer_cond ::
+    [(GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)
+                   Tests.tests_infer_cond14
+                   Tests.tests_infer_cond1) -}
+56e981401f89940765e10389747fc9f7
+  tests_infer_cond1 ::
+    [(GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)
+                   Tests.tests_infer_cond8
+                   Tests.tests_infer_cond2) -}
+33952f19f5380f5fee0135651e36e98a
+  tests_infer_cond10 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("bool"#) -}
+5c2f30718f646935ac4e881b5cab5666
+  tests_infer_cond11 :: GHC.Base.String
+  {- Unfolding: (case Tests.$winferFV
+                        Tests.tests_infer_rec11
+                        Tests.tests_infer_cond12 of ww { Unit# ww1 ->
+                 case ww1 Tests.inferRun3 of wild {
+                   Common.ValidRes s' ds -> s'
+                   Common.ErrorRes ds -> Tests.inferRun1 } }) -}
+7748e0a9943af0836b845797eccbd394
+  tests_infer_cond12 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   Tests.tests_infer_cond13) -}
+f7d91dc4af05e86c78300037a6718e7c
+  tests_infer_cond13 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("if false then true else false"#) -}
+839156a4b5ed7976493d51f5f8ab6e90
+  tests_infer_cond14 ::
+    (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)
+  {- Strictness: m,
+     Unfolding: ((Tests.tests_infer_cond15, Tests.tests_infer_rec20,
+                  Tests.tests_infer_rec19)) -}
+7ffb7598abeb093d72c04f7624048baa
+  tests_infer_cond15 :: GHC.Base.String
+  {- Unfolding: (case Tests.$winferFV
+                        Tests.tests_infer_rec11
+                        Tests.tests_infer_cond16 of ww { Unit# ww1 ->
+                 case ww1 Tests.inferRun3 of wild {
+                   Common.ValidRes s' ds -> s'
+                   Common.ErrorRes ds -> Tests.inferRun1 } }) -}
+e141313c61d6c09643f7ef0fd2fa32fa
+  tests_infer_cond16 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   Tests.tests_infer_cond17) -}
+893374ebac2f540da5e9b6cf9322da89
+  tests_infer_cond17 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("if true then 62 else 252"#) -}
+247f61d263ced24e994b1fb2a77e5812
+  tests_infer_cond2 ::
+    [(GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)
+                   Tests.tests_infer_cond3
+                   (GHC.Types.[]
+                      @ (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int))) -}
+417054a2b512d8693fffb8cee6ccb495
+  tests_infer_cond3 ::
+    (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)
+  {- Strictness: m,
+     Unfolding: ((Tests.tests_infer_cond5, Tests.inferRun1,
+                  Tests.tests_infer_cond4)) -}
+178a96afdce8abcf0a1bb94c40a35d6c
+  tests_infer_cond4 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 4#) -}
+842ffca265c4672001db25607b03707e
+  tests_infer_cond5 :: GHC.Base.String
+  {- Unfolding: (case Tests.$winferFV
+                        Tests.tests_infer_rec11
+                        Tests.tests_infer_cond6 of ww { Unit# ww1 ->
+                 case ww1 Tests.inferRun3 of wild {
+                   Common.ValidRes s' ds -> s'
+                   Common.ErrorRes ds -> Tests.inferRun1 } }) -}
+a3b6ce7ab75bc48e1f981b06788e7499
+  tests_infer_cond6 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   Tests.tests_infer_cond7) -}
+1322a1d330ae2dfbb55db06e463a654f
+  tests_infer_cond7 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("if false then 0 else \"hello\""#) -}
+b4017e407cdc67b38021a7122cf63a00
+  tests_infer_cond8 ::
+    (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)
+  {- Strictness: m,
+     Unfolding: ((Tests.tests_infer_cond11, Tests.tests_infer_cond9,
+                  Tests.tests_infer_cond4)) -}
+08e172f2675722fefb255c867de051c9
+  tests_infer_cond9 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   Tests.tests_infer_cond10) -}
+7f8d7f8f10bd6b43610ddf298a79839e
+  tests_infer_const ::
+    [(GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)
+                   Tests.tests_infer_const16
+                   Tests.tests_infer_const1) -}
+0ec76e9f78aafa9e305f7bf8bcf6e65d
+  tests_infer_const1 ::
+    [(GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)
+                   Tests.tests_infer_const12
+                   Tests.tests_infer_const2) -}
+bad101c897e820f59ab6ae01a1dbeca6
+  tests_infer_const10 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("unit"#) -}
+1d8b5e226f4218923bac3dd1f0f795c4
+  tests_infer_const11 :: GHC.Base.String
+  {- Unfolding: (case Tests.$winferFV
+                        Tests.tests_infer_rec11
+                        Tests.tests_infer_rec11 of ww { Unit# ww1 ->
+                 case ww1 Tests.inferRun3 of wild {
+                   Common.ValidRes s' ds -> s'
+                   Common.ErrorRes ds -> Tests.inferRun1 } }) -}
+16605c17cdc8d7b9405a7859b51945b5
+  tests_infer_const12 ::
+    (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)
+  {- Strictness: m,
+     Unfolding: ((Tests.tests_infer_const13, Tests.tests_infer_cond9,
+                  Tests.tests_infer_rec14)) -}
+43157c4cc4e7071f1aabeb03a0eb9ccb
+  tests_infer_const13 :: GHC.Base.String
+  {- Unfolding: (case Tests.$winferFV
+                        Tests.tests_infer_rec11
+                        Tests.tests_infer_const14 of ww { Unit# ww1 ->
+                 case ww1 Tests.inferRun3 of wild {
+                   Common.ValidRes s' ds -> s'
+                   Common.ErrorRes ds -> Tests.inferRun1 } }) -}
+6b4cbb490f97f51396debc2e42ca0895
+  tests_infer_const14 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   Tests.tests_infer_const15) -}
+7524529bd5acf1f4851bb9c4db33bfe5
+  tests_infer_const15 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("true"#) -}
+28325a81a324abd8b11fed7c4b3bf308
+  tests_infer_const16 ::
+    (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)
+  {- Strictness: m,
+     Unfolding: ((Tests.tests_infer_const17, Tests.tests_infer_rec20,
+                  Tests.tests_infer_rec14)) -}
+e9207044515bc245b5e74d9a975fe28d
+  tests_infer_const17 :: GHC.Base.String
+  {- Unfolding: (case Tests.$winferFV
+                        Tests.tests_infer_rec11
+                        Tests.tests_infer_const18 of ww { Unit# ww1 ->
+                 case ww1 Tests.inferRun3 of wild {
+                   Common.ValidRes s' ds -> s'
+                   Common.ErrorRes ds -> Tests.inferRun1 } }) -}
+e4c79764f4e5ade686a91b44c6297665
+  tests_infer_const18 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   Tests.tests_infer_const19) -}
+63e1659e2917ff54496fea5cedf0ce95
+  tests_infer_const19 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("46"#) -}
+29296dabdeeca6506dd51a6133946fa1
+  tests_infer_const2 ::
+    [(GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)
+                   Tests.tests_infer_const8
+                   Tests.tests_infer_const3) -}
+a9f021c958062fa8b19f6eba33b43c08
+  tests_infer_const3 ::
+    [(GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)
+                   Tests.tests_infer_const4
+                   (GHC.Types.[]
+                      @ (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int))) -}
+f6ece12d1840a265faeabd0e6be48821
+  tests_infer_const4 ::
+    (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)
+  {- Strictness: m,
+     Unfolding: ((Tests.tests_infer_const5, Tests.tests_infer_let5,
+                  Tests.tests_infer_rec19)) -}
+12a459fd8753592f19be1d5b94d828c8
+  tests_infer_const5 :: GHC.Base.String
+  {- Unfolding: (case Tests.$winferFV
+                        Tests.tests_infer_rec11
+                        Tests.tests_infer_const6 of ww { Unit# ww1 ->
+                 case ww1 Tests.inferRun3 of wild {
+                   Common.ValidRes s' ds -> s'
+                   Common.ErrorRes ds -> Tests.inferRun1 } }) -}
+2c0f6113ca5dd89aef0cbb0a7486cc90
+  tests_infer_const6 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   Tests.tests_infer_const7) -}
+92d73c3ff78cbfcd99c1e43800cbac39
+  tests_infer_const7 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("[]"#) -}
+611696ce88a9b147ed6fe33149b58fbf
+  tests_infer_const8 ::
+    (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)
+  {- Strictness: m,
+     Unfolding: ((Tests.tests_infer_const11, Tests.tests_infer_const9,
+                  Tests.tests_infer_rec14)) -}
+c6997c8f31949fb6dea478af8d48c772
+  tests_infer_const9 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   Tests.tests_infer_const10) -}
+3afab168812241945f8df28cf68ffaa3
+  tests_infer_fun ::
+    [(GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)
+                   Tests.tests_infer_fun23
+                   Tests.tests_infer_fun1) -}
+180bfb8d28c96d3a4f7e645038490499
+  tests_infer_fun1 ::
+    [(GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)
+                   Tests.tests_infer_fun17
+                   Tests.tests_infer_fun2) -}
+c41b2b292f7e74efa07bc2e125eab67e
+  tests_infer_fun10 ::
+    (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)
+  {- Strictness: m,
+     Unfolding: ((Tests.tests_infer_fun12, Tests.tests_infer_app8,
+                  Tests.tests_infer_fun11)) -}
+c795b8356767d61051c39450306fd339
+  tests_infer_fun11 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 3#) -}
+16415b18412940af3353fc6af022601d
+  tests_infer_fun12 :: GHC.Base.String
+  {- Unfolding: (case Tests.$winferFV
+                        Tests.tests_infer_fun15
+                        Tests.tests_infer_fun13 of ww { Unit# ww1 ->
+                 case ww1 Tests.inferRun3 of wild {
+                   Common.ValidRes s' ds -> s'
+                   Common.ErrorRes ds -> Tests.inferRun1 } }) -}
+09ee239b2c97bb75a79d1e4b0677cefa
+  tests_infer_fun13 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   Tests.tests_infer_fun14) -}
+ace57a13383613ccf117b6e36a0d5f07
+  tests_infer_fun14 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("fun y -> y + x"#) -}
+f342fa032051b2518d8c0ede63c6f4f8
+  tests_infer_fun15 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   Tests.tests_infer_fun16) -}
+9a0740c02a6ec2ce07dcf759f2365278
+  tests_infer_fun16 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("(x -> 7)"#) -}
+636c965e3e8cef4316abfcdc292f3357
+  tests_infer_fun17 ::
+    (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)
+  {- Strictness: m,
+     Unfolding: ((Tests.tests_infer_fun20, Tests.tests_infer_fun18,
+                  Tests.tests_infer_rec19)) -}
+b56ad43780c8876e9f08fe74eae66819
+  tests_infer_fun18 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   Tests.tests_infer_fun19) -}
+06016efa9dc15d4a6fad3bbdf17a6722
+  tests_infer_fun19 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("('a -> ('b -> int))"#) -}
+5e079464f5b383ed224ccdd078d58a27
+  tests_infer_fun2 ::
+    [(GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)
+                   Tests.tests_infer_fun10
+                   Tests.tests_infer_fun3) -}
+042af0e51b3db2fc2e14c2d02afb3fe3
+  tests_infer_fun20 :: GHC.Base.String
+  {- Unfolding: (case Tests.$winferFV
+                        Tests.tests_infer_rec11
+                        Tests.tests_infer_fun21 of ww { Unit# ww1 ->
+                 case ww1 Tests.inferRun3 of wild {
+                   Common.ValidRes s' ds -> s'
+                   Common.ErrorRes ds -> Tests.inferRun1 } }) -}
+06828ca48a2930b10d7cd36bef5daf8e
+  tests_infer_fun21 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   Tests.tests_infer_fun22) -}
+6e81cdf1ad157fedb5f870a228d948d3
+  tests_infer_fun22 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("fun x -> fun y -> 1"#) -}
+e2d5d7494003c4c3993432ea3a1a88b9
+  tests_infer_fun23 ::
+    (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)
+  {- Strictness: m,
+     Unfolding: ((Tests.tests_infer_fun24, Tests.tests_infer_app8,
+                  Tests.tests_infer_fun11)) -}
+0a9459fd238f14417654d6a0336dac8b
+  tests_infer_fun24 :: GHC.Base.String
+  {- Unfolding: (case Tests.$winferFV
+                        Tests.tests_infer_rec11
+                        Tests.tests_infer_fun25 of ww { Unit# ww1 ->
+                 case ww1 Tests.inferRun3 of wild {
+                   Common.ValidRes s' ds -> s'
+                   Common.ErrorRes ds -> Tests.inferRun1 } }) -}
+5187f9664e6bd29ffb2c53bcd68ed270
+  tests_infer_fun25 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   Tests.tests_infer_fun26) -}
+d8fa91d81b3a824c833c02c3b508b894
+  tests_infer_fun26 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("fun x -> x + 1"#) -}
+13932455b2ad67242d0415df36e8579c
+  tests_infer_fun3 ::
+    [(GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)
+                   Tests.tests_infer_fun4
+                   (GHC.Types.[]
+                      @ (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int))) -}
+0a3e5bfda9aa57099d8d98df6f9ccff0
+  tests_infer_fun4 ::
+    (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)
+  {- Strictness: m,
+     Unfolding: ((Tests.tests_infer_fun7, Tests.tests_infer_fun5,
+                  Tests.tests_infer_rec19)) -}
+2b56c041035ad425e06b8517f8eb857e
+  tests_infer_fun5 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   Tests.tests_infer_fun6) -}
+5cdf807eb8771780f29c86a351aec0b9
+  tests_infer_fun6 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("('a -> 'a)"#) -}
+2126ae28e65da6777bdc23dae3b61e4b
+  tests_infer_fun7 :: GHC.Base.String
+  {- Unfolding: (case Tests.$winferFV
+                        Tests.tests_infer_rec11
+                        Tests.tests_infer_fun8 of ww { Unit# ww1 ->
+                 case ww1 Tests.inferRun3 of wild {
+                   Common.ValidRes s' ds -> s'
+                   Common.ErrorRes ds -> Tests.inferRun1 } }) -}
+1e51c0c422562d54a322219353397af6
+  tests_infer_fun8 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   Tests.tests_infer_fun9) -}
+602e552bef97f63afd0c873a68efb026
+  tests_infer_fun9 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("fun x -> x"#) -}
+f8dece17d5f6918a44f38d384ed55a63
+  tests_infer_let ::
+    [(GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)
+                   Tests.tests_infer_let20
+                   Tests.tests_infer_let1) -}
+e9fdad7504f14ec53f18c448811c7701
+  tests_infer_let1 ::
+    [(GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)
+                   Tests.tests_infer_let16
+                   Tests.tests_infer_let2) -}
+7c960b405e1de24f2a79260ddba3f64f
+  tests_infer_let10 ::
+    (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)
+  {- Strictness: m,
+     Unfolding: ((Tests.tests_infer_let11, Tests.tests_infer_rec20,
+                  Tests.tests_infer_rec14)) -}
+6828f9efa7cc6be0eff71644423b71ba
+  tests_infer_let11 :: GHC.Base.String
+  {- Unfolding: (case Tests.$winferFV
+                        Tests.tests_infer_let14
+                        Tests.tests_infer_let12 of ww { Unit# ww1 ->
+                 case ww1 Tests.inferRun3 of wild {
+                   Common.ValidRes s' ds -> s'
+                   Common.ErrorRes ds -> Tests.inferRun1 } }) -}
+adc870fa027d813febc4e2a4632d7c9e
+  tests_infer_let12 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   Tests.tests_infer_let13) -}
+adb4584bdd8e80e1d647a52bf63b39a6
+  tests_infer_let13 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("let x = 0 in x"#) -}
+962765eed101ed6364500d5d8c8880ca
+  tests_infer_let14 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   Tests.tests_infer_let15) -}
+c098993b890764218eda171c3d056613
+  tests_infer_let15 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("(x -> bool)"#) -}
+f7f3998cd86537e55ce3218bd967e0d2
+  tests_infer_let16 ::
+    (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)
+  {- Strictness: m,
+     Unfolding: ((Tests.tests_infer_let17, Tests.tests_infer_rec20,
+                  Tests.tests_infer_rec19)) -}
+3bfd42ae65bbd3eb15d81267bf5d8830
+  tests_infer_let17 :: GHC.Base.String
+  {- Unfolding: (case Tests.$winferFV
+                        Tests.tests_infer_rec11
+                        Tests.tests_infer_let18 of ww { Unit# ww1 ->
+                 case ww1 Tests.inferRun3 of wild {
+                   Common.ValidRes s' ds -> s'
+                   Common.ErrorRes ds -> Tests.inferRun1 } }) -}
+f597649c410ea3e59441dce72f103381
+  tests_infer_let18 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   Tests.tests_infer_let19) -}
+7a7fcd78da559e2c50b1699269e4bef4
+  tests_infer_let19 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("let f = 1 in f"#) -}
+d4ab881bcc68be50ba26e57761c4a157
+  tests_infer_let2 ::
+    [(GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)
+                   Tests.tests_infer_let10
+                   Tests.tests_infer_let3) -}
+a7cad6ecc4d9f6fc24da1fec7c627517
+  tests_infer_let20 ::
+    (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)
+  {- Strictness: m,
+     Unfolding: ((Tests.tests_infer_let21, Tests.tests_infer_rec20,
+                  Tests.tests_infer_rec14)) -}
+0a72e9a4093f575b0b43f9310003deb8
+  tests_infer_let21 :: GHC.Base.String
+  {- Unfolding: (case Tests.$winferFV
+                        Tests.tests_infer_rec11
+                        Tests.tests_infer_let22 of ww { Unit# ww1 ->
+                 case ww1 Tests.inferRun3 of wild {
+                   Common.ValidRes s' ds -> s'
+                   Common.ErrorRes ds -> Tests.inferRun1 } }) -}
+ff7dd05db0c7fe1b8411e2022e34db9f
+  tests_infer_let22 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   Tests.tests_infer_let23) -}
+72cd40f0caa372e2e95452699fd277cc
+  tests_infer_let23 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("let x = 0 in 0"#) -}
+35b3e41a5ac09bca163df26c478d61b3
+  tests_infer_let3 ::
+    [(GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)
+                   Tests.tests_infer_let4
+                   (GHC.Types.[]
+                      @ (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int))) -}
+5285db87ac5d93f8dd9e584c7aab00c2
+  tests_infer_let4 ::
+    (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)
+  {- Strictness: m,
+     Unfolding: ((Tests.tests_infer_let7, Tests.tests_infer_let5,
+                  Tests.tests_infer_rec14)) -}
+63d42c38275091f8977ae70979d6a93e
+  tests_infer_let5 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   Tests.tests_infer_let6) -}
+b090706b107fd7081b569231ec719bc2
+  tests_infer_let6 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'a list"#) -}
+83833a07b1d743fe443ded342ed4dfd6
+  tests_infer_let7 :: GHC.Base.String
+  {- Unfolding: (case Tests.$winferFV
+                        Tests.tests_infer_rec11
+                        Tests.tests_infer_let8 of ww { Unit# ww1 ->
+                 case ww1 Tests.inferRun3 of wild {
+                   Common.ValidRes s' ds -> s'
+                   Common.ErrorRes ds -> Tests.inferRun1 } }) -}
+2b7dcaa0095ed49c2706094254c53a72
+  tests_infer_let8 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   Tests.tests_infer_let9) -}
+92de4922d8cac6b9cee2c62b5cdbe82e
+  tests_infer_let9 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("let h = [] in h"#) -}
+852326a0bf6ac587dd28c6cddfc88877
+  tests_infer_op ::
+    [(GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)
+                   Tests.tests_infer_op27
+                   Tests.tests_infer_op1) -}
+8770908b2914ce78be0c66db203ecccb
+  tests_infer_op1 ::
+    [(GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)
+                   Tests.tests_infer_op21
+                   Tests.tests_infer_op2) -}
+88010f27120231d4066422e594eb00d7
+  tests_infer_op10 :: GHC.Base.String
+  {- Unfolding: (case Tests.$winferFV
+                        Tests.tests_infer_rec11
+                        Tests.tests_infer_op11 of ww { Unit# ww1 ->
+                 case ww1 Tests.inferRun3 of wild {
+                   Common.ValidRes s' ds -> s'
+                   Common.ErrorRes ds -> Tests.inferRun1 } }) -}
+50180e3d2cb77be886ec95faf2a1415c
+  tests_infer_op11 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   Tests.tests_infer_op12) -}
+58d9309c1b432ad47ed4c515b6058db3
+  tests_infer_op12 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("not ((~ 7 * 8 / 1 - 4) > 3)"#) -}
+7cf6b797a462f7673a0b139b59e2ec0b
+  tests_infer_op13 ::
+    (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)
+  {- Strictness: m,
+     Unfolding: ((Tests.tests_infer_op16, Tests.tests_infer_op14,
+                  Tests.tests_infer_rec19)) -}
+ca49c6c8233897120c7755f807fa096d
+  tests_infer_op14 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   Tests.tests_infer_op15) -}
+330e4764e8d0b71b98b666c0db4b2987
+  tests_infer_op15 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("string"#) -}
+32ca9dea66c0acacb3f8a744a28f9662
+  tests_infer_op16 :: GHC.Base.String
+  {- Unfolding: (case Tests.$winferFV
+                        Tests.tests_infer_op19
+                        Tests.tests_infer_op17 of ww { Unit# ww1 ->
+                 case ww1 Tests.inferRun3 of wild {
+                   Common.ValidRes s' ds -> s'
+                   Common.ErrorRes ds -> Tests.inferRun1 } }) -}
+efc77c249cac80e78a65b385454205ad
+  tests_infer_op17 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   Tests.tests_infer_op18) -}
+c123cd9aa71d164f5097d8c1d0429791
+  tests_infer_op18 :: GHC.Prim.Addr#
+  {- HasNoCafRefs,
+     Unfolding: ("snd ((print x), (\"6\" ^ \"booboo\"))"#) -}
+c7546e09fe307755d6a65a8a6a6e6d1d
+  tests_infer_op19 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   Tests.tests_infer_op20) -}
+3425a08a650719142f9ad6b7edc189de
+  tests_infer_op2 ::
+    [(GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)
+                   Tests.tests_infer_op13
+                   Tests.tests_infer_op3) -}
+e0f0b56dd810ecf8f006aa9890e59216
+  tests_infer_op20 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("(x -> string)"#) -}
+6bc16e3b7320aa9a929865ca6aec7105
+  tests_infer_op21 ::
+    (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)
+  {- Strictness: m,
+     Unfolding: ((Tests.tests_infer_op24, Tests.tests_infer_op22,
+                  Tests.tests_infer_rec19)) -}
+1ab2247e15a310762eced9c59d6d28d3
+  tests_infer_op22 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   Tests.tests_infer_op23) -}
+eed65c02384037a8db65ca0f1ce3974f
+  tests_infer_op23 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("int list"#) -}
+f8101ff45df9397e8cdb7e6cf96980d3
+  tests_infer_op24 :: GHC.Base.String
+  {- Unfolding: (case Tests.$winferFV
+                        Tests.tests_infer_rec11
+                        Tests.tests_infer_op25 of ww { Unit# ww1 ->
+                 case ww1 Tests.inferRun3 of wild {
+                   Common.ValidRes s' ds -> s'
+                   Common.ErrorRes ds -> Tests.inferRun1 } }) -}
+bead7e02acbac2440ef5ffc20407ab65
+  tests_infer_op25 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   Tests.tests_infer_op26) -}
+2c927db256bd5a8988b8c1091e9f6b3f
+  tests_infer_op26 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("6 :: []"#) -}
+c6ce793d22c8b16a92ac33790d85eb87
+  tests_infer_op27 ::
+    (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)
+  {- Strictness: m,
+     Unfolding: ((Tests.tests_infer_op28, Tests.tests_infer_rec20,
+                  Tests.tests_infer_rec14)) -}
+9ad33ac41f389884fcdf1e8ddb316ac9
+  tests_infer_op28 :: GHC.Base.String
+  {- Unfolding: (case Tests.$winferFV
+                        Tests.tests_infer_rec11
+                        Tests.tests_infer_op29 of ww { Unit# ww1 ->
+                 case ww1 Tests.inferRun3 of wild {
+                   Common.ValidRes s' ds -> s'
+                   Common.ErrorRes ds -> Tests.inferRun1 } }) -}
+1676b5d9b1bde049f5665579039a0d08
+  tests_infer_op29 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   Tests.tests_infer_op30) -}
+bd395bf5d3857468e610d5c465f33ca6
+  tests_infer_op3 ::
+    [(GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)
+                   Tests.tests_infer_op9
+                   Tests.tests_infer_op4) -}
+697248a8748a173edfe5ba544b3c9f6d
+  tests_infer_op30 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("6 + 6"#) -}
+34848253d8adac47defd35190e027816
+  tests_infer_op4 ::
+    [(GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)
+                   Tests.tests_infer_op5
+                   (GHC.Types.[]
+                      @ (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int))) -}
+a86c1a974f5c95978703e3e6cd5e5a3f
+  tests_infer_op5 ::
+    (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)
+  {- Strictness: m,
+     Unfolding: ((Tests.tests_infer_op6, Tests.tests_infer_cond9,
+                  Tests.tests_infer_fun11)) -}
+4120c3dc77e72cca76e3ec5bf74a3f73
+  tests_infer_op6 :: GHC.Base.String
+  {- Unfolding: (case Tests.$winferFV
+                        Tests.tests_infer_rec11
+                        Tests.tests_infer_op7 of ww { Unit# ww1 ->
+                 case ww1 Tests.inferRun3 of wild {
+                   Common.ValidRes s' ds -> s'
+                   Common.ErrorRes ds -> Tests.inferRun1 } }) -}
+4a23a762ca2e34f7c3f0bfa49d71fd03
+  tests_infer_op7 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Tests.tests_infer_op8) -}
+501c9567756f85aa57391d2dd692cde0
+  tests_infer_op8 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("fst ((6 = hd (7 :: [])), tl [])"#) -}
+0013ce7b7072219b26fda7f410da7c32
+  tests_infer_op9 ::
+    (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)
+  {- Strictness: m,
+     Unfolding: ((Tests.tests_infer_op10, Tests.tests_infer_cond9,
+                  Tests.tests_infer_rec19)) -}
+1e0325866b4ccc670c388b59b7a2ed0a
+  tests_infer_rec ::
+    [(GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)
+                   Tests.tests_infer_rec25
+                   Tests.tests_infer_rec1) -}
+4a5365b9e70159c6750addf4efdabc37
+  tests_infer_rec1 ::
+    [(GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)
+                   Tests.tests_infer_rec18
+                   Tests.tests_infer_rec2) -}
+089f951e3627256ef09bfbc0ce1fa45f
+  tests_infer_rec10 :: GHC.Prim.Addr#
+  {- HasNoCafRefs,
+     Unfolding: ("let rec f x = x in ((f 0), (f false))"#) -}
+4b02b1ff08e1bd64ba79e853a34ed24f
+  tests_infer_rec11 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   Tests.tests_infer_rec12) -}
+c915908c1b1e0c237341ef40406a34f0
+  tests_infer_rec12 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("()"#) -}
+520bc928fb479b512e78f65d181a2c05
+  tests_infer_rec13 ::
+    (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)
+  {- Strictness: m,
+     Unfolding: ((Tests.tests_infer_rec15, Tests.inferRun1,
+                  Tests.tests_infer_rec14)) -}
+efccc8339a4699f3b3f579acd30382b9
+  tests_infer_rec14 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 1#) -}
+0c1daae773e51bec6311a232b7826f3a
+  tests_infer_rec15 :: GHC.Base.String
+  {- Unfolding: (case Tests.$winferFV
+                        Tests.tests_infer_rec11
+                        Tests.tests_infer_rec16 of ww { Unit# ww1 ->
+                 case ww1 Tests.inferRun3 of wild {
+                   Common.ValidRes s' ds -> s'
+                   Common.ErrorRes ds -> Tests.inferRun1 } }) -}
+54ee5f337baf704b9e9b9e2ee3cd7736
+  tests_infer_rec16 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   Tests.tests_infer_rec17) -}
+4be5290c446232d44139c42a608798cd
+  tests_infer_rec17 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("let rec f g = g f in f f"#) -}
+4a3de0aea4ecf98ef50fada6a1f6100f
+  tests_infer_rec18 ::
+    (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)
+  {- Strictness: m,
+     Unfolding: ((Tests.tests_infer_rec22, Tests.tests_infer_rec20,
+                  Tests.tests_infer_rec19)) -}
+78d1fc8af4db1489a233b05546095a3b
+  tests_infer_rec19 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 2#) -}
+a15fee874409c93a01d25365d1ba84cb
+  tests_infer_rec2 ::
+    [(GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)
+                   Tests.tests_infer_rec13
+                   Tests.tests_infer_rec3) -}
+90b2464d746703a1dac261faa32ac259
+  tests_infer_rec20 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   Tests.tests_infer_rec21) -}
+7c300964c687ddeb25c93374836ea4c9
+  tests_infer_rec21 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("int"#) -}
+4d1a26baa66e35d5762b1327f13fe1cf
+  tests_infer_rec22 :: GHC.Base.String
+  {- Unfolding: (case Tests.$winferFV
+                        Tests.tests_infer_rec11
+                        Tests.tests_infer_rec23 of ww { Unit# ww1 ->
+                 case ww1 Tests.inferRun3 of wild {
+                   Common.ValidRes s' ds -> s'
+                   Common.ErrorRes ds -> Tests.inferRun1 } }) -}
+a6a24c75aee9ef6502ae37f97b4c1fcf
+  tests_infer_rec23 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   Tests.tests_infer_rec24) -}
+7de7fe6f263b7ff566f1de38cb5c3a4c
+  tests_infer_rec24 :: GHC.Prim.Addr#
+  {- HasNoCafRefs,
+     Unfolding: ("let rec f x = if 0 > x then (f (x - 1)) + 1 else 1 in f 5"#) -}
+29e7d0b06cdddc89817b48906918151a
+  tests_infer_rec25 ::
+    (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)
+  {- Strictness: m,
+     Unfolding: ((Tests.tests_infer_rec28, Tests.tests_infer_rec26,
+                  Tests.tests_infer_rec19)) -}
+8553a8a5c467dc393865e71518abc12d
+  tests_infer_rec26 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   Tests.tests_infer_rec27) -}
+aae3c6579e78203173b1c2c557c10970
+  tests_infer_rec27 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'a"#) -}
+f5ad4e4b0a823d07971a2efcd645958c
+  tests_infer_rec28 :: GHC.Base.String
+  {- Unfolding: (case Tests.$winferFV
+                        Tests.tests_infer_rec11
+                        Tests.tests_infer_rec29 of ww { Unit# ww1 ->
+                 case ww1 Tests.inferRun3 of wild {
+                   Common.ValidRes s' ds -> s'
+                   Common.ErrorRes ds -> Tests.inferRun1 } }) -}
+f60e10866d03e200cc1996e01523abc9
+  tests_infer_rec29 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   Tests.tests_infer_rec30) -}
+38ca703f37670178ac568399d6052672
+  tests_infer_rec3 ::
+    [(GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)
+                   Tests.tests_infer_rec4
+                   (GHC.Types.[]
+                      @ (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int))) -}
+feaf2b54690318990cd7faf3cef1881e
+  tests_infer_rec30 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("let rec f x = f x in f false"#) -}
+8dda021ec98f1cf8b5b8305b32b5ab8d
+  tests_infer_rec4 ::
+    (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)
+  {- Strictness: m,
+     Unfolding: ((Tests.tests_infer_rec8, Tests.tests_infer_rec6,
+                  Tests.tests_infer_rec5)) -}
+63da3719ee2b68c986885fc6e86b5b7f
+  tests_infer_rec5 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 5#) -}
+eb7c71aa7d84bddefdaad9d44f20dd1b
+  tests_infer_rec6 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   Tests.tests_infer_rec7) -}
+a5fc6b8bdeae06bbca05e81360f18a8f
+  tests_infer_rec7 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("(int * bool)"#) -}
+5a5c73c74f44411c4638f3bb89bf8b1b
+  tests_infer_rec8 :: GHC.Base.String
+  {- Unfolding: (case Tests.$winferFV
+                        Tests.tests_infer_rec11
+                        Tests.tests_infer_rec9 of ww { Unit# ww1 ->
+                 case ww1 Tests.inferRun3 of wild {
+                   Common.ValidRes s' ds -> s'
+                   Common.ErrorRes ds -> Tests.inferRun1 } }) -}
+425ee09d67bf26d5bd5522b3d2281b33
+  tests_infer_rec9 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   Tests.tests_infer_rec10) -}
+2d6f2d8e4d28493daad1db540b666482
+  tests_infer_var ::
+    [(GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)
+                   Tests.tests_infer_var15
+                   Tests.tests_infer_var1) -}
+fdf09a16a5a98d9cedbd69ea1d258e89
+  tests_infer_var1 ::
+    [(GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)
+                   Tests.tests_infer_var9
+                   Tests.tests_infer_var2) -}
+8e30378fa69db7b9a42a2d9672daee23
+  tests_infer_var10 :: GHC.Base.String
+  {- Unfolding: (case Tests.$winferFV
+                        Tests.tests_infer_var13
+                        Tests.tests_infer_var11 of ww { Unit# ww1 ->
+                 case ww1 Tests.inferRun3 of wild {
+                   Common.ValidRes s' ds -> s'
+                   Common.ErrorRes ds -> Tests.inferRun1 } }) -}
+f2e5362d7a1568dc84bb217c2177a809
+  tests_infer_var11 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   Tests.tests_infer_var12) -}
+80d08e72766837bf92f4bb0b555516f2
+  tests_infer_var12 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("f"#) -}
+8bb2b145cdcf3aed67edf787d97185dd
+  tests_infer_var13 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   Tests.tests_infer_var14) -}
+b793446e2f14b28262d23c22f11de91c
+  tests_infer_var14 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("(f -> int)"#) -}
+56bf1757729cdb6a07d881603d8ffb26
+  tests_infer_var15 ::
+    (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)
+  {- Strictness: m,
+     Unfolding: ((Tests.tests_infer_var16, Tests.inferRun1,
+                  Tests.tests_infer_rec14)) -}
+da2dc06ec7c4cd81d47c7c27b07b6da3
+  tests_infer_var16 :: GHC.Base.String
+  {- Unfolding: (case Tests.$winferFV
+                        Tests.tests_infer_rec11
+                        Tests.tests_infer_var5 of ww { Unit# ww1 ->
+                 case ww1 Tests.inferRun3 of wild {
+                   Common.ValidRes s' ds -> s'
+                   Common.ErrorRes ds -> Tests.inferRun1 } }) -}
+00d9e6688465ecc6c4e872a3196fa635
+  tests_infer_var2 ::
+    [(GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)
+                   Tests.tests_infer_var3
+                   (GHC.Types.[]
+                      @ (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int))) -}
+65ba87a1f5a7fa0c19292872313566a8
+  tests_infer_var3 ::
+    (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)
+  {- Strictness: m,
+     Unfolding: ((Tests.tests_infer_var4, Tests.tests_infer_rec26,
+                  Tests.tests_infer_rec19)) -}
+f040570c77c83580fd9c859d31a1907b
+  tests_infer_var4 :: GHC.Base.String
+  {- Unfolding: (case Tests.$winferFV
+                        Tests.tests_infer_var7
+                        Tests.tests_infer_var5 of ww { Unit# ww1 ->
+                 case ww1 Tests.inferRun3 of wild {
+                   Common.ValidRes s' ds -> s'
+                   Common.ErrorRes ds -> Tests.inferRun1 } }) -}
+a3541c7a23856da3fe09b2bd3a5f4a42
+  tests_infer_var5 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   Tests.tests_infer_var6) -}
+898f9e778f34f864d5899e8fcd180482
+  tests_infer_var6 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("x"#) -}
+bc04e2f4f8fe8761d4b145a7c62bcc53
+  tests_infer_var7 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   Tests.tests_infer_var8) -}
+6b1f88d69fdf0fbf7d3b3e1a45b0af9c
+  tests_infer_var8 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("(x -> 0. 0)"#) -}
+ed17b4dd2a3338bf1e318fd0ab8c7a40
+  tests_infer_var9 ::
+    (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)
+  {- Strictness: m,
+     Unfolding: ((Tests.tests_infer_var10, Tests.tests_infer_rec20,
+                  Tests.tests_infer_rec19)) -}
+c9cb3ab117b6165b9a2e87f59fa824ac
+  tests_unify_all ::
+    [(GHC.Base.String,
+      [(GHC.Base.String, GHC.Base.String, GHC.Types.Int)])]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.String,
+                      [(GHC.Base.String, GHC.Base.String, GHC.Types.Int)])
+                   Tests.tests_unify_all21
+                   Tests.tests_unify_all1) -}
+dcd2ba569afed89a4dd4244edde0fcf2
+  tests_unify_all1 ::
+    [(GHC.Base.String,
+      [(GHC.Base.String, GHC.Base.String, GHC.Types.Int)])]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.String,
+                      [(GHC.Base.String, GHC.Base.String, GHC.Types.Int)])
+                   Tests.tests_unify_all18
+                   Tests.tests_unify_all2) -}
+9642e77fde051e4d453c68d2f02a7335
+  tests_unify_all10 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   Tests.tests_unify_all11) -}
+78e89fc4c3c4e432a90b6e99edbfa64a
+  tests_unify_all11 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("error cases"#) -}
+c3a28028a9bf048858b39e9f78bac44a
+  tests_unify_all12 ::
+    ([GHC.Types.Char],
+     [(GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)])
+  {- Strictness: m,
+     Unfolding: ((Tests.tests_unify_all13, Tests.tests_unify_decomp)) -}
+f9dae8a785eb69424f463eedf5288cd2
+  tests_unify_all13 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   Tests.tests_unify_all14) -}
+5a36ff7fddc1ab2767c684133b623ae5
+  tests_unify_all14 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("decomposition rule"#) -}
+45c24eb2c987d84d2e636a0f3705b571
+  tests_unify_all15 ::
+    ([GHC.Types.Char],
+     [(GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)])
+  {- Strictness: m,
+     Unfolding: ((Tests.tests_unify_all16, Tests.tests_unify_orient)) -}
+84109b09b6a5e43c34368b0b830f2fcc
+  tests_unify_all16 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   Tests.tests_unify_all17) -}
+1f15895f1c4b6462d64db274bde0bcd3
+  tests_unify_all17 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("orient rule"#) -}
+1b251af1d6e5745136630ce1defed396
+  tests_unify_all18 ::
+    ([GHC.Types.Char],
+     [(GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)])
+  {- Strictness: m,
+     Unfolding: ((Tests.tests_unify_all19, Tests.tests_unify_del)) -}
+4be048cc61eedb332242ae970f38ac8a
+  tests_unify_all19 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   Tests.tests_unify_all20) -}
+95b2d14aed7028ed491e3370d3e90b87
+  tests_unify_all2 ::
+    [(GHC.Base.String,
+      [(GHC.Base.String, GHC.Base.String, GHC.Types.Int)])]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.String,
+                      [(GHC.Base.String, GHC.Base.String, GHC.Types.Int)])
+                   Tests.tests_unify_all15
+                   Tests.tests_unify_all3) -}
+19f5b08a283cb0d80cf9ea98f03a630d
+  tests_unify_all20 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("delete rule"#) -}
+2e2d60a80c03d306a6874618d040a897
+  tests_unify_all21 ::
+    ([GHC.Types.Char],
+     [(GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)])
+  {- Strictness: m,
+     Unfolding: ((Tests.tests_unify_all22, Tests.tests_unify_elim)) -}
+b78f1bf37bac9eefe945ba510bf7ed6f
+  tests_unify_all22 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   Tests.tests_unify_all23) -}
+3754efab6f98b39641601bbc09a38020
+  tests_unify_all23 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("basic elimination"#) -}
+a459fe4630a8039206646f8be145508b
+  tests_unify_all3 ::
+    [(GHC.Base.String,
+      [(GHC.Base.String, GHC.Base.String, GHC.Types.Int)])]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.String,
+                      [(GHC.Base.String, GHC.Base.String, GHC.Types.Int)])
+                   Tests.tests_unify_all12
+                   Tests.tests_unify_all4) -}
+ff2e672503033b7e63bc1827be998911
+  tests_unify_all4 ::
+    [(GHC.Base.String,
+      [(GHC.Base.String, GHC.Base.String, GHC.Types.Int)])]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.String,
+                      [(GHC.Base.String, GHC.Base.String, GHC.Types.Int)])
+                   Tests.tests_unify_all9
+                   Tests.tests_unify_all5) -}
+fe2d18c97884fed0405f83c4509d28cf
+  tests_unify_all5 ::
+    [(GHC.Base.String,
+      [(GHC.Base.String, GHC.Base.String, GHC.Types.Int)])]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.String,
+                      [(GHC.Base.String, GHC.Base.String, GHC.Types.Int)])
+                   Tests.tests_unify_all6
+                   (GHC.Types.[]
+                      @ (GHC.Base.String,
+                         [(GHC.Base.String, GHC.Base.String, GHC.Types.Int)]))) -}
+c324da38dc4d80654dc5f667cdd582e1
+  tests_unify_all6 ::
+    ([GHC.Types.Char],
+     [(GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)])
+  {- Strictness: m,
+     Unfolding: ((Tests.tests_unify_all7, Tests.tests_unify_comp)) -}
+de84d55ef69b422c1bc40a81690a1e66
+  tests_unify_all7 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   Tests.tests_unify_all8) -}
+41860d6e17244230715f75402a1ed976
+  tests_unify_all8 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("more complex tests"#) -}
+b36c48978e898ce30bbd2b1f9f3d14de
+  tests_unify_all9 ::
+    ([GHC.Types.Char],
+     [(GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)])
+  {- Strictness: m,
+     Unfolding: ((Tests.tests_unify_all10, Tests.tests_unify_error)) -}
+190bad0385dc3fc521c4e93ee483cd17
+  tests_unify_comp ::
+    [(GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)
+                   Tests.tests_unify_comp7
+                   Tests.tests_unify_comp1) -}
+269bf61327d8399fb2934364e84580d4
+  tests_unify_comp1 ::
+    [(GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)
+                   Tests.tests_unify_comp2
+                   (GHC.Types.[]
+                      @ (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int))) -}
+5dcb73dd7cccfeb68a485089a70c5824
+  tests_unify_comp10 :: GHC.Base.String
+  {- Unfolding: (Tests.unifyRun
+                   (GHC.CString.unpackCString# Tests.tests_unify_comp11)) -}
+681b644bdc116685154f440ac740a4cd
+  tests_unify_comp11 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("(0 * int = 1, 0 = string)"#) -}
+15525fbcbaec3863ef4984971bd73c7b
+  tests_unify_comp2 ::
+    (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)
+  {- Strictness: m,
+     Unfolding: ((Tests.tests_unify_comp5, Tests.tests_unify_comp3,
+                  Tests.tests_infer_rec19)) -}
+628fd1aa1e5db22864fc8c0162d0330b
+  tests_unify_comp3 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   Tests.tests_unify_comp4) -}
+efb369f29a33a42e04c433218b7f3f2c
+  tests_unify_comp4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs,
+     Unfolding: ("{0 -> int, 1 -> bool, 2 -> (int -> bool), 3 -> int, 4 -> bool}"#) -}
+930f99c219be6ea7e6d05e5900561d13
+  tests_unify_comp5 :: GHC.Base.String
+  {- Unfolding: (Tests.unifyRun
+                   (GHC.CString.unpackCString# Tests.tests_unify_comp6)) -}
+18b1295c2baa7fd91e78b9059740806b
+  tests_unify_comp6 :: GHC.Prim.Addr#
+  {- HasNoCafRefs,
+     Unfolding: ("(0 -> 1 = 2, 2 = 3 -> 4, 0 = int, 4 = bool)"#) -}
+2abca8a0c7e80be1f680eeb36135101a
+  tests_unify_comp7 ::
+    (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)
+  {- Strictness: m,
+     Unfolding: ((Tests.tests_unify_comp10, Tests.tests_unify_comp8,
+                  Tests.tests_infer_rec19)) -}
+0ece79f452b6a32fbe96377cf16a515b
+  tests_unify_comp8 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   Tests.tests_unify_comp9) -}
+ee509b39a818179e1562bac197d9f5c8
+  tests_unify_comp9 :: GHC.Prim.Addr#
+  {- HasNoCafRefs,
+     Unfolding: ("{0 -> string, 1 -> (string * int)}"#) -}
+f22f8dc186adbec6685d44c0cee85f71
+  tests_unify_decomp ::
+    [(GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)
+                   Tests.tests_unify_decomp7
+                   Tests.tests_unify_decomp1) -}
+aa5cd0253beb48037227eff8af0dc528
+  tests_unify_decomp1 ::
+    [(GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)
+                   Tests.tests_unify_decomp2
+                   (GHC.Types.[]
+                      @ (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int))) -}
+f3080eb0da4211deb8aaa5b7d0e71ae8
+  tests_unify_decomp10 :: GHC.Base.String
+  {- Unfolding: (Tests.unifyRun
+                   (GHC.CString.unpackCString# Tests.tests_unify_decomp11)) -}
+6f9d83b1679827410ef1a1ce22b904df
+  tests_unify_decomp11 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("(0 -> 1 = int -> int)"#) -}
+a52b6c718740ddeb9e5cba5df4f5f994
+  tests_unify_decomp2 ::
+    (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)
+  {- Strictness: m,
+     Unfolding: ((Tests.tests_unify_decomp5, Tests.tests_unify_decomp3,
+                  Tests.tests_infer_rec19)) -}
+48572c2d41cea8e6062d94f6145e1b1e
+  tests_unify_decomp3 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   Tests.tests_unify_decomp4) -}
+e5491140d1ea0ac129f72bb012cd6c56
+  tests_unify_decomp4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs,
+     Unfolding: ("{0 -> (string * string), 1 -> string, 2 -> string}"#) -}
+d6745f04a25ba4c68b71c05f3c757156
+  tests_unify_decomp5 :: GHC.Base.String
+  {- Unfolding: (Tests.unifyRun
+                   (GHC.CString.unpackCString# Tests.tests_unify_decomp6)) -}
+ee38a0ceadaea0aa83c7324d53fb372e
+  tests_unify_decomp6 :: GHC.Prim.Addr#
+  {- HasNoCafRefs,
+     Unfolding: ("(0 * int = (1 * 2) * int, 1 = string, 2 = string)"#) -}
+fc236458c1c300e5c566c9ff9f997e01
+  tests_unify_decomp7 ::
+    (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)
+  {- Strictness: m,
+     Unfolding: ((Tests.tests_unify_decomp10, Tests.tests_unify_decomp8,
+                  Tests.tests_infer_rec19)) -}
+173c4508a1a319415b682a78eb3e4948
+  tests_unify_decomp8 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   Tests.tests_unify_decomp9) -}
+4c494a0f44b81199ef3a10123b9a1702
+  tests_unify_decomp9 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("{0 -> int, 1 -> int}"#) -}
+92d2e25d77b54df3e6df1ca72de06f8d
+  tests_unify_del ::
+    [(GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)
+                   Tests.tests_unify_del11
+                   Tests.tests_unify_del1) -}
+22469893423e5e3ad49c367d2e36bc58
+  tests_unify_del1 ::
+    [(GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)
+                   Tests.tests_unify_del6
+                   Tests.tests_unify_del2) -}
+356924b52abed97e86030c1c47c9b66c
+  tests_unify_del10 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("(0 = 0)"#) -}
+aada6c49c49afddc2851bc1e30d3faa5
+  tests_unify_del11 ::
+    (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)
+  {- Strictness: m,
+     Unfolding: ((Tests.tests_unify_del12, Tests.tests_unify_del7,
+                  Tests.tests_infer_rec14)) -}
+9cccc556f3842e798c26898f95e954ad
+  tests_unify_del12 :: GHC.Base.String
+  {- Unfolding: (Tests.unifyRun
+                   (GHC.CString.unpackCString# Tests.tests_unify_del13)) -}
+4bce8ebbb17ddc3ec91360c34e1f2e5f
+  tests_unify_del13 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("(int = int)"#) -}
+8de4ead25a9303a6a220152d1c42e92e
+  tests_unify_del2 ::
+    [(GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)
+                   Tests.tests_unify_del3
+                   (GHC.Types.[]
+                      @ (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int))) -}
+923a450790cfe7941ecf8c9b9956cb3b
+  tests_unify_del3 ::
+    (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)
+  {- Strictness: m,
+     Unfolding: ((Tests.tests_unify_del4, Tests.tests_unify_orient2,
+                  Tests.tests_infer_rec14)) -}
+5d38539238abc2450d1785d245aa0f08
+  tests_unify_del4 :: GHC.Base.String
+  {- Unfolding: (Tests.unifyRun
+                   (GHC.CString.unpackCString# Tests.tests_unify_del5)) -}
+c4f96fc138f74f6e0d7de3ca7a131877
+  tests_unify_del5 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("(0 = int, int = 0)"#) -}
+d82b47b42d58c6341e6d39e7534c828b
+  tests_unify_del6 ::
+    (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)
+  {- Strictness: m,
+     Unfolding: ((Tests.tests_unify_del9, Tests.tests_unify_del7,
+                  Tests.tests_infer_rec14)) -}
+022c4cd79003439ab921516aaf506cb1
+  tests_unify_del7 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   Tests.tests_unify_del8) -}
+7c599e712064fd5bcd232b756e23610e
+  tests_unify_del8 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("{}"#) -}
+64e429957e3f47f24a7c583e6d6545dc
+  tests_unify_del9 :: GHC.Base.String
+  {- Unfolding: (Tests.unifyRun
+                   (GHC.CString.unpackCString# Tests.tests_unify_del10)) -}
+cfc3b2428d3b1f3660fe3df1ac1b90b0
+  tests_unify_elim ::
+    [(GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)
+                   Tests.tests_unify_elim7
+                   Tests.tests_unify_elim1) -}
+6e8f9afbc8bdce81d01f965066352f5f
+  tests_unify_elim1 ::
+    [(GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)
+                   Tests.tests_unify_elim2
+                   (GHC.Types.[]
+                      @ (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int))) -}
+967a2054589a521135b9a75e78ef6423
+  tests_unify_elim2 ::
+    (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)
+  {- Strictness: m,
+     Unfolding: ((Tests.tests_unify_elim5, Tests.tests_unify_elim3,
+                  Tests.tests_infer_rec14)) -}
+e0216aae64645623bd4779c1e812a945
+  tests_unify_elim3 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   Tests.tests_unify_elim4) -}
+bc046dcc4ec78636a18b0f33ec6b4e68
+  tests_unify_elim4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("{0 -> int, 1 -> bool}"#) -}
+b3936537cd162c6a9eecf344f7610614
+  tests_unify_elim5 :: GHC.Base.String
+  {- Unfolding: (Tests.unifyRun
+                   (GHC.CString.unpackCString# Tests.tests_unify_elim6)) -}
+7c3d1e4392b4498dde6d2034fa49b43c
+  tests_unify_elim6 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("(0 = int, 1 = bool)"#) -}
+203f6cd7a2f6c9e61ade40443f96090b
+  tests_unify_elim7 ::
+    (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)
+  {- Strictness: m,
+     Unfolding: ((Tests.tests_unify_elim8, Tests.tests_unify_orient2,
+                  Tests.tests_infer_rec14)) -}
+831af2215613ce768e870d02bec8c182
+  tests_unify_elim8 :: GHC.Base.String
+  {- Unfolding: (Tests.unifyRun
+                   (GHC.CString.unpackCString# Tests.tests_unify_elim9)) -}
+92e38e9a5c2d0f2cc0f0f50ebfb35d9a
+  tests_unify_elim9 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("(0 = int)"#) -}
+728bd6599ab85913119f90c16f5b8105
+  tests_unify_error ::
+    [(GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)
+                   Tests.tests_unify_error9
+                   Tests.tests_unify_error1) -}
+2e651f86f73b0b4dbd7c47ff24ba03a6
+  tests_unify_error1 ::
+    [(GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)
+                   Tests.tests_unify_error6
+                   Tests.tests_unify_error2) -}
+9d3b5be86832a6270370e7842fa71820
+  tests_unify_error10 :: GHC.Base.String
+  {- Unfolding: (Tests.unifyRun
+                   (GHC.CString.unpackCString# Tests.tests_unify_error11)) -}
+654bc79c140af802af8ae77b084f63d5
+  tests_unify_error11 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("(0 = bool, int = 0)"#) -}
+9b66eb8845faadbe72b3bc0171c43da1
+  tests_unify_error2 ::
+    [(GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)
+                   Tests.tests_unify_error3
+                   (GHC.Types.[]
+                      @ (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int))) -}
+e4e10bbaa8e338472e41399842578fa7
+  tests_unify_error3 ::
+    (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)
+  {- Strictness: m,
+     Unfolding: ((Tests.tests_unify_error4, Tests.inferRun1,
+                  Tests.tests_infer_rec19)) -}
+5046366ea0d2f61094ba41214f6c62d5
+  tests_unify_error4 :: GHC.Base.String
+  {- Unfolding: (Tests.unifyRun
+                   (GHC.CString.unpackCString# Tests.tests_unify_error5)) -}
+5e6497fc1131fe400d25a80e04b593b1
+  tests_unify_error5 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("(0 = 1, 1 = 2, 2 = 0 * 0)"#) -}
+7a0a63d575a93d775124b6aa4b087c2e
+  tests_unify_error6 ::
+    (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)
+  {- Strictness: m,
+     Unfolding: ((Tests.tests_unify_error7, Tests.inferRun1,
+                  Tests.tests_infer_rec19)) -}
+805aae35f08c6619b700453117b8db6f
+  tests_unify_error7 :: GHC.Base.String
+  {- Unfolding: (Tests.unifyRun
+                   (GHC.CString.unpackCString# Tests.tests_unify_error8)) -}
+d177f3dceff83792e7c8897160a16bc6
+  tests_unify_error8 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("(0 = 0 -> int)"#) -}
+bd210ebb9dc6db4eb239c4f847245b8b
+  tests_unify_error9 ::
+    (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)
+  {- Strictness: m,
+     Unfolding: ((Tests.tests_unify_error10, Tests.inferRun1,
+                  Tests.tests_infer_rec14)) -}
+d4b4de8dd55d39a11f15c299718a330b
+  tests_unify_orient ::
+    [(GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)
+                   Tests.tests_unify_orient1
+                   (GHC.Types.[]
+                      @ (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int))) -}
+b1a5dff09ea282ee46fbcdf780ab6c8c
+  tests_unify_orient1 ::
+    (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)
+  {- Strictness: m,
+     Unfolding: ((Tests.tests_unify_orient4, Tests.tests_unify_orient2,
+                  Tests.tests_infer_rec19)) -}
+c9cfc841308e4cebf9a25f0a99a84be8
+  tests_unify_orient2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   Tests.tests_unify_orient3) -}
+f4b9abe4639cb3e1598ee5e3b15d9763
+  tests_unify_orient3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("{0 -> int}"#) -}
+83e84663e8923dc4c05f153aa855250c
+  tests_unify_orient4 :: GHC.Base.String
+  {- Unfolding: (Tests.unifyRun
+                   (GHC.CString.unpackCString# Tests.tests_unify_orient5)) -}
+9d9976dea82c8559a844fdbd1c0e393f
+  tests_unify_orient5 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("(int = 0)"#) -}
+2af59a6f390aeb422e93f2aedaaa3156
+  unifyRun :: GHC.Base.String -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: (\ (s :: GHC.Base.String) ->
+                 case (Parser.happyNewToken
+                         @ (Parser.HappyStk
+                              (Parser.HappyAbsSyn
+                                 GHC.Types.Any
+                                 GHC.Types.Any
+                                 GHC.Types.Any
+                                 GHC.Types.Any
+                                 GHC.Types.Any
+                                 GHC.Types.Any
+                                 GHC.Types.Any
+                                 GHC.Types.Any
+                                 GHC.Types.Any
+                                 GHC.Types.Any
+                                 GHC.Types.Any
+                                 GHC.Types.Any
+                                 [(Common.MonoTy, Common.MonoTy)]
+                                 [(Common.MonoTy, Common.MonoTy)]
+                                 (Common.MonoTy, Common.MonoTy)
+                                 GHC.Types.Any
+                                 GHC.Types.Any
+                                 GHC.Types.Any
+                                 GHC.Types.Any
+                                 Common.MonoTy
+                                 Common.MonoTy
+                                 Common.MonoTy))
+                         @ (Parser.HappyAbsSyn
+                              GHC.Types.Any
+                              GHC.Types.Any
+                              GHC.Types.Any
+                              GHC.Types.Any
+                              GHC.Types.Any
+                              GHC.Types.Any
+                              GHC.Types.Any
+                              GHC.Types.Any
+                              GHC.Types.Any
+                              GHC.Types.Any
+                              GHC.Types.Any
+                              GHC.Types.Any
+                              [(Common.MonoTy, Common.MonoTy)]
+                              [(Common.MonoTy, Common.MonoTy)]
+                              (Common.MonoTy, Common.MonoTy)
+                              GHC.Types.Any
+                              GHC.Types.Any
+                              GHC.Types.Any
+                              GHC.Types.Any
+                              Common.MonoTy
+                              Common.MonoTy
+                              Common.MonoTy)
+                         Parser.parseEqList2
+                         (Parser.notHappyAtAll
+                            @ [Parser.HappyState
+                                 Parser.Token
+                                 (Parser.HappyStk
+                                    (Parser.HappyAbsSyn
+                                       GHC.Types.Any
+                                       GHC.Types.Any
+                                       GHC.Types.Any
+                                       GHC.Types.Any
+                                       GHC.Types.Any
+                                       GHC.Types.Any
+                                       GHC.Types.Any
+                                       GHC.Types.Any
+                                       GHC.Types.Any
+                                       GHC.Types.Any
+                                       GHC.Types.Any
+                                       GHC.Types.Any
+                                       [(Common.MonoTy, Common.MonoTy)]
+                                       [(Common.MonoTy, Common.MonoTy)]
+                                       (Common.MonoTy, Common.MonoTy)
+                                       GHC.Types.Any
+                                       GHC.Types.Any
+                                       GHC.Types.Any
+                                       GHC.Types.Any
+                                       Common.MonoTy
+                                       Common.MonoTy
+                                       Common.MonoTy)
+                                  -> [Parser.Token]
+                                  -> Parser.HappyIdentity
+                                       (Parser.HappyAbsSyn
+                                          GHC.Types.Any
+                                          GHC.Types.Any
+                                          GHC.Types.Any
+                                          GHC.Types.Any
+                                          GHC.Types.Any
+                                          GHC.Types.Any
+                                          GHC.Types.Any
+                                          GHC.Types.Any
+                                          GHC.Types.Any
+                                          GHC.Types.Any
+                                          GHC.Types.Any
+                                          GHC.Types.Any
+                                          [(Common.MonoTy, Common.MonoTy)]
+                                          [(Common.MonoTy, Common.MonoTy)]
+                                          (Common.MonoTy, Common.MonoTy)
+                                          GHC.Types.Any
+                                          GHC.Types.Any
+                                          GHC.Types.Any
+                                          GHC.Types.Any
+                                          Common.MonoTy
+                                          Common.MonoTy
+                                          Common.MonoTy))])
+                         (Parser.notHappyAtAll
+                            @ (Parser.HappyStk
+                                 (Parser.HappyAbsSyn
+                                    GHC.Types.Any
+                                    GHC.Types.Any
+                                    GHC.Types.Any
+                                    GHC.Types.Any
+                                    GHC.Types.Any
+                                    GHC.Types.Any
+                                    GHC.Types.Any
+                                    GHC.Types.Any
+                                    GHC.Types.Any
+                                    GHC.Types.Any
+                                    GHC.Types.Any
+                                    GHC.Types.Any
+                                    [(Common.MonoTy, Common.MonoTy)]
+                                    [(Common.MonoTy, Common.MonoTy)]
+                                    (Common.MonoTy, Common.MonoTy)
+                                    GHC.Types.Any
+                                    GHC.Types.Any
+                                    GHC.Types.Any
+                                    GHC.Types.Any
+                                    Common.MonoTy
+                                    Common.MonoTy
+                                    Common.MonoTy)))
+                         (Parser.lexer s))
+                        `cast`
+                      (Parser.N:HappyIdentity[0]
+                           <Parser.HappyAbsSyn
+                              GHC.Types.Any
+                              GHC.Types.Any
+                              GHC.Types.Any
+                              GHC.Types.Any
+                              GHC.Types.Any
+                              GHC.Types.Any
+                              GHC.Types.Any
+                              GHC.Types.Any
+                              GHC.Types.Any
+                              GHC.Types.Any
+                              GHC.Types.Any
+                              GHC.Types.Any
+                              [(Common.MonoTy, Common.MonoTy)]
+                              [(Common.MonoTy, Common.MonoTy)]
+                              (Common.MonoTy, Common.MonoTy)
+                              GHC.Types.Any
+                              GHC.Types.Any
+                              GHC.Types.Any
+                              GHC.Types.Any
+                              Common.MonoTy
+                              Common.MonoTy
+                              Common.MonoTy>_R) of wild {
+                   DEFAULT -> case Parser.notHappyAtAll ret_ty GHC.Base.String of {}
+                   Parser.HappyAbsSyn20 z
+                   -> case Infer.unify_aux
+                             Tests.unifyRun1
+                             z
+                             (Data.Map.Internal.Tip @ Common.VarId @ Common.MonoTy) of wild1 {
+                        Common.ValidState f
+                        -> case f Tests.inferRun3 of wild2 {
+                             Common.ValidRes sEnv ds -> Common.$wstringOfSub sEnv 5#
+                             Common.ErrorRes ds -> Tests.inferRun1 }
+                        Common.ErrorState e -> Tests.inferRun1 } }) -}
+88ff43daf1000cf139be05a839fe0d8c
+  unifyRun1 :: Common.Exp
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (Common.VarExp (GHC.Types.[] @ GHC.Types.Char)) -}
+"SPEC/Tests fromList @ String _" [orphan] forall @ a
+                                                 ($dOrd :: GHC.Classes.Ord GHC.Base.String)
+  Data.Map.Strict.Internal.fromList @ [GHC.Types.Char] @ a $dOrd
+  = Tests.$sfromList @ a
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+

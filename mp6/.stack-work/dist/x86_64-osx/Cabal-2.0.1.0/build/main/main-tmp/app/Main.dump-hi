@@ -1,0 +1,116 @@
+
+==================== FINAL INTERFACE ====================
+2019-04-26 21:26:55.882493 UTC
+
+interface main:Main 8022
+  interface hash: 4be101b8022a31bf1188bb5790dc9902
+  ABI hash: 5048c872a8fcd0351b631517aa43792d
+  export-list hash: c9f2351f63508b65f48d76799bd5c26c
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: ddd45abcb0179d7f7d78d6d8f42c87c3
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Main.main
+  Main.repl
+  Main.step
+module dependencies:
+package dependencies: array-0.5.2.0 base-4.10.1.0*
+                      containers-0.5.10.2 deepseq-1.4.3.0 ghc-prim-0.5.1.1
+                      integer-gmp-1.0.1.0 mp6-type-infer-0.1.0.0
+orphans: base-4.10.1.0:GHC.Float base-4.10.1.0:GHC.Base
+family instance modules: base-4.10.1.0:Control.Applicative
+                         base-4.10.1.0:Data.Complex base-4.10.1.0:Data.Either
+                         base-4.10.1.0:Data.Functor.Compose base-4.10.1.0:Data.Functor.Const
+                         base-4.10.1.0:Data.Functor.Identity
+                         base-4.10.1.0:Data.Functor.Product base-4.10.1.0:Data.Functor.Sum
+                         base-4.10.1.0:Data.List.NonEmpty base-4.10.1.0:Data.Monoid
+                         base-4.10.1.0:Data.Semigroup base-4.10.1.0:Data.Type.Equality
+                         base-4.10.1.0:Data.Version base-4.10.1.0:Data.Void
+                         base-4.10.1.0:GHC.Exts base-4.10.1.0:GHC.Generics
+                         base-4.10.1.0:GHC.IO.Exception base-4.10.1.0:GHC.TypeLits
+                         base-4.10.1.0:GHC.TypeNats containers-0.5.10.2:Data.Map.Internal
+                         containers-0.5.10.2:Data.Set.Internal
+import  -/  base-4.10.1.0:GHC.Base 782fd99b5e36f3698a26179a49afca64
+import  -/  base-4.10.1.0:Prelude 31945b7d0084063347fc52506d3a4020
+import  -/  base-4.10.1.0:System.IO 525805ab19df5e4fe6d8de7dde9cb909
+import  -/  containers-0.5.10.2:Data.Map.Internal 9c57d7e8180b3d401d116f2112d8715d
+import  -/  containers-0.5.10.2:Data.Map.Strict 194f5b0a9785a91a43562790aa6787fc
+import  -/  ghc-prim-0.5.1.1:GHC.Types b1fd0716441595db508c1a74387bf394
+import  -/  mp6-type-infer-0.1.0.0:Common 96525dafafa987517b11778b8f4e142a
+import  -/  mp6-type-infer-0.1.0.0:Infer 7014f112cafeeaa4b7bba1c1738a444e
+import  -/  mp6-type-infer-0.1.0.0:Parser bc64ccd1eae189a8de98868e52cda392
+9d72b2fddb818bcd8919052935e0f1f3
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module Main.$trModule3 Main.$trModule1) -}
+3108ceeaf5a318be844de422b45de9d8
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Main.$trModule2) -}
+e5875966b74dad2d29772660b8a75e33
+  $trModule2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Main"#) -}
+33bd129667974f0a0ba4a893af79107d
+  $trModule3 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Main.$trModule4) -}
+d026be77cb9ced20e35a61514e0458aa
+  $trModule4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("main"#) -}
+d98ec7eb94d8da18bc3e642ed6929363
+  main :: GHC.Types.IO ()
+  {- Arity: 1,
+     Unfolding: InlineRule (0, True, True)
+                Main.main1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
+77d5e8c35270145bd9ab7257c7378365
+  main1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1,
+     Unfolding: (Main.main2
+                   (Data.Map.Internal.Tip @ GHC.Base.String @ Common.PolyTy)) -}
+21cb16a8b431dc720ce13e9c4af22c15
+  main2 ::
+    Common.TypeEnv
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 2, Strictness: <L,U><S,U> -}
+79c25144a9bfab452d2df4f10671d5a8
+  main3 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1,
+     Unfolding: (GHC.TopHandler.runMainIO1
+                   @ ()
+                   Main.main1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R))) -}
+9999decb32e6cfba1016e3c3b74a0e39
+  repl :: Common.TypeEnv -> GHC.Types.IO ()
+  {- Arity: 2, Strictness: <L,U><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.main2
+                  `cast`
+                (<Common.TypeEnv>_R ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
+31fd09c4302035b64a168166f3ab525c
+  step :: Common.TypeEnv -> GHC.Types.IO Common.TypeEnv
+  {- Arity: 2, Strictness: <L,U><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.step1
+                  `cast`
+                (<Common.TypeEnv>_R
+                 ->_R Sym (GHC.Types.N:IO[0] <Common.TypeEnv>_R)) -}
+2274d3fcf0e9cbba59c1e1b4de26d5f8
+  step1 ::
+    Common.TypeEnv
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, Common.TypeEnv #)
+  {- Arity: 2, Strictness: <L,U><S,U> -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+

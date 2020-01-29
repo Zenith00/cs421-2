@@ -1,0 +1,2809 @@
+
+==================== FINAL INTERFACE ====================
+2019-04-22 03:44:45.378526 UTC
+
+interface mp6-type-infer-0.1.0.0-KCsIbnCrPoAJ0yEvsnbQhv:Common 8022
+  interface hash: 2cdc428a5570a8c09b98be03185be96f
+  ABI hash: 96525dafafa987517b11778b8f4e142a
+  export-list hash: 6f2c885b2035c4fcd55933ada3fd6cf3
+  orphan hash: c65f3c30316915466f6aa6a8d731c1fb
+  flag hash: 0451a77cc0d8e5d99d548d6441c7dd35
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Common.binopTySig
+  Common.boolTy
+  Common.canonize
+  Common.constTySig
+  Common.freeVarsEnv
+  Common.freeVarsMonoTy
+  Common.freeVarsPolyTy
+  Common.freshTVar
+  Common.freshTau
+  Common.funTy
+  Common.gen
+  Common.intTy
+  Common.liftEnv
+  Common.liftMonoTy
+  Common.liftPolyTy
+  Common.listTy
+  Common.monopTySig
+  Common.pairTy
+  Common.quantifyMonoTy
+  Common.runFVState
+  Common.setDiff
+  Common.setInsert
+  Common.setRemove
+  Common.setUnion
+  Common.stringOfBinop
+  Common.stringOfConst
+  Common.stringOfDec
+  Common.stringOfError
+  Common.stringOfExp
+  Common.stringOfMonoTy
+  Common.stringOfMonop
+  Common.stringOfSub
+  Common.stringTy
+  Common.substCompose
+  Common.substEmpty
+  Common.substInit
+  Common.tVarName
+  Common.throwError
+  Common.unitTy
+  Common.Binop{Common.CommaOp Common.ConcatOp Common.ConsOp Common.EqOp Common.GreaterOp Common.IntDivOp Common.IntMinusOp Common.IntPlusOp Common.IntTimesOp}
+  Common.CanonEnv
+  Common.Const{Common.BoolConst Common.IntConst Common.NilConst Common.StringConst Common.UnitConst}
+  Common.Dec{Common.AnonDec Common.LetDec Common.LetRec}
+  Common.Exp{Common.AppExp Common.BinOpExp Common.ConstExp Common.FunExp Common.IfExp Common.LetExp Common.LetRecExp Common.MonOpExp Common.VarExp}
+  Common.FVCounter
+  Common.FVRes{Common.ErrorRes Common.ValidRes}
+  Common.FVState{Common.ErrorState Common.ValidState}
+  Common.MonoTy{Common.TyConst Common.TyVar}
+  Common.Monop{Common.FstOp Common.HdOp Common.IntNegOp Common.NotOp Common.PrintOp Common.SndOp Common.TlOp}
+  Common.PolyTy
+  Common.SubstEnv
+  Common.TypeEnv
+  Common.TypeError{Common.LookupError Common.UnifError}
+  Common.VarId
+module dependencies:
+package dependencies: array-0.5.2.0 base-4.10.1.0*
+                      containers-0.5.10.2 deepseq-1.4.3.0 ghc-prim-0.5.1.1
+                      integer-gmp-1.0.1.0
+orphans: base-4.10.1.0:GHC.Float base-4.10.1.0:GHC.Base
+family instance modules: base-4.10.1.0:Control.Applicative
+                         base-4.10.1.0:Data.Complex base-4.10.1.0:Data.Either
+                         base-4.10.1.0:Data.Functor.Compose base-4.10.1.0:Data.Functor.Const
+                         base-4.10.1.0:Data.Functor.Identity
+                         base-4.10.1.0:Data.Functor.Product base-4.10.1.0:Data.Functor.Sum
+                         base-4.10.1.0:Data.List.NonEmpty base-4.10.1.0:Data.Monoid
+                         base-4.10.1.0:Data.Semigroup base-4.10.1.0:Data.Type.Equality
+                         base-4.10.1.0:Data.Version base-4.10.1.0:Data.Void
+                         base-4.10.1.0:GHC.Exts base-4.10.1.0:GHC.Generics
+                         base-4.10.1.0:GHC.IO.Exception base-4.10.1.0:GHC.TypeLits
+                         base-4.10.1.0:GHC.TypeNats containers-0.5.10.2:Data.Map.Internal
+                         containers-0.5.10.2:Data.Set.Internal
+import  -/  base-4.10.1.0:Control.Applicative 99577a9c463ffe4790a1d37547a345bd
+import  -/  base-4.10.1.0:Control.Monad ebed2e8e7444944e0c1d827c6faf40a4
+import  -/  base-4.10.1.0:Data.Char fe4e3458190deeac19969ce15e33bed9
+import  -/  base-4.10.1.0:Data.Foldable 9ed87455d68e87ff2b5b8725eae9897e
+import  -/  base-4.10.1.0:Data.Tuple 8fa1305aa5032ea35e2a54fa5f1e78f9
+import  -/  base-4.10.1.0:GHC.Base 782fd99b5e36f3698a26179a49afca64
+import  -/  base-4.10.1.0:GHC.Char 630ee80a10729165b02c0abeda9c6526
+import  -/  base-4.10.1.0:GHC.Num 6e1dc5d36d99a802edb39b92bb1923b8
+import  -/  base-4.10.1.0:GHC.Show 0a8ce2b5e533d1c2cfb7954e6736be45
+import  -/  base-4.10.1.0:Prelude 31945b7d0084063347fc52506d3a4020
+import  -/  containers-0.5.10.2:Data.Map.Internal 9c57d7e8180b3d401d116f2112d8715d
+import  -/  containers-0.5.10.2:Data.Map.Strict 194f5b0a9785a91a43562790aa6787fc
+import  -/  containers-0.5.10.2:Data.Map.Strict.Internal 90deec3a59296f433f9f1dc7cc1632b6
+import  -/  ghc-prim-0.5.1.1:GHC.Classes 93e2660065dce9329577e83d76d8f0d4
+503809768707ef4f03cda82750d7b8e1
+  $fApplicativeFVState :: GHC.Base.Applicative Common.FVState
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ Common.FVState
+                  Common.$fFunctorFVState
+                  Common.$fApplicativeFVState_$creturn
+                  Common.$fApplicativeFVState_$c<*>
+                  Common.$fApplicativeFVState_$cliftA2
+                  Common.$fApplicativeFVState_$c*>
+                  Common.$fApplicativeFVState_$c<* -}
+503809768707ef4f03cda82750d7b8e1
+  $fApplicativeFVState_$c*> ::
+    Common.FVState a -> Common.FVState b -> Common.FVState b
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><L,U>,
+     Unfolding: (\ @ a
+                   @ b
+                   (a1 :: Common.FVState a)
+                   (a2 :: Common.FVState b) ->
+                 case a1 of wild {
+                   Common.ValidState i
+                   -> Common.$fApplicativeFVState_$c<*>
+                        @ b
+                        @ b
+                        (Common.ValidState
+                           @ (b -> b)
+                           (\ (s :: Common.FVCounter) ->
+                            case i s of wild1 {
+                              Common.ValidRes v s'
+                              -> Common.ValidRes @ (b -> b) (GHC.Base.breakpoint @ b) s'
+                              Common.ErrorRes e -> Common.ErrorRes @ (b -> b) e }))
+                        a2
+                   Common.ErrorState e
+                   -> Common.$fApplicativeFVState_$c<*>
+                        @ b
+                        @ b
+                        (Common.ErrorState @ (b -> b) e)
+                        a2 }) -}
+503809768707ef4f03cda82750d7b8e1
+  $fApplicativeFVState_$c<* ::
+    Common.FVState a -> Common.FVState b -> Common.FVState a
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><L,U>,
+     Unfolding: (\ @ a
+                   @ b
+                   (x :: Common.FVState a)
+                   (eta :: Common.FVState b) ->
+                 case x of wild {
+                   Common.ValidState i
+                   -> Common.$fApplicativeFVState_$c<*>
+                        @ b
+                        @ a
+                        (Common.ValidState
+                           @ (b -> a)
+                           (\ (s :: Common.FVCounter) ->
+                            case i s of wild1 {
+                              Common.ValidRes v s'
+                              -> Common.ValidRes @ (b -> a) (\ (ds :: b) -> v) s'
+                              Common.ErrorRes e -> Common.ErrorRes @ (b -> a) e }))
+                        eta
+                   Common.ErrorState e
+                   -> Common.$fApplicativeFVState_$c<*>
+                        @ b
+                        @ a
+                        (Common.ErrorState @ (b -> a) e)
+                        eta }) -}
+503809768707ef4f03cda82750d7b8e1
+  $fApplicativeFVState_$c<*> ::
+    Common.FVState (a -> b) -> Common.FVState a -> Common.FVState b
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><L,U>,
+     Unfolding: (\ @ a
+                   @ b
+                   (m1 :: Common.FVState (a -> b))
+                   (m2 :: Common.FVState a) ->
+                 case m1 of wild {
+                   Common.ValidState i
+                   -> Common.ValidState
+                        @ b
+                        (\ (s :: Common.FVCounter) ->
+                         case i s of wild1 {
+                           Common.ValidRes v s'
+                           -> case m2 of wild2 {
+                                Common.ValidState i1
+                                -> case i1 s' of wild3 {
+                                     Common.ValidRes v1 s'1 -> Common.ValidRes @ b (v v1) s'1
+                                     Common.ErrorRes e -> Common.ErrorRes @ b e }
+                                Common.ErrorState e -> Common.ErrorRes @ b e }
+                           Common.ErrorRes e -> Common.ErrorRes @ b e })
+                   Common.ErrorState e -> Common.ErrorState @ b e }) -}
+503809768707ef4f03cda82750d7b8e1
+  $fApplicativeFVState_$cfmap ::
+    (a -> b) -> Common.FVState a -> Common.FVState b
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,C(U)><S,1*U>,
+     Unfolding: (\ @ a @ b (f :: a -> b) (m1 :: Common.FVState a) ->
+                 case m1 of wild {
+                   Common.ValidState i
+                   -> Common.ValidState
+                        @ b
+                        (\ (s :: Common.FVCounter) ->
+                         case i s of wild1 {
+                           Common.ValidRes v s' -> Common.ValidRes @ b (f v) s'
+                           Common.ErrorRes e -> Common.ErrorRes @ b e })
+                   Common.ErrorState e -> Common.ErrorState @ b e }) -}
+503809768707ef4f03cda82750d7b8e1
+  $fApplicativeFVState_$cliftA2 ::
+    (a -> b -> c)
+    -> Common.FVState a -> Common.FVState b -> Common.FVState c
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,C(U)><L,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a @ b @ c (f1 :: a -> b -> c) (x :: Common.FVState a) ->
+                 Common.$fApplicativeFVState_$c<*>
+                   @ b
+                   @ c
+                   (Common.$fApplicativeFVState_$cfmap @ a @ (b -> c) f1 x)) -}
+503809768707ef4f03cda82750d7b8e1
+  $fApplicativeFVState_$creturn :: a -> Common.FVState a
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,U>m1,
+     Unfolding: InlineRule (1, True, False)
+                (\ @ a (v :: a) ->
+                 Common.ValidState
+                   @ a
+                   (\ (s :: Common.FVCounter) -> Common.ValidRes @ a v s)) -}
+2b092fa562158d888310321a9eb0ed4c
+  $fEqMonoTy :: GHC.Classes.Eq Common.MonoTy
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ Common.MonoTy Common.$fEqMonoTy_$c== Common.$fEqMonoTy_$c/= -}
+2b092fa562158d888310321a9eb0ed4c
+  $fEqMonoTy_$c/= :: Common.MonoTy -> Common.MonoTy -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (a :: Common.MonoTy) (b :: Common.MonoTy) ->
+                 case Common.$fEqMonoTy_$c== a b of wild {
+                   GHC.Types.False -> GHC.Types.True
+                   GHC.Types.True -> GHC.Types.False }) -}
+2b092fa562158d888310321a9eb0ed4c
+  $fEqMonoTy_$c== :: Common.MonoTy -> Common.MonoTy -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U> -}
+503809768707ef4f03cda82750d7b8e1
+  $fFunctorFVState :: GHC.Base.Functor Common.FVState
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ Common.FVState
+                  Common.$fApplicativeFVState_$cfmap
+                  Common.$fFunctorFVState_$c<$ -}
+503809768707ef4f03cda82750d7b8e1
+  $fFunctorFVState_$c<$ :: a -> Common.FVState b -> Common.FVState a
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,U><S,1*U>,
+     Unfolding: (\ @ a @ b (x :: a) (eta :: Common.FVState b) ->
+                 case eta of wild {
+                   Common.ValidState i
+                   -> Common.ValidState
+                        @ a
+                        (\ (s :: Common.FVCounter) ->
+                         case i s of wild1 {
+                           Common.ValidRes v s' -> Common.ValidRes @ a x s'
+                           Common.ErrorRes e -> Common.ErrorRes @ a e })
+                   Common.ErrorState e -> Common.ErrorState @ a e }) -}
+503809768707ef4f03cda82750d7b8e1
+  $fMonadFVState :: GHC.Base.Monad Common.FVState
+  DFunId
+  {- Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ Common.FVState
+                  Common.$fApplicativeFVState
+                  Common.$fMonadFVState_$c>>=
+                  Common.$fMonadFVState_$c>>
+                  Common.$fApplicativeFVState_$creturn
+                  (\ @ a ->
+                   GHC.Err.errorWithoutStackTrace
+                     @ 'GHC.Types.LiftedRep
+                     @ (Common.FVState a)) -}
+503809768707ef4f03cda82750d7b8e1
+  $fMonadFVState_$c>> ::
+    Common.FVState a -> Common.FVState b -> Common.FVState b
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><L,U>,
+     Inline: (sat-args=2),
+     Unfolding: InlineRule (2, False, False)
+                (\ @ a @ b (m1 :: Common.FVState a) (k :: Common.FVState b) ->
+                 case m1 of wild {
+                   Common.ValidState i
+                   -> Common.ValidState
+                        @ b
+                        (\ (s :: Common.FVCounter) ->
+                         case i s of wild1 {
+                           Common.ValidRes v s'
+                           -> case k of wild2 {
+                                Common.ValidState f -> f s'
+                                Common.ErrorState e -> Common.ErrorRes @ b e }
+                           Common.ErrorRes e -> Common.ErrorRes @ b e })
+                   Common.ErrorState e -> Common.ErrorState @ b e }) -}
+503809768707ef4f03cda82750d7b8e1
+  $fMonadFVState_$c>>= ::
+    Common.FVState a -> (a -> Common.FVState b) -> Common.FVState b
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><L,C(U)>,
+     Unfolding: (\ @ a
+                   @ b
+                   (ds :: Common.FVState a)
+                   (f :: a -> Common.FVState b) ->
+                 case ds of wild {
+                   Common.ValidState i
+                   -> Common.ValidState
+                        @ b
+                        (\ (s :: Common.FVCounter) ->
+                         case i s of wild1 {
+                           Common.ValidRes v s'
+                           -> case f v of wild2 {
+                                Common.ValidState f1 -> f1 s'
+                                Common.ErrorState e -> Common.ErrorRes @ b e }
+                           Common.ErrorRes e -> Common.ErrorRes @ b e })
+                   Common.ErrorState e -> Common.ErrorState @ b e }) -}
+1b41d1e1c8c70d44cc095cdca5474831
+  $sunion ::
+    Data.Map.Internal.Map Common.VarId a
+    -> Data.Map.Internal.Map Common.VarId a
+    -> Data.Map.Internal.Map Common.VarId a
+  {- Arity: 2, Strictness: <S,1*U><S,1*U>, Inline: [~] -}
+273cd0f75b15fb53594e19fbd3f20845
+  $tc'AnonDec :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   15427290371231531110##
+                   3699424612625818189##
+                   Common.$trModule
+                   Common.$tc'AnonDec2
+                   0#
+                   Common.$tc'AnonDec1) -}
+ff397c1eeb1ffddeb2c6229df646e671
+  $tc'AnonDec1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
+421f6cee8531ceb1eac0eef4c809dd1e
+  $tc'AnonDec2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Common.$tc'AnonDec3) -}
+74d31d00f84fb4e926e13b663c9c9e13
+  $tc'AnonDec3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'AnonDec"#) -}
+45467c70d162e9cda0c4a72029282d1a
+  $tc'AppExp :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   15980245181642838067##
+                   4073100643487400659##
+                   Common.$trModule
+                   Common.$tc'AppExp2
+                   0#
+                   Common.$tc'AppExp1) -}
+b0d242220c54088ba887095df40eaf6c
+  $tc'AppExp1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
+b5816a7e5ae04a100c3a35aaa4854bef
+  $tc'AppExp2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Common.$tc'AppExp3) -}
+cacf3e01d488a99da28e5ecf6ee2b0f0
+  $tc'AppExp3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'AppExp"#) -}
+4b3b4012842349c5a14996a3209ebcd9
+  $tc'BinOpExp :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   5140564115378137771##
+                   10647691884172880311##
+                   Common.$trModule
+                   Common.$tc'BinOpExp2
+                   0#
+                   Common.$tc'BinOpExp1) -}
+dbcff07c91b3d7addf12a573312b0c72
+  $tc'BinOpExp1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
+e4addb8f3e6cd476c61385074de12545
+  $tc'BinOpExp2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Common.$tc'BinOpExp3) -}
+c8c99f3931e1d4489603170e61687713
+  $tc'BinOpExp3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'BinOpExp"#) -}
+280630dfef714350fdae77f56f489f76
+  $tc'BoolConst :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   7445487609206629751##
+                   4711591450971599291##
+                   Common.$trModule
+                   Common.$tc'BoolConst2
+                   0#
+                   Common.$tc'BoolConst1) -}
+030326cb4fd217c9060f9c003722b117
+  $tc'BoolConst1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
+a17a16a369dc3a050610050bbbd8305c
+  $tc'BoolConst2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Common.$tc'BoolConst3) -}
+4fa9e728a72a0b5a03adf071090c3ea5
+  $tc'BoolConst3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'BoolConst"#) -}
+9cbaeb8e6b1aec16c226c6b6bf5dccd0
+  $tc'CommaOp :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   11874825416911276697##
+                   12887157766335106052##
+                   Common.$trModule
+                   Common.$tc'CommaOp2
+                   0#
+                   Common.$tc'CommaOp1) -}
+b94766256474601151adbc05b63510d4
+  $tc'CommaOp1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m1, Inline: [~] -}
+4e95458d3070e5a919036c479d36061d
+  $tc'CommaOp2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Common.$tc'CommaOp3) -}
+41a273ca18d0bff62717f09b137cdc83
+  $tc'CommaOp3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'CommaOp"#) -}
+d21e97deba885ff4a88567e26ca33c59
+  $tc'ConcatOp :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   11622090952536557983##
+                   10528352220009209099##
+                   Common.$trModule
+                   Common.$tc'ConcatOp1
+                   0#
+                   Common.$tc'CommaOp1) -}
+231e2c3ec241c86755cd4bd95c3361df
+  $tc'ConcatOp1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Common.$tc'ConcatOp2) -}
+171bc02a6dcc72274f688226e163f055
+  $tc'ConcatOp2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'ConcatOp"#) -}
+e740e35ea07055523f2a228f05a53e50
+  $tc'ConsOp :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   8908760159540982354##
+                   4488679140876857110##
+                   Common.$trModule
+                   Common.$tc'ConsOp1
+                   0#
+                   Common.$tc'CommaOp1) -}
+d538347ad1dd3bc60aac0002ace68abc
+  $tc'ConsOp1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Common.$tc'ConsOp2) -}
+3d3e4246d78ad549d03c662016e81a3d
+  $tc'ConsOp2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'ConsOp"#) -}
+cffc0b7281eccc353e77366815298474
+  $tc'ConstExp :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   1290860978930754984##
+                   9934678247867982993##
+                   Common.$trModule
+                   Common.$tc'ConstExp2
+                   0#
+                   Common.$tc'ConstExp1) -}
+ec2ecce01f8f443f0035f715bea2de1e
+  $tc'ConstExp1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
+8525425c7b1a62e9ae7d7ab295963fb9
+  $tc'ConstExp2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Common.$tc'ConstExp3) -}
+84ccfada9e9d3ed4b455b868705031de
+  $tc'ConstExp3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'ConstExp"#) -}
+7536e540940eebaef5d5c7af43f4f7e1
+  $tc'EqOp :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   16360529032848129706##
+                   8284008005525769669##
+                   Common.$trModule
+                   Common.$tc'EqOp1
+                   0#
+                   Common.$tc'CommaOp1) -}
+d899fef28f153a2015956141cedbbcb3
+  $tc'EqOp1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Common.$tc'EqOp2) -}
+b7dcb2669174cff59c8112e465edbef3
+  $tc'EqOp2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'EqOp"#) -}
+4711ae41074f7134a47b0194ce8642f5
+  $tc'ErrorRes :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   8652682213793583934##
+                   17783491018681962605##
+                   Common.$trModule
+                   Common.$tc'ErrorRes2
+                   1#
+                   Common.$tc'ErrorRes1) -}
+474ba2fdd2e3fd8b75bdc81708317012
+  $tc'ErrorRes1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
+7f191cee693bebf373e5b1d789753409
+  $tc'ErrorRes2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Common.$tc'ErrorRes3) -}
+c3ed77ec08ec62f6cfb530adb2d3fe6b
+  $tc'ErrorRes3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'ErrorRes"#) -}
+b3b5e1b3b68fe2d198945f7d50604913
+  $tc'ErrorState :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   3353810839107515167##
+                   10796591607522116388##
+                   Common.$trModule
+                   Common.$tc'ErrorState2
+                   1#
+                   Common.$tc'ErrorState1) -}
+eb7b02de8211bfa231551956012d3357
+  $tc'ErrorState1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
+8440b96bb2bacf87d3f965568ebf5a91
+  $tc'ErrorState2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Common.$tc'ErrorState3) -}
+a6307f9ece32c217615485a3c69573a1
+  $tc'ErrorState3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'ErrorState"#) -}
+2cc17e34ec206d146294901d2d965630
+  $tc'FstOp :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   9559842590896677326##
+                   4772303936214413286##
+                   Common.$trModule
+                   Common.$tc'FstOp2
+                   0#
+                   Common.$tc'FstOp1) -}
+42543f16213a55f53a9307118247fa7e
+  $tc'FstOp1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m1, Inline: [~] -}
+adf4a8ea4407639d376580464dc1125d
+  $tc'FstOp2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Common.$tc'FstOp3) -}
+76a4cc69a7db46ebd9e76a97745964c5
+  $tc'FstOp3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'FstOp"#) -}
+1eda502b762d6bfb8d748c0ef68aeefd
+  $tc'FunExp :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   13402527248803640758##
+                   15868409277520878579##
+                   Common.$trModule
+                   Common.$tc'FunExp2
+                   0#
+                   Common.$tc'FunExp1) -}
+067c7b03fc993f594f636e1cd01caac7
+  $tc'FunExp1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
+12d9a2c1fec9aecdad0551cec9adf996
+  $tc'FunExp2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Common.$tc'FunExp3) -}
+eabeb115027b5b7bf9a7c727affa8b28
+  $tc'FunExp3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'FunExp"#) -}
+22f7292218fe83188e04c388b207e659
+  $tc'GreaterOp :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   3610214128631338209##
+                   6467662114489025024##
+                   Common.$trModule
+                   Common.$tc'GreaterOp1
+                   0#
+                   Common.$tc'CommaOp1) -}
+86a4f13868813e768ae81e33283a6c57
+  $tc'GreaterOp1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Common.$tc'GreaterOp2) -}
+e1235004ad976baabe105ce24ce10e6e
+  $tc'GreaterOp2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'GreaterOp"#) -}
+35f15e3195b993fe6da48f953599d10d
+  $tc'HdOp :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   5726722719789991221##
+                   12332049500420265008##
+                   Common.$trModule
+                   Common.$tc'HdOp1
+                   0#
+                   Common.$tc'FstOp1) -}
+f3c568aceb3dbe8e75835c32906270e1
+  $tc'HdOp1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Common.$tc'HdOp2) -}
+00962234a8781d20fab2866b8fda278c
+  $tc'HdOp2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'HdOp"#) -}
+14e0fa3e626e13da4064412ffbabcd13
+  $tc'IfExp :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   13934791373167681506##
+                   15310651314600529709##
+                   Common.$trModule
+                   Common.$tc'IfExp2
+                   0#
+                   Common.$tc'IfExp1) -}
+e2188a8c47937051821fe73b43f4636b
+  $tc'IfExp1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
+cb36a3fd8281204247093609dd52c938
+  $tc'IfExp2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Common.$tc'IfExp3) -}
+a07131ca620476ed39f379d5c571625f
+  $tc'IfExp3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'IfExp"#) -}
+36333b9364db16bc6bad04acde1a7f90
+  $tc'IntConst :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   12268115894988585546##
+                   9372731427589335888##
+                   Common.$trModule
+                   Common.$tc'IntConst2
+                   0#
+                   Common.$tc'IntConst1) -}
+3443d0e5d4fd4104bf2b6b0a6f8aebaf
+  $tc'IntConst1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
+f045d4c9921073468a227eba62e98923
+  $tc'IntConst2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Common.$tc'IntConst3) -}
+15a2305f1d43105f147417298a3f74a6
+  $tc'IntConst3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'IntConst"#) -}
+bca4bd0f14f3da87a3e71022154bc18f
+  $tc'IntDivOp :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   6038338826400263177##
+                   13781112937055002904##
+                   Common.$trModule
+                   Common.$tc'IntDivOp1
+                   0#
+                   Common.$tc'CommaOp1) -}
+d4353976991e4113d07609ff31a36c4c
+  $tc'IntDivOp1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Common.$tc'IntDivOp2) -}
+f953d2ec9ae1b297c81ae06d6cbfc1a5
+  $tc'IntDivOp2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'IntDivOp"#) -}
+46830e9368fd9868f0cf0c223553271a
+  $tc'IntMinusOp :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   17053087551224531034##
+                   2811588652419902150##
+                   Common.$trModule
+                   Common.$tc'IntMinusOp1
+                   0#
+                   Common.$tc'CommaOp1) -}
+a0f40e39f71cf1fe2facfb6185905189
+  $tc'IntMinusOp1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Common.$tc'IntMinusOp2) -}
+0a48b2b69fd9ec350f8223f16a6539af
+  $tc'IntMinusOp2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'IntMinusOp"#) -}
+6b8f6a4626266794a5dac4e4bc987b4b
+  $tc'IntNegOp :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   1326501938530542664##
+                   7848910889675469475##
+                   Common.$trModule
+                   Common.$tc'IntNegOp1
+                   0#
+                   Common.$tc'FstOp1) -}
+1e8f228feeaf1aa693d4a7d0380f33d4
+  $tc'IntNegOp1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Common.$tc'IntNegOp2) -}
+2150503f26db24c6ceb4e6f9db19e12c
+  $tc'IntNegOp2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'IntNegOp"#) -}
+87c2625725455735b92d87f85bedde7b
+  $tc'IntPlusOp :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   16623196708959159934##
+                   11466900746514332537##
+                   Common.$trModule
+                   Common.$tc'IntPlusOp1
+                   0#
+                   Common.$tc'CommaOp1) -}
+538c3dc35118a75db56c2d7fea576857
+  $tc'IntPlusOp1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Common.$tc'IntPlusOp2) -}
+0ac1b2af0f09369458ed040df96115ec
+  $tc'IntPlusOp2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'IntPlusOp"#) -}
+c66dcd1aec09da4da40d11a0246f58a7
+  $tc'IntTimesOp :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   11340491073959804165##
+                   10305221968903819444##
+                   Common.$trModule
+                   Common.$tc'IntTimesOp1
+                   0#
+                   Common.$tc'CommaOp1) -}
+3dc131147f5d530c0e64b7243ad3ec1d
+  $tc'IntTimesOp1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Common.$tc'IntTimesOp2) -}
+088c32a7d031b1fe9ae49d62275e96ea
+  $tc'IntTimesOp2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'IntTimesOp"#) -}
+4ac0102effb2355672fd8a44f86a65dc
+  $tc'LetDec :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   7736442358842725332##
+                   16256224207662664201##
+                   Common.$trModule
+                   Common.$tc'LetDec2
+                   0#
+                   Common.$tc'LetDec1) -}
+a5c9045d332e6b11586fc53fa85d0afa
+  $tc'LetDec1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
+5429bb1d7013bfef868ffd0fe52aa696
+  $tc'LetDec2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Common.$tc'LetDec3) -}
+333e2c412d55510874e759e08bd7a47f
+  $tc'LetDec3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'LetDec"#) -}
+52010a098ec4b50047d4bdab32d2262c
+  $tc'LetExp :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   5700209423249832433##
+                   6685260649385579896##
+                   Common.$trModule
+                   Common.$tc'LetExp2
+                   0#
+                   Common.$tc'LetExp1) -}
+08be27651a120e9372eee97b1100040c
+  $tc'LetExp1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
+3c1b7499abe5e3cdb1d07a9efe7bba22
+  $tc'LetExp2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Common.$tc'LetExp3) -}
+a2fd5a3ed153b3872475a0553e492d91
+  $tc'LetExp3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'LetExp"#) -}
+826ed3878e176b5b0adefbaf53372175
+  $tc'LetRec :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   17276052562142259242##
+                   18187339672777451247##
+                   Common.$trModule
+                   Common.$tc'LetRec2
+                   0#
+                   Common.$tc'LetRec1) -}
+ca11a380bf02232f628002a113c4a79b
+  $tc'LetRec1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
+843af83d2763bdd3d170623c945c7ead
+  $tc'LetRec2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Common.$tc'LetRec3) -}
+23a49a11abd4634de2a0a09bb32345e0
+  $tc'LetRec3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'LetRec"#) -}
+36546889fc0c543824bf0af9174e8dd9
+  $tc'LetRecExp :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   3899935591873745585##
+                   5185664531719200631##
+                   Common.$trModule
+                   Common.$tc'LetRecExp2
+                   0#
+                   Common.$tc'LetRecExp1) -}
+7b1ee859720456071442a455b726d78f
+  $tc'LetRecExp1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
+d0472bd6894f892f1a757e84adee1b6b
+  $tc'LetRecExp2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Common.$tc'LetRecExp3) -}
+3066ede68c8d836f6c2d17b6b4f89c94
+  $tc'LetRecExp3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'LetRecExp"#) -}
+7e76435f7af6b49cf6adcf93ce3bae31
+  $tc'LookupError :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   15393236660192181898##
+                   1236727898142881662##
+                   Common.$trModule
+                   Common.$tc'LookupError2
+                   0#
+                   Common.$tc'LookupError1) -}
+cc06135fc820f24160cc527e62373e6c
+  $tc'LookupError1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
+e1057cf55a4bdad74f6e071fbb8e60d6
+  $tc'LookupError2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Common.$tc'LookupError3) -}
+3b994fc32e68c848ee42b8e944d989b8
+  $tc'LookupError3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'LookupError"#) -}
+4d7cfac41f028093be524def5f03f163
+  $tc'MonOpExp :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   16967609515818753469##
+                   11518963175980961897##
+                   Common.$trModule
+                   Common.$tc'MonOpExp2
+                   0#
+                   Common.$tc'MonOpExp1) -}
+bfd3874c09e88019fc6d5525f44bc564
+  $tc'MonOpExp1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
+64aa3928733eea6954ae8a552f02c8b7
+  $tc'MonOpExp2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Common.$tc'MonOpExp3) -}
+fcc71058eff80d48b4d60f05f759692b
+  $tc'MonOpExp3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'MonOpExp"#) -}
+0fb0201b0755d02b12e00a82e19243b9
+  $tc'NilConst :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   16483111750285454066##
+                   12309249724567345586##
+                   Common.$trModule
+                   Common.$tc'NilConst2
+                   0#
+                   Common.$tc'NilConst1) -}
+8ba834fcc5f88be2bed91e648f87f49c
+  $tc'NilConst1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m1, Inline: [~] -}
+a178cf12f48b7de7d6ceea0f1cdcc9cc
+  $tc'NilConst2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Common.$tc'NilConst3) -}
+8066003a9f7b0dd9cb359b8f15996534
+  $tc'NilConst3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'NilConst"#) -}
+e25cb25af5c3e0aa68adcac572f60491
+  $tc'NotOp :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   3113700212508315456##
+                   4624488287251329471##
+                   Common.$trModule
+                   Common.$tc'NotOp1
+                   0#
+                   Common.$tc'FstOp1) -}
+dd8b20b6d68afce629fb204d15070141
+  $tc'NotOp1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Common.$tc'NotOp2) -}
+9c013c96c444e7c131639f76602ecfb4
+  $tc'NotOp2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'NotOp"#) -}
+8b9bf3c9d44ca6d9210cfff93f391b74
+  $tc'PrintOp :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   3882347675031313185##
+                   5466156471834118047##
+                   Common.$trModule
+                   Common.$tc'PrintOp1
+                   0#
+                   Common.$tc'FstOp1) -}
+6f7b9df2eea5aa44d0cb05ce5d48d39f
+  $tc'PrintOp1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Common.$tc'PrintOp2) -}
+4b2e3733df2cf6b1ad62afaf7090ba4c
+  $tc'PrintOp2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'PrintOp"#) -}
+5ff6c90286d9b35044c63e8fc72ad78a
+  $tc'SndOp :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   1170650766094832389##
+                   12319483336636702307##
+                   Common.$trModule
+                   Common.$tc'SndOp1
+                   0#
+                   Common.$tc'FstOp1) -}
+983bd850a109803ad99fccc3411f1996
+  $tc'SndOp1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Common.$tc'SndOp2) -}
+708c43f73eb84ff5a5aea18f6ee2045a
+  $tc'SndOp2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'SndOp"#) -}
+1542766174ae77d65f0b2786e17d1803
+  $tc'StringConst :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   4656058112623823503##
+                   12859753648320796395##
+                   Common.$trModule
+                   Common.$tc'StringConst2
+                   0#
+                   Common.$tc'StringConst1) -}
+0556bd85a2727e7295657ec29e7fcfb2
+  $tc'StringConst1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
+ecbc09782e239d5d4b0de0288483936b
+  $tc'StringConst2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Common.$tc'StringConst3) -}
+ae3022382b3ce9ad1162f6f13b5e0017
+  $tc'StringConst3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'StringConst"#) -}
+68a0514ec1523b4aa965992a2c8a2d6b
+  $tc'TlOp :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   15408711950695421218##
+                   16334120379989119097##
+                   Common.$trModule
+                   Common.$tc'TlOp1
+                   0#
+                   Common.$tc'FstOp1) -}
+f76b4b3a2ba7876537a7d343ecab3a39
+  $tc'TlOp1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Common.$tc'TlOp2) -}
+fe0b4648a60fabb1c4831d899ed3e34b
+  $tc'TlOp2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'TlOp"#) -}
+4d5b033c7b8f27e7f7289b2974fb6ad9
+  $tc'TyConst :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   2063586651967867353##
+                   982582383119539445##
+                   Common.$trModule
+                   Common.$tc'TyConst2
+                   0#
+                   Common.$tc'TyConst1) -}
+2ffa14dbfb33c70c11c50de3e04cf8a0
+  $tc'TyConst1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
+bc22072650683356026bf062632c8691
+  $tc'TyConst2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Common.$tc'TyConst3) -}
+dfa1cabe8204a6e0ff636026f77dcf11
+  $tc'TyConst3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'TyConst"#) -}
+e568df0893ce7b53c921c73bddaa6abc
+  $tc'TyVar :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   37224792948254474##
+                   11049628406415624605##
+                   Common.$trModule
+                   Common.$tc'TyVar2
+                   0#
+                   Common.$tc'TyVar1) -}
+8e20aaba5374c52165030147e485bfb6
+  $tc'TyVar1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
+3497e5e284315b4e9f62b7cd8e917b1f
+  $tc'TyVar2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Common.$tc'TyVar3) -}
+f210244b1bde6dba37a81be48860ca23
+  $tc'TyVar3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'TyVar"#) -}
+e8ecfc5a7a41a71dd206e448a8e8bf35
+  $tc'UnifError :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   14880556351723631849##
+                   14485398518313541050##
+                   Common.$trModule
+                   Common.$tc'UnifError2
+                   0#
+                   Common.$tc'UnifError1) -}
+4f2090adf5c1fb7e083e8cd10fd2557e
+  $tc'UnifError1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
+635e5a0430178fbad42eb06733190389
+  $tc'UnifError2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Common.$tc'UnifError3) -}
+b119fea45af105efb14ea6350045c10f
+  $tc'UnifError3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'UnifError"#) -}
+35d391143dc1e954f740149ce0e71450
+  $tc'UnitConst :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   13253182522034239575##
+                   1855512387652107350##
+                   Common.$trModule
+                   Common.$tc'UnitConst1
+                   0#
+                   Common.$tc'NilConst1) -}
+69cf5089cace023f40a94e03d261776b
+  $tc'UnitConst1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Common.$tc'UnitConst2) -}
+04c899375881a50cb258497016bedc90
+  $tc'UnitConst2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'UnitConst"#) -}
+01419c2e303307d9d63bc467e22ca331
+  $tc'ValidRes :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   11872650148454301623##
+                   11566773352594980607##
+                   Common.$trModule
+                   Common.$tc'ValidRes2
+                   1#
+                   Common.$tc'ValidRes1) -}
+093ec2bc492241a5c1747a1a25880037
+  $tc'ValidRes1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
+d19ecae2bcb41836d66e9978f5d7e1f2
+  $tc'ValidRes2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Common.$tc'ValidRes3) -}
+0f96057c954e1c6199219c06fceda379
+  $tc'ValidRes3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'ValidRes"#) -}
+9071d052dcbd34a18b9c75f3d6ba78d9
+  $tc'ValidState :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   8220522404431858042##
+                   10214321839208528424##
+                   Common.$trModule
+                   Common.$tc'ValidState2
+                   1#
+                   Common.$tc'ValidState1) -}
+d012a903c29d8763266a9e341f331631
+  $tc'ValidState1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
+4f00a43e495fbe2cc495bdcf603e8009
+  $tc'ValidState2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Common.$tc'ValidState3) -}
+f1f9ad6fc3654fcc466c97fcb9802477
+  $tc'ValidState3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'ValidState"#) -}
+dfe253bee9a76cfc2cf9f8c5cd317ef8
+  $tc'VarExp :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   15539671179855118073##
+                   3864888657793099968##
+                   Common.$trModule
+                   Common.$tc'VarExp2
+                   0#
+                   Common.$tc'VarExp1) -}
+989161b582fc01a1b1cc5769ff46d1a1
+  $tc'VarExp1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
+348941f01f0314d4f60a6f71954ea750
+  $tc'VarExp2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Common.$tc'VarExp3) -}
+03cfdd8610edf5c7e91601eec2637a65
+  $tc'VarExp3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'VarExp"#) -}
+5b22bab3eb9e07cc4b24354b8e001267
+  $tcBinop :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   13797823025768843536##
+                   8021734411885880273##
+                   Common.$trModule
+                   Common.$tcBinop1
+                   0#
+                   GHC.Types.krep$*) -}
+b58d3488672984c7de84df5eba3b04fe
+  $tcBinop1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Common.$tcBinop2) -}
+3d08f02beb90724882d10205524f7962
+  $tcBinop2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Binop"#) -}
+9970e120880d36b9b3500883235fe67f
+  $tcConst :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   5741642112302149751##
+                   11105015443603428236##
+                   Common.$trModule
+                   Common.$tcConst1
+                   0#
+                   GHC.Types.krep$*) -}
+7062362ea9ce28f3e39f9b24ff6db5ad
+  $tcConst1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Common.$tcConst2) -}
+4710fa9c8819ee1244123b135e43d76a
+  $tcConst2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Const"#) -}
+0fdde13b111221552c128d8ba4d36c82
+  $tcDec :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   15656682256295655809##
+                   16691516964156966300##
+                   Common.$trModule
+                   Common.$tcDec1
+                   0#
+                   GHC.Types.krep$*) -}
+1001cfb4a95df300832a7c90dfb2ed94
+  $tcDec1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Common.$tcDec2) -}
+43f949a860ad6f5db901841e632f6275
+  $tcDec2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Dec"#) -}
+e13592ea22d42bcf65d8543a78ff098e
+  $tcExp :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   12230438246715765623##
+                   1160536226213681719##
+                   Common.$trModule
+                   Common.$tcExp1
+                   0#
+                   GHC.Types.krep$*) -}
+1c56f704a46aa95eaeaf046f04f1f9fc
+  $tcExp1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Common.$tcExp2) -}
+1ed1e8eebf1878d52b7b893b5b4424d2
+  $tcExp2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Exp"#) -}
+6729bd06b3226b7d8bac1d391c2d5d81
+  $tcFVRes :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   4806910998676949025##
+                   18190887342561017410##
+                   Common.$trModule
+                   Common.$tcFVRes1
+                   0#
+                   GHC.Types.krep$*Arr*) -}
+406172e091093dc29a1d6ada38111397
+  $tcFVRes1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Common.$tcFVRes2) -}
+a56b6560579c2b74a1efbb6d5beb3c47
+  $tcFVRes2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("FVRes"#) -}
+1018c7e8e914cc4a7ff18fe8ac4cf430
+  $tcFVState :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   6146292722436056360##
+                   17324249901159548519##
+                   Common.$trModule
+                   Common.$tcFVState1
+                   0#
+                   GHC.Types.krep$*Arr*) -}
+1d82b9195ee34c362f6553815b005478
+  $tcFVState1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Common.$tcFVState2) -}
+436fd75efccbfdd4ee30fd581088fa08
+  $tcFVState2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("FVState"#) -}
+bbffab9ae850354d697b6fa9fb5fd18c
+  $tcMonoTy :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   18071450148769221483##
+                   3492183239106648474##
+                   Common.$trModule
+                   Common.$tcMonoTy1
+                   0#
+                   GHC.Types.krep$*) -}
+cd068cd3108c2f0118099e6373c3300a
+  $tcMonoTy1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Common.$tcMonoTy2) -}
+342d57c4b24f0288cef9d9ff1f01a436
+  $tcMonoTy2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("MonoTy"#) -}
+2e2c38ba7278aed029d223c2d7275fb0
+  $tcMonop :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   12997774541941475502##
+                   142056815207072173##
+                   Common.$trModule
+                   Common.$tcMonop1
+                   0#
+                   GHC.Types.krep$*) -}
+102b6add5aea6d57533a40cec2524ac2
+  $tcMonop1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Common.$tcMonop2) -}
+0d88c81b72c2139f641bd9ca886c6580
+  $tcMonop2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Monop"#) -}
+551860dfddb8e29e723e3e623eb11922
+  $tcTypeError :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   18085241318601173499##
+                   6243987378395641230##
+                   Common.$trModule
+                   Common.$tcTypeError1
+                   0#
+                   GHC.Types.krep$*) -}
+047f73625895a8e86885306f4fa12072
+  $tcTypeError1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Common.$tcTypeError2) -}
+7633e5996f81d5049f4f99293ec8bb90
+  $tcTypeError2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("TypeError"#) -}
+959176f1e6adf824fbaa3bd68464ddef
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   Common.$trModule3
+                   Common.$trModule1) -}
+1320e9e1e79dbc0fbeb6c661850c9470
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Common.$trModule2) -}
+6c02a42b71ccf51bce3f46035b802cd9
+  $trModule2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Common"#) -}
+40722d177cdda82d1ac2d74d9bbecdc8
+  $trModule3 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Common.$trModule4) -}
+932b9e041d38b5b416ddc744b2c8158c
+  $trModule4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs,
+     Unfolding: ("mp6-type-infer-0.1.0.0-KCsIbnCrPoAJ0yEvsnbQhv"#) -}
+fb7cc0e96dff00e27fa7b051d9e365e2
+  $w$sgo1 ::
+    Common.VarId
+    -> GHC.Prim.Int#
+    -> a1
+    -> Data.Map.Internal.Map Common.VarId a1
+    -> Data.Map.Internal.Map Common.VarId a1
+  {- Arity: 4, Strictness: <L,U><L,U><L,U><S,1*U>, Inline: [0] -}
+54f5145568a84e218fc1e8e3691ba06a
+  $w$sgo13 ::
+    Common.VarId
+    -> GHC.Prim.Int#
+    -> a1
+    -> Data.Map.Internal.Map Common.VarId a1
+    -> Data.Map.Internal.Map Common.VarId a1
+  {- Arity: 4, Strictness: <L,U><L,U><L,U><S,1*U>, Inline: [0] -}
+9d9701ff6746b9b5be7f328ba02e7b64
+  $w$sgo8 ::
+    GHC.Prim.Int#
+    -> a1
+    -> Data.Map.Internal.Map Common.VarId a1
+    -> Data.Map.Internal.Map Common.VarId a1
+  {- Arity: 3, Strictness: <L,U><S,1*U><S,1*U>, Inline: [0] -}
+a6bdf1404b6098a012763ad48851baaf
+  $w$ssetInsert ::
+    [Common.VarId]
+    -> Common.VarId -> (# Common.VarId, [Common.VarId] #)
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><L,U(U)>,
+     Inline: [0] -}
+e65d659c2ee593d84378cf2786253468
+  $wcanonRec ::
+    Data.Map.Internal.Map Common.VarId GHC.Base.String
+    -> GHC.Types.Int
+    -> Common.MonoTy
+    -> (# Data.Map.Internal.Map Common.VarId GHC.Base.String,
+          GHC.Types.Int #)
+  {- Arity: 3, Strictness: <L,U><L,U(U)><S,1*U>, Inline: [0] -}
+b02f1bec041211ed86651a4815b14712
+  $wlvl ::
+    Common.FVCounter
+    -> (# ([Common.VarId], Common.MonoTy), Common.FVCounter #)
+  {- Arity: 1, Strictness: <L,U(U)>, Inline: [0],
+     Unfolding: (\ (w :: Common.FVCounter) ->
+                 let {
+                   s :: Common.FVCounter
+                   = case w of wild { GHC.Types.I# x ->
+                     GHC.Types.I# (GHC.Prim.+# x 1#) }
+                 } in
+                 (# (GHC.Types.:
+                       @ Common.VarId
+                       w
+                       (GHC.Types.: @ Common.VarId s (GHC.Types.[] @ Common.VarId)),
+                     Common.TyConst
+                       Common.binopTySig9
+                       (GHC.Types.:
+                          @ Common.MonoTy
+                          (Common.TyVar w)
+                          (GHC.Types.:
+                             @ Common.MonoTy
+                             (Common.TyConst
+                                Common.binopTySig9
+                                (GHC.Types.:
+                                   @ Common.MonoTy
+                                   (Common.TyVar s)
+                                   (GHC.Types.:
+                                      @ Common.MonoTy
+                                      (Common.TyConst
+                                         Common.binopTySig15
+                                         (GHC.Types.:
+                                            @ Common.MonoTy
+                                            (Common.TyVar w)
+                                            (GHC.Types.:
+                                               @ Common.MonoTy
+                                               (Common.TyVar s)
+                                               (GHC.Types.[] @ Common.MonoTy))))
+                                      (GHC.Types.[] @ Common.MonoTy))))
+                             (GHC.Types.[] @ Common.MonoTy)))),
+                    case s of wild { GHC.Types.I# x ->
+                    GHC.Types.I# (GHC.Prim.+# x 1#) } #)) -}
+dd39b0414de5fc13f7889eaef05fedfa
+  $wlvl1 ::
+    Common.FVCounter
+    -> (# ([Common.VarId], Common.MonoTy), Common.FVCounter #)
+  {- Arity: 1, Strictness: <L,U(U)>, Inline: [0],
+     Unfolding: (\ (w :: Common.FVCounter) ->
+                 let {
+                   lTau :: Common.MonoTy = Common.TyVar w
+                 } in
+                 let {
+                   lTau1 :: [Common.MonoTy]
+                   = GHC.Types.: @ Common.MonoTy lTau (GHC.Types.[] @ Common.MonoTy)
+                 } in
+                 let {
+                   lTau2 :: Common.MonoTy = Common.TyConst Common.binopTySig19 lTau1
+                 } in
+                 (# (GHC.Types.: @ Common.VarId w (GHC.Types.[] @ Common.VarId),
+                     Common.TyConst
+                       Common.binopTySig9
+                       (GHC.Types.:
+                          @ Common.MonoTy
+                          lTau
+                          (GHC.Types.:
+                             @ Common.MonoTy
+                             (Common.TyConst
+                                Common.binopTySig9
+                                (GHC.Types.:
+                                   @ Common.MonoTy
+                                   lTau2
+                                   (GHC.Types.:
+                                      @ Common.MonoTy
+                                      lTau2
+                                      (GHC.Types.[] @ Common.MonoTy))))
+                             (GHC.Types.[] @ Common.MonoTy)))),
+                    case w of wild { GHC.Types.I# x ->
+                    GHC.Types.I# (GHC.Prim.+# x 1#) } #)) -}
+f27c9c535a1be23820c97f6d0716aa14
+  $wlvl2 ::
+    Common.FVCounter
+    -> (# ([Common.VarId], Common.MonoTy), Common.FVCounter #)
+  {- Arity: 1, Strictness: <L,U(U)>, Inline: [0],
+     Unfolding: (\ (w :: Common.FVCounter) ->
+                 let {
+                   s :: Common.FVCounter
+                   = case w of wild { GHC.Types.I# x ->
+                     GHC.Types.I# (GHC.Prim.+# x 1#) }
+                 } in
+                 (# (GHC.Types.:
+                       @ Common.VarId
+                       w
+                       (GHC.Types.: @ Common.VarId s (GHC.Types.[] @ Common.VarId)),
+                     Common.TyConst
+                       Common.binopTySig9
+                       (GHC.Types.:
+                          @ Common.MonoTy
+                          (Common.TyConst
+                             Common.binopTySig15
+                             (GHC.Types.:
+                                @ Common.MonoTy
+                                (Common.TyVar w)
+                                (GHC.Types.:
+                                   @ Common.MonoTy
+                                   (Common.TyVar s)
+                                   (GHC.Types.[] @ Common.MonoTy))))
+                          (GHC.Types.:
+                             @ Common.MonoTy
+                             (Common.TyVar s)
+                             (GHC.Types.[] @ Common.MonoTy)))),
+                    case s of wild { GHC.Types.I# x ->
+                    GHC.Types.I# (GHC.Prim.+# x 1#) } #)) -}
+14605d98457f1270a11e3c855eb7e900
+  $wlvl3 ::
+    Common.FVCounter
+    -> (# ([Common.VarId], Common.MonoTy), Common.FVCounter #)
+  {- Arity: 1, Strictness: <L,U(U)>, Inline: [0],
+     Unfolding: (\ (w :: Common.FVCounter) ->
+                 let {
+                   s :: Common.FVCounter
+                   = case w of wild { GHC.Types.I# x ->
+                     GHC.Types.I# (GHC.Prim.+# x 1#) }
+                 } in
+                 (# (GHC.Types.:
+                       @ Common.VarId
+                       w
+                       (GHC.Types.: @ Common.VarId s (GHC.Types.[] @ Common.VarId)),
+                     Common.TyConst
+                       Common.binopTySig9
+                       (GHC.Types.:
+                          @ Common.MonoTy
+                          (Common.TyConst
+                             Common.binopTySig15
+                             (GHC.Types.:
+                                @ Common.MonoTy
+                                (Common.TyVar w)
+                                (GHC.Types.:
+                                   @ Common.MonoTy
+                                   (Common.TyVar s)
+                                   (GHC.Types.[] @ Common.MonoTy))))
+                          (GHC.Types.:
+                             @ Common.MonoTy
+                             (Common.TyVar w)
+                             (GHC.Types.[] @ Common.MonoTy)))),
+                    case s of wild { GHC.Types.I# x ->
+                    GHC.Types.I# (GHC.Prim.+# x 1#) } #)) -}
+25627ab3089be1f5b634333e9227a1b3
+  $wlvl4 ::
+    Common.FVCounter
+    -> (# ([Common.VarId], Common.MonoTy), Common.FVCounter #)
+  {- Arity: 1, Strictness: <L,U(U)>, Inline: [0],
+     Unfolding: (\ (w :: Common.FVCounter) ->
+                 let {
+                   lTau :: Common.MonoTy = Common.TyVar w
+                 } in
+                 let {
+                   lTau1 :: [Common.MonoTy]
+                   = GHC.Types.: @ Common.MonoTy lTau (GHC.Types.[] @ Common.MonoTy)
+                 } in
+                 let {
+                   lTau2 :: Common.MonoTy = Common.TyConst Common.binopTySig19 lTau1
+                 } in
+                 (# (GHC.Types.: @ Common.VarId w (GHC.Types.[] @ Common.VarId),
+                     Common.TyConst
+                       Common.binopTySig9
+                       (GHC.Types.:
+                          @ Common.MonoTy
+                          lTau2
+                          (GHC.Types.:
+                             @ Common.MonoTy
+                             lTau2
+                             (GHC.Types.[] @ Common.MonoTy)))),
+                    case w of wild { GHC.Types.I# x ->
+                    GHC.Types.I# (GHC.Prim.+# x 1#) } #)) -}
+15222e2826033d621a1d64a763c5a23c
+  $wpoly_go1 ::
+    GHC.Prim.Int#
+    -> Data.Map.Internal.Map GHC.Types.Int a -> GHC.Base.Maybe a
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,U><S,1*U>, Inline: [0] -}
+f52b3adc8a8d22d454974f272378050c
+  $wpoly_go13 ::
+    Common.VarId
+    -> Data.Map.Internal.Map Common.VarId a
+    -> (# Data.Map.Internal.Map Common.VarId a,
+          Data.Map.Internal.Map Common.VarId a #)
+  {- Arity: 2, Strictness: <L,1*U(U)><S,1*U>, Inline: [0] -}
+7999da3bb955091f5af285f981e73e0a
+  $wsetInsert :: GHC.Classes.Eq a => [a] -> a -> (# a, [a] #)
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,U(C(C1(U)),A)><S,1*U><L,U>, Inline: [0] -}
+9e8974ea3aba5aa66e310f8bf25cbcef
+  $wstringOfSub ::
+    Common.SubstEnv -> GHC.Prim.Int# -> GHC.Base.String
+  {- Arity: 2, Strictness: <L,U><S,U>, Inline: [0],
+     Unfolding: (\ (w :: Common.SubstEnv) (ww :: GHC.Prim.Int#) ->
+                 letrec {
+                   $wlistRec :: GHC.Prim.Int# -> [(GHC.Types.Int, Common.MonoTy)]
+                     {- Arity: 1, Strictness: <S,U>, Inline: [0] -}
+                   = \ (ww1 :: GHC.Prim.Int#) ->
+                     case GHC.Prim.tagToEnum#
+                            @ GHC.Types.Bool
+                            (GHC.Prim.==# ww1 ww) of wild {
+                       GHC.Types.False
+                       -> case Common.$wpoly_go1 @ Common.MonoTy ww1 w of wild1 {
+                            GHC.Base.Nothing -> $wlistRec (GHC.Prim.+# ww1 1#)
+                            GHC.Base.Just tau
+                            -> GHC.Types.:
+                                 @ (GHC.Types.Int, Common.MonoTy)
+                                 (GHC.Types.I# ww1, tau)
+                                 ($wlistRec (GHC.Prim.+# ww1 1#)) }
+                       GHC.Types.True -> GHC.Types.[] @ (GHC.Types.Int, Common.MonoTy) }
+                 } in
+                 case $wlistRec 0# of wild {
+                   [] -> Common.stringOfSub5
+                   : ds t
+                   -> case ds of wild1 { (,) i tau ->
+                      GHC.CString.unpackAppendCString#
+                        Common.stringOfSub4
+                        (case i of ww2 { GHC.Types.I# ww3 ->
+                         case GHC.Show.$wshowSignedInt
+                                0#
+                                ww3
+                                (GHC.Types.[] @ GHC.Types.Char) of ww4 { (#,#) ww5 ww6 ->
+                         GHC.Base.++
+                           @ GHC.Types.Char
+                           (GHC.Types.: @ GHC.Types.Char ww5 ww6)
+                           (GHC.CString.unpackAppendCString#
+                              Common.stringOfSub3
+                              (GHC.Base.++
+                                 @ GHC.Types.Char
+                                 (Common.stringOfMonoTy
+                                    (case Common.$wcanonRec
+                                            (Data.Map.Internal.Tip @ Common.VarId @ GHC.Base.String)
+                                            Common.canonize1
+                                            tau of ww1 { (#,#) ww8 ww9 ->
+                                     ww8 })
+                                    tau)
+                                 (GHC.Base.++
+                                    @ GHC.Types.Char
+                                    (Common.stringOfSub_sosRec t)
+                                    Common.stringOfSub1))) } }) } }) -}
+8acf88c425b3c33cb74ce9bee4a256ff
+  data Binop
+    = IntPlusOp
+    | IntMinusOp
+    | IntTimesOp
+    | IntDivOp
+    | ConcatOp
+    | ConsOp
+    | CommaOp
+    | EqOp
+    | GreaterOp
+e422d09eea70b7951562aa97baf248b3
+  type CanonEnv = Data.Map.Internal.Map Common.VarId GHC.Base.String
+8aa57b5352e6c5826bceaac33c2ca83d
+  data Const
+    = IntConst GHC.Types.Int
+    | BoolConst GHC.Types.Bool
+    | StringConst GHC.Base.String
+    | NilConst
+    | UnitConst
+cbb321cf939f554f3572105d36f80298
+  data Dec
+    = AnonDec Common.Exp
+    | LetDec GHC.Base.String Common.Exp
+    | LetRec GHC.Base.String GHC.Base.String Common.Exp
+c0b0202dc4c067b39dfa53aaf4d8cfc2
+  data Exp
+    = ConstExp Common.Const
+    | VarExp GHC.Base.String
+    | MonOpExp Common.Monop Common.Exp
+    | BinOpExp Common.Binop Common.Exp Common.Exp
+    | IfExp Common.Exp Common.Exp Common.Exp
+    | AppExp Common.Exp Common.Exp
+    | FunExp GHC.Base.String Common.Exp
+    | LetExp GHC.Base.String Common.Exp Common.Exp
+    | LetRecExp GHC.Base.String GHC.Base.String Common.Exp Common.Exp
+b0a1b3607ad629df76383328dd5dc78d
+  type FVCounter = GHC.Types.Int
+c430fbe786bbd595deea77002f661f2c
+  data FVRes a
+    = ValidRes a Common.FVCounter | ErrorRes Common.TypeError
+503809768707ef4f03cda82750d7b8e1
+  data FVState a
+    = ValidState (Common.FVCounter -> Common.FVRes a)
+    | ErrorState Common.TypeError
+2b092fa562158d888310321a9eb0ed4c
+  data MonoTy
+    = TyVar Common.VarId | TyConst GHC.Base.String [Common.MonoTy]
+12dacdc3e75439df91eac27e5e22c7f6
+  data Monop
+    = HdOp | TlOp | PrintOp | IntNegOp | FstOp | SndOp | NotOp
+e666a042bc634f0e50a878d50f403570
+  type PolyTy = ([Common.VarId], Common.MonoTy)
+9112a2bbb66d32e8ce2cf12a21fd2c84
+  type SubstEnv = Data.Map.Internal.Map Common.VarId Common.MonoTy
+98d606472b227d150ddaf942ea7457a9
+  type TypeEnv = Data.Map.Internal.Map GHC.Base.String Common.PolyTy
+a74c05c20732f377ca8255b518de3c3d
+  data TypeError = UnifError Common.Exp | LookupError GHC.Base.String
+00c97d273b8f930706c2534babae9bb9
+  type VarId = GHC.Types.Int
+7d2417ad18f8fdbf36e327f3e6e1d74e
+  binopTySig :: Common.Binop -> Common.FVState Common.PolyTy
+  {- Arity: 1, Strictness: <S,1*U>m1,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Common.Binop) ->
+                 case ds of wild {
+                   DEFAULT -> Common.binopTySig29
+                   Common.ConcatOp -> Common.binopTySig21
+                   Common.ConsOp -> Common.binopTySig17
+                   Common.CommaOp -> Common.binopTySig13
+                   Common.EqOp -> Common.binopTySig11
+                   Common.GreaterOp -> Common.binopTySig1 }) -}
+f3ca2adc740849615d476945890d8e89
+  binopTySig1 :: Common.FVState ([Common.VarId], Common.MonoTy)
+  {- Strictness: m1,
+     Unfolding: (Common.ValidState
+                   @ ([Common.VarId], Common.MonoTy)
+                   Common.binopTySig2) -}
+68bd19d118b507bb135e3d5b3697d22c
+  binopTySig10 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("fun"#) -}
+32b623866ab6a299a7937e052ea57ad3
+  binopTySig11 :: Common.FVState Common.PolyTy
+  {- Strictness: m1,
+     Unfolding: (Common.ValidState
+                   @ Common.PolyTy
+                   Common.binopTySig12) -}
+2dac4694f99a49084874512ea3e46ae1
+  binopTySig12 ::
+    Common.FVCounter -> Common.FVRes ([Common.VarId], Common.MonoTy)
+  {- Arity: 1, Strictness: <L,U(U)>m1, Inline: [0],
+     Unfolding: InlineRule (1, True, False)
+                (\ (w :: Common.FVCounter) ->
+                 Common.ValidRes
+                   @ ([Common.VarId], Common.MonoTy)
+                   (GHC.Types.: @ Common.VarId w (GHC.Types.[] @ Common.VarId),
+                    Common.TyConst
+                      Common.binopTySig9
+                      (GHC.Types.:
+                         @ Common.MonoTy
+                         (Common.TyVar w)
+                         (GHC.Types.:
+                            @ Common.MonoTy
+                            (Common.TyConst
+                               Common.binopTySig9
+                               (GHC.Types.:
+                                  @ Common.MonoTy
+                                  (Common.TyVar w)
+                                  (GHC.Types.:
+                                     @ Common.MonoTy
+                                     Common.boolTy
+                                     (GHC.Types.[] @ Common.MonoTy))))
+                            (GHC.Types.[] @ Common.MonoTy))))
+                   (case w of wild { GHC.Types.I# x ->
+                    GHC.Types.I# (GHC.Prim.+# x 1#) })) -}
+322ad0df23c89c048d8c5c607fd3f03e
+  binopTySig13 :: Common.FVState Common.PolyTy
+  {- Strictness: m1,
+     Unfolding: (Common.ValidState
+                   @ Common.PolyTy
+                   Common.binopTySig14) -}
+b4c09cb25047991f6dd98aa3679c51db
+  binopTySig14 ::
+    Common.FVCounter -> Common.FVRes ([Common.VarId], Common.MonoTy)
+  {- Arity: 1, Strictness: <L,U(U)>m1, Inline: [0],
+     Unfolding: InlineRule (1, True, False)
+                (\ (w :: Common.FVCounter) ->
+                 case Common.$wlvl w of ww { (#,#) ww1 ww2 ->
+                 Common.ValidRes @ ([Common.VarId], Common.MonoTy) ww1 ww2 }) -}
+fc0fb0f36de1bd206bbaebfcc0faa152
+  binopTySig15 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Common.binopTySig16) -}
+0d9f6ef15164130d3dbefd48a7dda925
+  binopTySig16 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("pair"#) -}
+e25cf214405e05b6aa9f3b04b17b040a
+  binopTySig17 :: Common.FVState Common.PolyTy
+  {- Strictness: m1,
+     Unfolding: (Common.ValidState
+                   @ Common.PolyTy
+                   Common.binopTySig18) -}
+554a7c848c88dcf1b7d8583f21175906
+  binopTySig18 ::
+    Common.FVCounter -> Common.FVRes ([Common.VarId], Common.MonoTy)
+  {- Arity: 1, Strictness: <L,U(U)>m1, Inline: [0],
+     Unfolding: InlineRule (1, True, False)
+                (\ (w :: Common.FVCounter) ->
+                 case Common.$wlvl1 w of ww { (#,#) ww1 ww2 ->
+                 Common.ValidRes @ ([Common.VarId], Common.MonoTy) ww1 ww2 }) -}
+e10a6c03188eb35a280f4e340a351112
+  binopTySig19 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Common.binopTySig20) -}
+5382cd0e0c6dadbea4dd02ede3a9d232
+  binopTySig2 ::
+    Common.FVCounter -> Common.FVRes ([Common.VarId], Common.MonoTy)
+  {- Arity: 1, Strictness: <L,U>m1,
+     Unfolding: InlineRule (1, True, False)
+                (\ (s :: Common.FVCounter) ->
+                 Common.ValidRes
+                   @ ([Common.VarId], Common.MonoTy)
+                   Common.binopTySig_v
+                   s) -}
+31cd5c4ec5d33e8bfa55470be888fd24
+  binopTySig20 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("list"#) -}
+dabdf6e65d6064d0188f10918b314a55
+  binopTySig21 :: Common.FVState ([Common.VarId], Common.MonoTy)
+  {- Strictness: m1,
+     Unfolding: (Common.ValidState
+                   @ ([Common.VarId], Common.MonoTy)
+                   Common.binopTySig22) -}
+1003eb1f81732303f72b8d81d00f2cbf
+  binopTySig22 ::
+    Common.FVCounter -> Common.FVRes ([Common.VarId], Common.MonoTy)
+  {- Arity: 1, Strictness: <L,U>m1,
+     Unfolding: InlineRule (1, True, False)
+                (\ (s :: Common.FVCounter) ->
+                 Common.ValidRes
+                   @ ([Common.VarId], Common.MonoTy)
+                   Common.binopTySig_v1
+                   s) -}
+855f818a96d107f3c6dc5a05a5b83097
+  binopTySig23 :: Common.MonoTy
+  {- Strictness: m2,
+     Unfolding: (Common.TyConst
+                   Common.binopTySig9
+                   Common.binopTySig24) -}
+efceb863edc8b61b80fb67f62dfcadae
+  binopTySig24 :: [Common.MonoTy]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Common.MonoTy
+                   Common.stringTy
+                   Common.binopTySig25) -}
+c1fba9fb4d8f83ad61f33779fd701b09
+  binopTySig25 :: [Common.MonoTy]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Common.MonoTy
+                   Common.binopTySig26
+                   (GHC.Types.[] @ Common.MonoTy)) -}
+38e78be4c1d536de55732e38d40de823
+  binopTySig26 :: Common.MonoTy
+  {- Strictness: m2,
+     Unfolding: (Common.TyConst
+                   Common.binopTySig9
+                   Common.binopTySig27) -}
+8a5766eabc65ed54ff2fbac7296fa71d
+  binopTySig27 :: [Common.MonoTy]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Common.MonoTy
+                   Common.stringTy
+                   Common.binopTySig28) -}
+5a04450d1e76a903beaafb95d199b384
+  binopTySig28 :: [Common.MonoTy]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Common.MonoTy
+                   Common.stringTy
+                   (GHC.Types.[] @ Common.MonoTy)) -}
+2e94763c214bc5b02f50ebab2c53e35c
+  binopTySig29 :: Common.FVState ([Common.VarId], Common.MonoTy)
+  {- Strictness: m1,
+     Unfolding: (Common.ValidState
+                   @ ([Common.VarId], Common.MonoTy)
+                   Common.binopTySig30) -}
+00f5cfa68c9fba9d1ff7dd9ea353cf23
+  binopTySig3 :: Common.MonoTy
+  {- Strictness: m2,
+     Unfolding: (Common.TyConst
+                   Common.binopTySig9
+                   Common.binopTySig4) -}
+3f7d1912a1d5b716266986c92fa7f2c6
+  binopTySig30 ::
+    Common.FVCounter -> Common.FVRes ([Common.VarId], Common.MonoTy)
+  {- Arity: 1, Strictness: <L,U>m1,
+     Unfolding: InlineRule (1, True, False)
+                (\ (s :: Common.FVCounter) ->
+                 Common.ValidRes
+                   @ ([Common.VarId], Common.MonoTy)
+                   Common.binopTySig_v2
+                   s) -}
+cb6002a0a7414fb5139fcb4f324f9230
+  binopTySig31 :: Common.MonoTy
+  {- Strictness: m2,
+     Unfolding: (Common.TyConst
+                   Common.binopTySig9
+                   Common.binopTySig32) -}
+860effb3df7e5d682b815e630a7d2774
+  binopTySig32 :: [Common.MonoTy]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Common.MonoTy
+                   Common.intTy
+                   Common.binopTySig33) -}
+83b4717467fc31fa64d89f56527b1bd8
+  binopTySig33 :: [Common.MonoTy]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Common.MonoTy
+                   Common.binopTySig34
+                   (GHC.Types.[] @ Common.MonoTy)) -}
+223bcd16fdc2a21fcbc5355affa586c3
+  binopTySig34 :: Common.MonoTy
+  {- Strictness: m2,
+     Unfolding: (Common.TyConst
+                   Common.binopTySig9
+                   Common.binopTySig35) -}
+40d300f1ed550c398e9601f21da843ba
+  binopTySig35 :: [Common.MonoTy]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Common.MonoTy
+                   Common.intTy
+                   Common.binopTySig36) -}
+7fc566fd5cca4de77c577f83bbd54dd8
+  binopTySig36 :: [Common.MonoTy]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Common.MonoTy
+                   Common.intTy
+                   (GHC.Types.[] @ Common.MonoTy)) -}
+2ae85cf8187b169c0a0c14566de32ab0
+  binopTySig4 :: [Common.MonoTy]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Common.MonoTy
+                   Common.intTy
+                   Common.binopTySig5) -}
+200e675aea7d884459d1a17b512104fe
+  binopTySig5 :: [Common.MonoTy]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Common.MonoTy
+                   Common.binopTySig6
+                   (GHC.Types.[] @ Common.MonoTy)) -}
+2b3d140cc139973e0b1705032d7ac396
+  binopTySig6 :: Common.MonoTy
+  {- Strictness: m2,
+     Unfolding: (Common.TyConst
+                   Common.binopTySig9
+                   Common.binopTySig7) -}
+affbf6815812df745229bf39d11ef24b
+  binopTySig7 :: [Common.MonoTy]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Common.MonoTy
+                   Common.intTy
+                   Common.binopTySig8) -}
+1738892c5f7ca26c4f5119808c20c3ac
+  binopTySig8 :: [Common.MonoTy]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Common.MonoTy
+                   Common.boolTy
+                   (GHC.Types.[] @ Common.MonoTy)) -}
+c2a53efdf814385778876b932fe290fe
+  binopTySig9 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Common.binopTySig10) -}
+652479e80cce321dfdd44aa92afa59dc
+  binopTySig_v :: ([Common.VarId], Common.MonoTy)
+  {- Strictness: m,
+     Unfolding: ((GHC.Types.[] @ Common.VarId, Common.binopTySig3)) -}
+74a1daff6e936f9f177e2e1faf75075d
+  binopTySig_v1 :: ([Common.VarId], Common.MonoTy)
+  {- Strictness: m,
+     Unfolding: ((GHC.Types.[] @ Common.VarId, Common.binopTySig23)) -}
+64c5445bc3b35c0d6c2345adfc7cc7bc
+  binopTySig_v2 :: ([Common.VarId], Common.MonoTy)
+  {- Strictness: m,
+     Unfolding: ((GHC.Types.[] @ Common.VarId, Common.binopTySig31)) -}
+4315c482013bf4289d7c6618b4f3f160
+  boolTy :: Common.MonoTy
+  {- Strictness: m2,
+     Unfolding: (Common.TyConst
+                   Common.boolTy1
+                   (GHC.Types.[] @ Common.MonoTy)) -}
+b146e34464b21ba118b0db86bb362e33
+  boolTy1 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Common.boolTy2) -}
+0f103ac716af0efcedc94a6a22943395
+  boolTy2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("bool"#) -}
+a1dc6d61fbe046a7c154adc169ab92e8
+  canonize :: Common.MonoTy -> Common.CanonEnv
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (tau :: Common.MonoTy) ->
+                 case Common.canonize_canonRec
+                        (Data.Map.Internal.Tip @ Common.VarId @ GHC.Base.String)
+                        Common.canonize1
+                        tau of wild { (,) env ds ->
+                 env }) -}
+2b92e4833516959d49fe11cffec4134c
+  canonize1 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 0#) -}
+9a42b03c44ee721396889469ba7a2a94
+  canonize_canonRec ::
+    Data.Map.Internal.Map Common.VarId GHC.Base.String
+    -> GHC.Types.Int
+    -> Common.MonoTy
+    -> (Data.Map.Internal.Map Common.VarId GHC.Base.String,
+        GHC.Types.Int)
+  {- Arity: 3, Strictness: <L,U><L,U(U)><S,1*U>m, Inline: [0],
+     Unfolding: InlineRule (3, True, False)
+                (\ (w :: Data.Map.Internal.Map Common.VarId GHC.Base.String)
+                   (w1 :: GHC.Types.Int)
+                   (w2 :: Common.MonoTy) ->
+                 case Common.$wcanonRec w w1 w2 of ww { (#,#) ww1 ww2 ->
+                 (ww1, ww2) }) -}
+4add607540192c79a27ca415a3624e4d
+  constTySig :: Common.Const -> Common.FVState Common.PolyTy
+  {- Arity: 1, Strictness: <S,1*U>m1,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Common.Const) ->
+                 case ds of wild {
+                   Common.IntConst ds1 -> Common.constTySig9
+                   Common.BoolConst ds1 -> Common.constTySig7
+                   Common.StringConst ds1 -> Common.constTySig5
+                   Common.NilConst -> Common.constTySig3
+                   Common.UnitConst -> Common.constTySig1 }) -}
+0d5066fcad6ee7bcb1bad6f546ffb033
+  constTySig1 :: Common.FVState ([Common.VarId], Common.MonoTy)
+  {- Strictness: m1,
+     Unfolding: (Common.ValidState
+                   @ ([Common.VarId], Common.MonoTy)
+                   Common.constTySig2) -}
+5e8dd58dd6a12a80f2bef42715674612
+  constTySig10 ::
+    Common.FVCounter -> Common.FVRes ([Common.VarId], Common.MonoTy)
+  {- Arity: 1, Strictness: <L,U>m1,
+     Unfolding: InlineRule (1, True, False)
+                (\ (s :: Common.FVCounter) ->
+                 Common.ValidRes
+                   @ ([Common.VarId], Common.MonoTy)
+                   Common.constTySig_v3
+                   s) -}
+97a79bb31b5aae64c8c5f51388f6b8ec
+  constTySig2 ::
+    Common.FVCounter -> Common.FVRes ([Common.VarId], Common.MonoTy)
+  {- Arity: 1, Strictness: <L,U>m1,
+     Unfolding: InlineRule (1, True, False)
+                (\ (s :: Common.FVCounter) ->
+                 Common.ValidRes
+                   @ ([Common.VarId], Common.MonoTy)
+                   Common.constTySig_v
+                   s) -}
+f2050285c8a03ab7531f8eb917c3eb63
+  constTySig3 :: Common.FVState ([Common.VarId], Common.MonoTy)
+  {- Strictness: m1,
+     Unfolding: (Common.ValidState
+                   @ ([Common.VarId], Common.MonoTy)
+                   Common.constTySig4) -}
+5207b351b27a1ea3982cee8ab38194f5
+  constTySig4 ::
+    Common.FVCounter -> Common.FVRes ([Common.VarId], Common.MonoTy)
+  {- Arity: 1, Strictness: <L,U(U)>m1, Inline: [0],
+     Unfolding: InlineRule (1, True, False)
+                (\ (w :: Common.FVCounter) ->
+                 Common.ValidRes
+                   @ ([Common.VarId], Common.MonoTy)
+                   (GHC.Types.: @ Common.VarId w (GHC.Types.[] @ Common.VarId),
+                    Common.TyConst
+                      Common.binopTySig19
+                      (GHC.Types.:
+                         @ Common.MonoTy
+                         (Common.TyVar w)
+                         (GHC.Types.[] @ Common.MonoTy)))
+                   (case w of wild { GHC.Types.I# x ->
+                    GHC.Types.I# (GHC.Prim.+# x 1#) })) -}
+f744bcb7c4b67c7768e2c701bb4fe0dc
+  constTySig5 :: Common.FVState ([Common.VarId], Common.MonoTy)
+  {- Strictness: m1,
+     Unfolding: (Common.ValidState
+                   @ ([Common.VarId], Common.MonoTy)
+                   Common.constTySig6) -}
+748c04fcb11b87e9d5a6f67352268dc8
+  constTySig6 ::
+    Common.FVCounter -> Common.FVRes ([Common.VarId], Common.MonoTy)
+  {- Arity: 1, Strictness: <L,U>m1,
+     Unfolding: InlineRule (1, True, False)
+                (\ (s :: Common.FVCounter) ->
+                 Common.ValidRes
+                   @ ([Common.VarId], Common.MonoTy)
+                   Common.constTySig_v1
+                   s) -}
+b402ecbf7e7d092ea4df5495325f28eb
+  constTySig7 :: Common.FVState ([Common.VarId], Common.MonoTy)
+  {- Strictness: m1,
+     Unfolding: (Common.ValidState
+                   @ ([Common.VarId], Common.MonoTy)
+                   Common.constTySig8) -}
+abafad0da4517c1ec96233cb9a6eafc0
+  constTySig8 ::
+    Common.FVCounter -> Common.FVRes ([Common.VarId], Common.MonoTy)
+  {- Arity: 1, Strictness: <L,U>m1,
+     Unfolding: InlineRule (1, True, False)
+                (\ (s :: Common.FVCounter) ->
+                 Common.ValidRes
+                   @ ([Common.VarId], Common.MonoTy)
+                   Common.constTySig_v2
+                   s) -}
+4b95320cd54699c55752a2e8c9df2bcd
+  constTySig9 :: Common.FVState ([Common.VarId], Common.MonoTy)
+  {- Strictness: m1,
+     Unfolding: (Common.ValidState
+                   @ ([Common.VarId], Common.MonoTy)
+                   Common.constTySig10) -}
+fe30956caaea12a612a28206cafb61e3
+  constTySig_v :: ([Common.VarId], Common.MonoTy)
+  {- Strictness: m,
+     Unfolding: ((GHC.Types.[] @ Common.VarId, Common.unitTy)) -}
+997427a945bda4064493d75913182aef
+  constTySig_v1 :: ([Common.VarId], Common.MonoTy)
+  {- Strictness: m,
+     Unfolding: ((GHC.Types.[] @ Common.VarId, Common.stringTy)) -}
+e1515985959027b69ff32addc5822656
+  constTySig_v2 :: ([Common.VarId], Common.MonoTy)
+  {- Strictness: m,
+     Unfolding: ((GHC.Types.[] @ Common.VarId, Common.boolTy)) -}
+bcdcbb7885575e6c389f2d4061cb5c4b
+  constTySig_v3 :: ([Common.VarId], Common.MonoTy)
+  {- Strictness: m,
+     Unfolding: ((GHC.Types.[] @ Common.VarId, Common.intTy)) -}
+0819f6750d0d70e99f3c75d10506e7de
+  freeVarsEnv :: Common.TypeEnv -> [Common.VarId]
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>,
+     Unfolding: (\ (env :: Common.TypeEnv) ->
+                 Common.freeVarsEnv_go13 (GHC.Types.[] @ Common.VarId) env) -}
+c881b06ca977377e5fd0f29b2c1ef626
+  freeVarsEnv_go13 ::
+    [Common.VarId]
+    -> Data.Map.Internal.Map
+         [GHC.Types.Char] ([Common.VarId], Common.MonoTy)
+    -> [Common.VarId]
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U> -}
+1013c4b9e3cc724ac27c6ae7de72aa50
+  freeVarsMonoTy :: Common.MonoTy -> [Common.VarId]
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>,
+     Unfolding: (\ (ds :: Common.MonoTy) ->
+                 case ds of wild {
+                   Common.TyVar i
+                   -> GHC.Types.: @ Common.VarId i (GHC.Types.[] @ Common.VarId)
+                   Common.TyConst ds1 tauL -> Common.freeVarsMonoTy_go tauL }) -}
+764d822f20a9c9f13e6116afb8b22386
+  freeVarsMonoTy_go :: [Common.MonoTy] -> [Common.VarId]
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U> -}
+c9a304c55d304c344a501b449ec85866
+  freeVarsPolyTy :: Common.PolyTy -> [Common.VarId]
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(SS),1*U(1*U,1*U)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: ([Common.VarId], Common.MonoTy)) ->
+                 case ds of wild { (,) qVars tau ->
+                 case tau of wild1 {
+                   Common.TyVar i
+                   -> Common.freeVarsPolyTy_$ssetDiff
+                        (GHC.Types.: @ Common.VarId i (GHC.Types.[] @ Common.VarId))
+                        qVars
+                   Common.TyConst ds1 tauL
+                   -> Common.freeVarsPolyTy_$ssetDiff
+                        (Common.freeVarsMonoTy_go tauL)
+                        qVars } }) -}
+c17bd3b094e96b6c390e8b091132cb6b
+  freeVarsPolyTy_$ssetDiff ::
+    [Common.VarId] -> [Common.VarId] -> [Common.VarId]
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U> -}
+1ffc2edadc92f877335aeb92942f5cdb
+  freshTVar :: Common.FVState Common.VarId
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (Common.ValidState
+                   @ Common.FVCounter
+                   Common.freshTVar1) -}
+9c50b60414190594b5ec19a78d4aaf39
+  freshTVar1 :: Common.FVCounter -> Common.FVRes Common.FVCounter
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,U(U)>m1,
+     Unfolding: InlineRule (1, True, False)
+                (\ (i :: Common.FVCounter) ->
+                 Common.ValidRes
+                   @ Common.FVCounter
+                   i
+                   (case i of wild { GHC.Types.I# x ->
+                    GHC.Types.I# (GHC.Prim.+# x 1#) })) -}
+c461d4a174b98996d378a7a0b072723c
+  freshTau :: Common.FVState Common.MonoTy
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (Common.ValidState @ Common.MonoTy Common.freshTau1) -}
+d65485cc027db2597f272e9667b8ac8f
+  freshTau1 :: Common.FVCounter -> Common.FVRes Common.MonoTy
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,U(U)>m1,
+     Unfolding: InlineRule (1, True, False)
+                (\ (s :: Common.FVCounter) ->
+                 Common.ValidRes
+                   @ Common.MonoTy
+                   (Common.TyVar s)
+                   (case s of wild { GHC.Types.I# x ->
+                    GHC.Types.I# (GHC.Prim.+# x 1#) })) -}
+763972fffc5cedd0a6bd8f8638c39892
+  funTy :: Common.MonoTy -> Common.MonoTy -> Common.MonoTy
+  {- Arity: 2, Strictness: <L,U><L,U>m2,
+     Unfolding: InlineRule (2, True, False)
+                (\ (t1 :: Common.MonoTy) (t2 :: Common.MonoTy) ->
+                 Common.TyConst
+                   Common.binopTySig9
+                   (GHC.Types.:
+                      @ Common.MonoTy
+                      t1
+                      (GHC.Types.:
+                         @ Common.MonoTy
+                         t2
+                         (GHC.Types.[] @ Common.MonoTy)))) -}
+286cdd3227530d2b213de9db839d3a5a
+  gen :: Common.TypeEnv -> Common.MonoTy -> Common.PolyTy
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,1*U><L,U>m,
+     Unfolding: InlineRule (2, True, False)
+                (\ (env :: Common.TypeEnv) (tau :: Common.MonoTy) ->
+                 (case tau of wild {
+                    Common.TyVar i
+                    -> Common.freeVarsPolyTy_$ssetDiff
+                         (GHC.Types.: @ Common.VarId i (GHC.Types.[] @ Common.VarId))
+                         (Common.freeVarsEnv_go13 (GHC.Types.[] @ Common.VarId) env)
+                    Common.TyConst ds tauL
+                    -> Common.freeVarsPolyTy_$ssetDiff
+                         (Common.freeVarsMonoTy_go tauL)
+                         (Common.freeVarsEnv_go13 (GHC.Types.[] @ Common.VarId) env) },
+                  tau)) -}
+0bcdf2d4c36ac259274d39f57c53ecc6
+  intTy :: Common.MonoTy
+  {- Strictness: m2,
+     Unfolding: (Common.TyConst
+                   Common.intTy1
+                   (GHC.Types.[] @ Common.MonoTy)) -}
+d18c8a36744e473d88b81c6c5fe0b951
+  intTy1 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Common.intTy2) -}
+b93bf6db2135072e0fe29090cd73b0b3
+  intTy2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("int"#) -}
+b44ff58b9ad6a11735a57cc5ad3fee03
+  liftEnv :: Common.SubstEnv -> Common.TypeEnv -> Common.TypeEnv
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,U><S,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (sEnv :: Common.SubstEnv) (tEnv :: Common.TypeEnv) ->
+                 Data.Map.Strict.Internal.mapWithKey
+                   @ GHC.Base.String
+                   @ Common.PolyTy
+                   @ Common.PolyTy
+                   (\ (x :: GHC.Base.String) (tau :: Common.PolyTy)[OneShot] ->
+                    Common.liftPolyTy sEnv tau)
+                   tEnv) -}
+0f38d943cc11cb2b7f53eafee3133245
+  liftMonoTy :: Common.SubstEnv -> Common.MonoTy -> Common.MonoTy
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,U><S,1*U> -}
+b1c9e3dadbd3ac7d1669525f0cb69926
+  liftPolyTy :: Common.SubstEnv -> Common.PolyTy -> Common.PolyTy
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,U><S,1*U(U,1*U)>m,
+     Unfolding: InlineRule (2, True, False)
+                (\ (sEnv :: Common.SubstEnv)
+                   (ds :: ([Common.VarId], Common.MonoTy)) ->
+                 case ds of wild { (,) qVars tau ->
+                 (qVars, Common.liftMonoTy sEnv tau) }) -}
+c47a441137f9094212fe299ce1c284f1
+  listTy :: Common.MonoTy -> Common.MonoTy
+  {- Arity: 1, Strictness: <L,U>m2,
+     Unfolding: InlineRule (1, True, False)
+                (\ (tau :: Common.MonoTy) ->
+                 Common.TyConst
+                   Common.binopTySig19
+                   (GHC.Types.:
+                      @ Common.MonoTy
+                      tau
+                      (GHC.Types.[] @ Common.MonoTy))) -}
+6184fa97b9e13f772baddd89ce4aeeec
+  monopTySig :: Common.Monop -> Common.FVState Common.PolyTy
+  {- Arity: 1, Strictness: <S,1*U>m1,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Common.Monop) ->
+                 case ds of wild {
+                   Common.HdOp -> Common.monopTySig18
+                   Common.TlOp -> Common.monopTySig16
+                   Common.PrintOp -> Common.monopTySig11
+                   Common.IntNegOp -> Common.monopTySig9
+                   Common.FstOp -> Common.monopTySig7
+                   Common.SndOp -> Common.monopTySig5
+                   Common.NotOp -> Common.monopTySig1 }) -}
+ebbb840f91cd4662daa64fb25c88a8d1
+  monopTySig1 :: Common.FVState ([Common.VarId], Common.MonoTy)
+  {- Strictness: m1,
+     Unfolding: (Common.ValidState
+                   @ ([Common.VarId], Common.MonoTy)
+                   Common.monopTySig2) -}
+1910dda2648e2e8252ff10c6656b5d06
+  monopTySig10 ::
+    Common.FVCounter -> Common.FVRes ([Common.VarId], Common.MonoTy)
+  {- Arity: 1, Strictness: <L,U>m1,
+     Unfolding: InlineRule (1, True, False)
+                (\ (s :: Common.FVCounter) ->
+                 Common.ValidRes
+                   @ ([Common.VarId], Common.MonoTy)
+                   Common.monopTySig_v1
+                   s) -}
+17e931189c21841ca3f42691c10d054f
+  monopTySig11 :: Common.FVState ([Common.VarId], Common.MonoTy)
+  {- Strictness: m1,
+     Unfolding: (Common.ValidState
+                   @ ([Common.VarId], Common.MonoTy)
+                   Common.monopTySig12) -}
+55117ba7ac201eceecc3be6271f594a5
+  monopTySig12 ::
+    Common.FVCounter -> Common.FVRes ([Common.VarId], Common.MonoTy)
+  {- Arity: 1, Strictness: <L,U>m1,
+     Unfolding: InlineRule (1, True, False)
+                (\ (s :: Common.FVCounter) ->
+                 Common.ValidRes
+                   @ ([Common.VarId], Common.MonoTy)
+                   Common.monopTySig_v2
+                   s) -}
+de7557ea32c945b14efe84d492c83a21
+  monopTySig13 :: Common.MonoTy
+  {- Strictness: m2,
+     Unfolding: (Common.TyConst
+                   Common.binopTySig9
+                   Common.monopTySig14) -}
+72319e26f579babcac9f48f68e5f6032
+  monopTySig14 :: [Common.MonoTy]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Common.MonoTy
+                   Common.stringTy
+                   Common.monopTySig15) -}
+dfa96c8549e5da72c92484c7160e7d92
+  monopTySig15 :: [Common.MonoTy]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Common.MonoTy
+                   Common.unitTy
+                   (GHC.Types.[] @ Common.MonoTy)) -}
+f93f51a118674b1f6e902f288529ec67
+  monopTySig16 :: Common.FVState ([Common.VarId], Common.MonoTy)
+  {- Strictness: m1,
+     Unfolding: (Common.ValidState
+                   @ ([Common.VarId], Common.MonoTy)
+                   Common.monopTySig17) -}
+33f6cc8d67d7ab73c3e5027fd3440f43
+  monopTySig17 ::
+    Common.FVCounter -> Common.FVRes ([Common.VarId], Common.MonoTy)
+  {- Arity: 1, Strictness: <L,U(U)>m1, Inline: [0],
+     Unfolding: InlineRule (1, True, False)
+                (\ (w :: Common.FVCounter) ->
+                 case Common.$wlvl4 w of ww { (#,#) ww1 ww2 ->
+                 Common.ValidRes @ ([Common.VarId], Common.MonoTy) ww1 ww2 }) -}
+9c2b3623261497a95dd94d302fa06c10
+  monopTySig18 :: Common.FVState ([Common.VarId], Common.MonoTy)
+  {- Strictness: m1,
+     Unfolding: (Common.ValidState
+                   @ ([Common.VarId], Common.MonoTy)
+                   Common.monopTySig19) -}
+8f08d50019e4380839c99ecec5f38fe6
+  monopTySig19 ::
+    Common.FVCounter -> Common.FVRes ([Common.VarId], Common.MonoTy)
+  {- Arity: 1, Strictness: <L,U(U)>m1, Inline: [0],
+     Unfolding: InlineRule (1, True, False)
+                (\ (w :: Common.FVCounter) ->
+                 Common.ValidRes
+                   @ ([Common.VarId], Common.MonoTy)
+                   (GHC.Types.: @ Common.VarId w (GHC.Types.[] @ Common.VarId),
+                    Common.TyConst
+                      Common.binopTySig9
+                      (GHC.Types.:
+                         @ Common.MonoTy
+                         (Common.TyConst
+                            Common.binopTySig19
+                            (GHC.Types.:
+                               @ Common.MonoTy
+                               (Common.TyVar w)
+                               (GHC.Types.[] @ Common.MonoTy)))
+                         (GHC.Types.:
+                            @ Common.MonoTy
+                            (Common.TyVar w)
+                            (GHC.Types.[] @ Common.MonoTy))))
+                   (case w of wild { GHC.Types.I# x ->
+                    GHC.Types.I# (GHC.Prim.+# x 1#) })) -}
+084dfa419f73bf7a8f1fb392dbdcc277
+  monopTySig2 ::
+    Common.FVCounter -> Common.FVRes ([Common.VarId], Common.MonoTy)
+  {- Arity: 1, Strictness: <L,U>m1,
+     Unfolding: InlineRule (1, True, False)
+                (\ (s :: Common.FVCounter) ->
+                 Common.ValidRes
+                   @ ([Common.VarId], Common.MonoTy)
+                   Common.monopTySig_v
+                   s) -}
+1f0559ea99c5ed79ccd72a3ef8db6f43
+  monopTySig3 :: Common.MonoTy
+  {- Strictness: m2,
+     Unfolding: (Common.TyConst
+                   Common.binopTySig9
+                   Common.monopTySig4) -}
+4a83d6ada095a35c2644bbaa1e78358c
+  monopTySig4 :: [Common.MonoTy]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Common.MonoTy
+                   Common.boolTy
+                   Common.binopTySig8) -}
+10a1bbb32d08472a50a01e9d1c1cd5e7
+  monopTySig5 :: Common.FVState Common.PolyTy
+  {- Strictness: m1,
+     Unfolding: (Common.ValidState
+                   @ Common.PolyTy
+                   Common.monopTySig6) -}
+001bd467c73f444f7796571efa89d83e
+  monopTySig6 ::
+    Common.FVCounter -> Common.FVRes ([Common.VarId], Common.MonoTy)
+  {- Arity: 1, Strictness: <L,U(U)>m1, Inline: [0],
+     Unfolding: InlineRule (1, True, False)
+                (\ (w :: Common.FVCounter) ->
+                 case Common.$wlvl2 w of ww { (#,#) ww1 ww2 ->
+                 Common.ValidRes @ ([Common.VarId], Common.MonoTy) ww1 ww2 }) -}
+1a8086c4767fa81d18a767d4b019fd57
+  monopTySig7 :: Common.FVState Common.PolyTy
+  {- Strictness: m1,
+     Unfolding: (Common.ValidState
+                   @ Common.PolyTy
+                   Common.monopTySig8) -}
+1de8debb030cff1ca17ad4803ea2d504
+  monopTySig8 ::
+    Common.FVCounter -> Common.FVRes ([Common.VarId], Common.MonoTy)
+  {- Arity: 1, Strictness: <L,U(U)>m1, Inline: [0],
+     Unfolding: InlineRule (1, True, False)
+                (\ (w :: Common.FVCounter) ->
+                 case Common.$wlvl3 w of ww { (#,#) ww1 ww2 ->
+                 Common.ValidRes @ ([Common.VarId], Common.MonoTy) ww1 ww2 }) -}
+77a9aa71fecedce19852397c7920219d
+  monopTySig9 :: Common.FVState ([Common.VarId], Common.MonoTy)
+  {- Strictness: m1,
+     Unfolding: (Common.ValidState
+                   @ ([Common.VarId], Common.MonoTy)
+                   Common.monopTySig10) -}
+719b7d16409f5fc0eeece6245593d65a
+  monopTySig_v :: ([Common.VarId], Common.MonoTy)
+  {- Strictness: m,
+     Unfolding: ((GHC.Types.[] @ Common.VarId, Common.monopTySig3)) -}
+96534511c16bc7441636ac07f34b0790
+  monopTySig_v1 :: ([Common.VarId], Common.MonoTy)
+  {- Strictness: m,
+     Unfolding: ((GHC.Types.[] @ Common.VarId, Common.binopTySig34)) -}
+6b49a9969672839362173443b1673169
+  monopTySig_v2 :: ([Common.VarId], Common.MonoTy)
+  {- Strictness: m,
+     Unfolding: ((GHC.Types.[] @ Common.VarId, Common.monopTySig13)) -}
+f28b8e95dfdc22c2e776dfe43bb12a90
+  pairTy :: Common.MonoTy -> Common.MonoTy -> Common.MonoTy
+  {- Arity: 2, Strictness: <L,U><L,U>m2,
+     Unfolding: InlineRule (2, True, False)
+                (\ (t1 :: Common.MonoTy) (t2 :: Common.MonoTy) ->
+                 Common.TyConst
+                   Common.binopTySig15
+                   (GHC.Types.:
+                      @ Common.MonoTy
+                      t1
+                      (GHC.Types.:
+                         @ Common.MonoTy
+                         t2
+                         (GHC.Types.[] @ Common.MonoTy)))) -}
+6b381c6c85a387660823c8a31893cb09
+  quantifyMonoTy :: Common.MonoTy -> Common.PolyTy
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,U>m,
+     Unfolding: InlineRule (1, True, False)
+                (\ (tau :: Common.MonoTy) -> (Common.freeVarsMonoTy tau, tau)) -}
+acf0f5d078ceebd1a11f04a5f22333a1
+  runFVState ::
+    Common.FVState a -> Common.FVCounter -> Common.FVRes a
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><L,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ @ a (ds :: Common.FVState a) (ds1 :: Common.FVCounter) ->
+                 case ds of wild {
+                   Common.ValidState f -> f ds1
+                   Common.ErrorState e -> Common.ErrorRes @ a e }) -}
+07013c4f191962e3416fddd199746dd8
+  setDiff :: GHC.Classes.Eq a => [a] -> [a] -> [a]
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,U(C(C1(U)),A)><S,1*U><S,1*U> -}
+5a9e0ed57810b259edafd4471d1c6dee
+  setInsert :: GHC.Classes.Eq a => [a] -> a -> [a]
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,U(C(C1(U)),A)><S,1*U><L,U>m2, Inline: [0],
+     Unfolding: InlineRule (3, True, False)
+                (\ @ a (w :: GHC.Classes.Eq a) (w1 :: [a]) (w2 :: a) ->
+                 case Common.$wsetInsert @ a w w1 w2 of ww { (#,#) ww1 ww2 ->
+                 GHC.Types.: @ a ww1 ww2 }) -}
+1c18755c6068e038aa949f2b43cdd2fc
+  setRemove :: GHC.Classes.Eq a => [a] -> a -> [a]
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,U(C(C1(U)),A)><S,1*U><L,U> -}
+9ff07a9c2ab834817dd26d020d86f700
+  setRemove_$ssetRemove ::
+    [Common.VarId] -> Common.VarId -> [Common.VarId]
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><L,1*U(U)> -}
+63ff78c987768f6dba602eab42d67b4f
+  setUnion :: GHC.Classes.Eq a => [a] -> [a] -> [a]
+  {- Arity: 3, HasNoCafRefs,
+     Strictness: <L,U(C(C1(U)),A)><S,1*U><S,1*U> -}
+9c8b1679b72d60ff9c0b7f0164727199
+  setUnion_$ssetUnion ::
+    [Common.VarId] -> [Common.VarId] -> [Common.VarId]
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U> -}
+cb9a2a30234ccc097d1e57aac99cb2d0
+  stringOfBinop :: Common.Binop -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: (\ (ds :: Common.Binop) ->
+                 case ds of wild {
+                   Common.IntPlusOp -> Common.stringOfBinop17
+                   Common.IntMinusOp -> Common.stringOfBinop15
+                   Common.IntTimesOp -> Common.stringOfBinop13
+                   Common.IntDivOp -> Common.stringOfBinop11
+                   Common.ConcatOp -> Common.stringOfBinop9
+                   Common.ConsOp -> Common.stringOfBinop7
+                   Common.CommaOp -> Common.stringOfBinop5
+                   Common.EqOp -> Common.stringOfBinop3
+                   Common.GreaterOp -> Common.stringOfBinop1 }) -}
+c3ca3ae00775fad8c6951d5eabfcaaff
+  stringOfBinop1 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Common.stringOfBinop2) -}
+15aa1dfa706ca16d3fc73c5ac017fed4
+  stringOfBinop10 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("^"#) -}
+3f8ee2f7d74a332668e42099e8d8af60
+  stringOfBinop11 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   Common.stringOfBinop12) -}
+f4cbd122de4a747be24e1e1696bbae72
+  stringOfBinop12 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("/"#) -}
+a22e14a6661f6eea6bc67ebb2431b93a
+  stringOfBinop13 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   Common.stringOfBinop14) -}
+9bcbaaacb9a8b6eb7975927a74da5051
+  stringOfBinop14 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("*"#) -}
+0a55cd069cd5d814b3dc3cfd94de1bae
+  stringOfBinop15 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   Common.stringOfBinop16) -}
+d8efa1a00ead5894d680f5533a1bd5e7
+  stringOfBinop16 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("-"#) -}
+a8c70e893963e1580351217994666edc
+  stringOfBinop17 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   Common.stringOfBinop18) -}
+caad0e2907d5a497fa24ff6481c9df1e
+  stringOfBinop18 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("+"#) -}
+c15424aca480324ae0f0e447d424a6c7
+  stringOfBinop2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: (">"#) -}
+b9fb4552e7f66be6ec2f8f2da5c1ff6e
+  stringOfBinop3 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Common.stringOfBinop4) -}
+ea67ca361e91348a8239b820719c49b4
+  stringOfBinop4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("="#) -}
+a24c9dbead2e6c240049d47945615e68
+  stringOfBinop5 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Common.stringOfBinop6) -}
+8ffdb05b930b24a389452c7ebd67f6dc
+  stringOfBinop6 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: (","#) -}
+3b7e51d86eaa74cf69fbcd538cc46231
+  stringOfBinop7 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Common.stringOfBinop8) -}
+1a4ee9dfcf5107db4183458749a5b519
+  stringOfBinop8 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("::"#) -}
+187213e884e9e9d2861fab712e6eef64
+  stringOfBinop9 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   Common.stringOfBinop10) -}
+827a58346ac30e44e5ff604494a41a1f
+  stringOfConst :: Common.Const -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: (\ (ds :: Common.Const) ->
+                 case ds of wild {
+                   Common.IntConst i -> GHC.Show.$fShowInt_$cshow i
+                   Common.BoolConst b
+                   -> case b of wild1 {
+                        GHC.Types.False -> Common.stringOfConst9
+                        GHC.Types.True -> Common.stringOfConst7 }
+                   Common.StringConst s
+                   -> GHC.CString.unpackAppendCString#
+                        Common.stringOfConst6
+                        (GHC.Base.++ @ GHC.Types.Char s Common.stringOfConst5)
+                   Common.NilConst -> Common.stringOfConst3
+                   Common.UnitConst -> Common.stringOfConst1 }) -}
+88600040053bc375f58691417f0e8c16
+  stringOfConst1 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Common.stringOfConst2) -}
+f57b8c815be1ec79caedf4ba3a70275a
+  stringOfConst10 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("false"#) -}
+d913ee00a474faaef3a774ff09dd9c45
+  stringOfConst2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("()"#) -}
+6b37574aeaff7f8f98c4be102c7995ac
+  stringOfConst3 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Common.stringOfConst4) -}
+eae72f697adab244c8b5ea7b7591f4fe
+  stringOfConst4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("[]"#) -}
+2afc00c3c4907ddac002f5aaf56aee78
+  stringOfConst5 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Common.stringOfConst6) -}
+17a53d1f931763776a69b13df945e709
+  stringOfConst6 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("\""#) -}
+6135489637e11502291690248638c8ad
+  stringOfConst7 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Common.stringOfConst8) -}
+bc3627b211489c459d59531e268cd4dc
+  stringOfConst8 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("true"#) -}
+b72df49d95bf883095775364445771eb
+  stringOfConst9 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   Common.stringOfConst10) -}
+57978a792c3cfeb0e4d17c9b33a34f66
+  stringOfDec :: Common.Dec -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: (\ (ds :: Common.Dec) ->
+                 case ds of wild {
+                   Common.AnonDec e' -> Common.stringOfExp e'
+                   Common.LetDec x e'
+                   -> GHC.CString.unpackAppendCString#
+                        Common.stringOfDec4
+                        (GHC.Base.++
+                           @ GHC.Types.Char
+                           x
+                           (GHC.CString.unpackAppendCString#
+                              Common.stringOfDec3
+                              (Common.stringOfExp e')))
+                   Common.LetRec f x e'
+                   -> GHC.CString.unpackAppendCString#
+                        Common.stringOfDec2
+                        (GHC.Base.++
+                           @ GHC.Types.Char
+                           f
+                           (GHC.CString.unpackAppendCString#
+                              Common.stringOfDec1
+                              (GHC.Base.++
+                                 @ GHC.Types.Char
+                                 x
+                                 (GHC.CString.unpackAppendCString#
+                                    Common.stringOfDec3
+                                    (Common.stringOfExp e'))))) }) -}
+4f9b94577021f7a1e74f0c09110b930a
+  stringOfDec1 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: (" "#) -}
+d14a38ea81ca2616c79b21b024e9f456
+  stringOfDec2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("let rec "#) -}
+aba0e16911771274f4661ae507d9ac7d
+  stringOfDec3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: (" = "#) -}
+a10510b69a2a81983526e6b959de498f
+  stringOfDec4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("let "#) -}
+b317b045d774d0de31d5cb633e3f459e
+  stringOfError :: Common.TypeError -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: (\ (ds :: Common.TypeError) ->
+                 case ds of wild {
+                   Common.UnifError e
+                   -> GHC.CString.unpackAppendCString#
+                        Common.stringOfError2
+                        (Common.stringOfExp e)
+                   Common.LookupError x
+                   -> GHC.CString.unpackAppendCString# Common.stringOfError1 x }) -}
+ff9d555ee64a99ac71e324a4d18b0741
+  stringOfError1 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Failed lookup of variable: "#) -}
+b43352ca6f8b88a27612e32f73e8b5e5
+  stringOfError2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs,
+     Unfolding: ("Unification error from expression: "#) -}
+c6b77d04c70fde4360693b6d4b66304b
+  stringOfExp :: Common.Exp -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U> -}
+646f5a47d489b89b32f56cb8931484ed
+  stringOfMonoTy ::
+    Common.CanonEnv -> Common.MonoTy -> GHC.Base.String
+  {- Arity: 2, Strictness: <L,U><S,1*U> -}
+d2ba9c8b7940c7c27e6e998a4dd48ee7
+  stringOfMonop :: Common.Monop -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Common.Monop) ->
+                 case ds of wild {
+                   Common.HdOp -> Common.stringOfMonop13
+                   Common.TlOp -> Common.stringOfMonop11
+                   Common.PrintOp -> Common.stringOfMonop9
+                   Common.IntNegOp -> Common.stringOfMonop7
+                   Common.FstOp -> Common.stringOfMonop5
+                   Common.SndOp -> Common.stringOfMonop3
+                   Common.NotOp -> Common.stringOfMonop1 }) -}
+dee0549a01f1c3db32370a00ccfb7352
+  stringOfMonop1 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Common.stringOfMonop2) -}
+6556f29a3024f6e76158cdbaa91eb407
+  stringOfMonop10 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("print"#) -}
+cb2a3af0797783023504563b875ec200
+  stringOfMonop11 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   Common.stringOfMonop12) -}
+ffa57811aac99828d4b92babc748cd84
+  stringOfMonop12 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("tl"#) -}
+018375db3e12d080ea0b9a73cd56d8fb
+  stringOfMonop13 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   Common.stringOfMonop14) -}
+79592c9022e5f4f3a28419a9e49659aa
+  stringOfMonop14 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("hd"#) -}
+71b3800402597e62e83946493197b550
+  stringOfMonop2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("not"#) -}
+b8d55daabe96b368b36a5e0829a84ea2
+  stringOfMonop3 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Common.stringOfMonop4) -}
+62242a76be46d29371990ab13d186ea0
+  stringOfMonop4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("snd"#) -}
+7e38e5d7b09f87c8dacbb1e0d4738194
+  stringOfMonop5 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Common.stringOfMonop6) -}
+523151dbc7177e3c30e7484c0ce4bb1e
+  stringOfMonop6 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("fst"#) -}
+c0cc33bb5bdea87b7ffc7792bd77a8d2
+  stringOfMonop7 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Common.stringOfMonop8) -}
+aeadd9171df5e8ebe0e866beaf02ba87
+  stringOfMonop8 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("~"#) -}
+898a4459206ffbdc222388f06acacc12
+  stringOfMonop9 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   Common.stringOfMonop10) -}
+c24abdf1ac6d6dd765ce84fc40bae6ce
+  stringOfSub :: Common.SubstEnv -> GHC.Types.Int -> GHC.Base.String
+  {- Arity: 2, Strictness: <L,U><S(S),1*U(U)>, Inline: [0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: Common.SubstEnv) (w1 :: GHC.Types.Int) ->
+                 case w1 of ww { GHC.Types.I# ww1 ->
+                 Common.$wstringOfSub w ww1 }) -}
+a975a59db26a3155413bb34eefd53b09
+  stringOfSub1 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Common.stringOfSub2) -}
+17abb4d8b5dea6c5b42e656323e46949
+  stringOfSub2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("}"#) -}
+94d72ab4bf5d27370d26ea4a0e45e4f0
+  stringOfSub3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: (" -> "#) -}
+b0382a154530c437eb54b2ffbd7298b5
+  stringOfSub4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("{"#) -}
+4134c90628dd0d15c372e65311f7be19
+  stringOfSub5 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Common.stringOfSub6) -}
+ad47dac2a3ece8e8aa71a2b799a4e906
+  stringOfSub6 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("{}"#) -}
+30f1f00338c06c3a90a3f4724bd6ff24
+  stringOfSub_sosRec ::
+    [(GHC.Types.Int, Common.MonoTy)] -> [GHC.Types.Char]
+  {- Arity: 1, Strictness: <S,1*U> -}
+18aabe8bacb833c728e2c5b884d2ea96
+  stringTy :: Common.MonoTy
+  {- Strictness: m2,
+     Unfolding: (Common.TyConst
+                   Common.stringTy1
+                   (GHC.Types.[] @ Common.MonoTy)) -}
+5e0a0b6c491cd9f8a7d6886e676e61dc
+  stringTy1 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Common.stringTy2) -}
+0bed196c7fa7e58ffae6f482e2cf2f71
+  stringTy2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("string"#) -}
+11a73969f9dcb1d0937f14f4f8ff5160
+  substCompose ::
+    Common.SubstEnv -> Common.SubstEnv -> Common.SubstEnv
+  {- Arity: 2, Strictness: <S,U><S,U>,
+     Unfolding: (\ (sEnv1 :: Common.SubstEnv)
+                   (sEnv2 :: Common.SubstEnv) ->
+                 letrec {
+                   scRec :: [(Common.VarId, Common.MonoTy)]
+                            -> Data.Map.Internal.Map Common.VarId Common.MonoTy
+                     {- Arity: 1, Strictness: <S,1*U> -}
+                   = \ (ds :: [(Common.VarId, Common.MonoTy)]) ->
+                     case ds of wild {
+                       [] -> sEnv2
+                       : ds1 t
+                       -> case ds1 of wild1 { (,) i tau ->
+                          case i of ww { GHC.Types.I# ww1 ->
+                          Common.$w$sgo8
+                            @ Common.MonoTy
+                            ww1
+                            (Common.liftMonoTy sEnv1 tau)
+                            (scRec t) } } }
+                 } in
+                 Common.$sunion
+                   @ Common.MonoTy
+                   sEnv1
+                   (scRec
+                      (Data.Map.Internal.$fDataMap_go
+                         @ GHC.Types.Int
+                         @ Common.MonoTy
+                         (GHC.Types.[] @ (GHC.Types.Int, Common.MonoTy))
+                         sEnv2))) -}
+6700e670aeb03e5f7ab578a55a71b107
+  substEmpty :: Common.SubstEnv
+  {- HasNoCafRefs,
+     Unfolding: InlineRule (0, True, True)
+                (Data.Map.Internal.Tip @ Common.VarId @ Common.MonoTy) -}
+246c089736ccdad497b4bcdba2ff1b6d
+  substInit :: Common.VarId -> Common.MonoTy -> Common.SubstEnv
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>m1,
+     Unfolding: InlineRule (0, True, True)
+                (Data.Map.Strict.Internal.singleton
+                   @ Common.VarId
+                   @ Common.MonoTy) -}
+63d3785eb89d9dda892249052656c0f8
+  tVarName :: GHC.Types.Int -> GHC.Base.String
+  {- Arity: 1, Strictness: <L,1*U(U)>m2, Inline: [0],
+     Unfolding: InlineRule (1, True, False)
+                (\ (w :: GHC.Types.Int) ->
+                 GHC.Types.:
+                   @ GHC.Types.Char
+                   Common.tVarName1
+                   (GHC.Types.:
+                      @ GHC.Types.Char
+                      (case w of wild1 { GHC.Types.I# y ->
+                       let {
+                         i# :: GHC.Prim.Int# = GHC.Prim.+# 97# y
+                       } in
+                       case GHC.Prim.tagToEnum#
+                              @ GHC.Types.Bool
+                              (GHC.Prim.leWord# (GHC.Prim.int2Word# i#) 1114111##) of wild2 {
+                         GHC.Types.False -> GHC.Char.$wlvl i#
+                         GHC.Types.True -> GHC.Types.C# (GHC.Prim.chr# i#) } })
+                      (GHC.Types.[] @ GHC.Types.Char))) -}
+b122d349624188680ed1b4a25fe4e837
+  tVarName1 :: GHC.Types.Char
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.C# '\''#) -}
+9284a46e9287502831f7ca10372e717f
+  throwError :: Common.TypeError -> Common.FVState a
+  {- Arity: 1, HasNoCafRefs, Strictness: <L,U>m2,
+     Unfolding: InlineRule (0, True, True) Common.ErrorState -}
+a6f410fb09427a07d3684617229c7829
+  unitTy :: Common.MonoTy
+  {- Strictness: m2,
+     Unfolding: (Common.TyConst
+                   Common.unitTy1
+                   (GHC.Types.[] @ Common.MonoTy)) -}
+f86d2231057cbbe960e05a8dbf9e86f8
+  unitTy1 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Common.unitTy2) -}
+d76fe3d523766aab80ab1b21e6b656d4
+  unitTy2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("unit"#) -}
+instance [safe] GHC.Base.Applicative [Common.FVState]
+  = Common.$fApplicativeFVState
+instance [safe] GHC.Classes.Eq [Common.MonoTy] = Common.$fEqMonoTy
+instance [safe] GHC.Base.Functor [Common.FVState]
+  = Common.$fFunctorFVState
+instance [safe] GHC.Base.Monad [Common.FVState]
+  = Common.$fMonadFVState
+"SPEC setDiff @ VarId" forall ($dEq :: GHC.Classes.Eq Common.VarId)
+  Common.setDiff @ GHC.Types.Int $dEq
+  = Common.freeVarsPolyTy_$ssetDiff
+"SPEC setRemove @ VarId" forall ($dEq :: GHC.Classes.Eq
+                                           Common.VarId)
+  Common.setRemove @ GHC.Types.Int $dEq
+  = Common.setRemove_$ssetRemove
+"SPEC setUnion @ VarId" forall ($dEq :: GHC.Classes.Eq
+                                          Common.VarId)
+  Common.setUnion @ GHC.Types.Int $dEq = Common.setUnion_$ssetUnion
+"SPEC/Common union @ VarId _" [orphan] forall @ a
+                                              ($dOrd :: GHC.Classes.Ord Common.VarId)
+  Data.Map.Internal.union @ GHC.Types.Int @ a $dOrd
+  = Common.$sunion @ a
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+

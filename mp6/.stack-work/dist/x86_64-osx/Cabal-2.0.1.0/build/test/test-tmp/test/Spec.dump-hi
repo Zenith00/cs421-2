@@ -1,0 +1,401 @@
+
+==================== FINAL INTERFACE ====================
+2019-04-26 20:29:37.443127 UTC
+
+interface main:Spec 8022
+  interface hash: cf7b31528290df935bad90318e57d439
+  ABI hash: 363386a0091a8fb98599434f709f9f61
+  export-list hash: d45f78a21856a1d29c3d5a9d4ed6d586
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 6ec88d32ae9896706285a278428c6202
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Spec.convert_test
+  Spec.main
+  Spec.test_group_infer
+  Spec.test_group_unify
+  Spec.tests
+module dependencies: Tests
+package dependencies: QuickCheck-2.10.1 ansi-terminal-0.7.1.1
+                      ansi-wl-pprint-0.6.8.1 array-0.5.2.0 base-4.10.1.0 binary-0.8.5.1
+                      bytestring-0.10.8.2 colour-2.3.4 containers-0.5.10.2
+                      deepseq-1.4.3.0 ghc-boot-th-8.2.2 ghc-prim-0.5.1.1 hostname-1.0
+                      integer-gmp-1.0.1.0 mp6-type-infer-0.1.0.0 pretty-1.1.3.3
+                      primitive-0.6.2.0 random-1.1 regex-base-0.93.2 regex-posix-0.95.2
+                      template-haskell-2.12.0.0 test-framework-0.8.1.1
+                      test-framework-quickcheck2-0.3.0.4 text-1.2.2.2 tf-random-0.5
+                      time-1.8.0.2 transformers-0.5.2.0 xml-1.3.14
+orphans: colour-2.3.4:Data.Colour text-1.2.2.2:Data.Text.Lazy
+         text-1.2.2.2:Data.Text binary-0.8.5.1:Data.Binary.Generic
+         bytestring-0.10.8.2:Data.ByteString.Builder
+         text-1.2.2.2:Data.Text.Show
+         regex-posix-0.95.2:Text.Regex.Posix.String
+         regex-base-0.93.2:Text.Regex.Base.Context
+         transformers-0.5.2.0:Control.Monad.Trans.Error
+         time-1.8.0.2:Data.Time.Format.Parse
+         time-1.8.0.2:Data.Time.LocalTime.Internal.ZonedTime
+         time-1.8.0.2:Data.Time.LocalTime.Internal.LocalTime
+         time-1.8.0.2:Data.Time.Calendar.Gregorian base-4.10.1.0:GHC.Float
+         base-4.10.1.0:GHC.Base
+family instance modules: base-4.10.1.0:Control.Applicative
+                         base-4.10.1.0:Data.Complex base-4.10.1.0:Data.Either
+                         base-4.10.1.0:Data.Functor.Compose base-4.10.1.0:Data.Functor.Const
+                         base-4.10.1.0:Data.Functor.Identity
+                         base-4.10.1.0:Data.Functor.Product base-4.10.1.0:Data.Functor.Sum
+                         base-4.10.1.0:Data.List.NonEmpty base-4.10.1.0:Data.Monoid
+                         base-4.10.1.0:Data.Semigroup base-4.10.1.0:Data.Type.Equality
+                         base-4.10.1.0:Data.Version base-4.10.1.0:Data.Void
+                         base-4.10.1.0:GHC.Exts base-4.10.1.0:GHC.Generics
+                         base-4.10.1.0:GHC.IO.Exception base-4.10.1.0:GHC.TypeLits
+                         base-4.10.1.0:GHC.TypeNats containers-0.5.10.2:Data.IntMap.Internal
+                         containers-0.5.10.2:Data.IntSet.Internal
+                         containers-0.5.10.2:Data.Map.Internal
+                         containers-0.5.10.2:Data.Sequence.Internal
+                         containers-0.5.10.2:Data.Set.Internal containers-0.5.10.2:Data.Tree
+                         ghc-boot-th-8.2.2:GHC.ForeignSrcLang.Type
+                         ghc-boot-th-8.2.2:GHC.LanguageExtensions.Type
+                         pretty-1.1.3.3:Text.PrettyPrint.Annotated.HughesPJ
+                         pretty-1.1.3.3:Text.PrettyPrint.HughesPJ
+                         primitive-0.6.2.0:Control.Monad.Primitive
+                         template-haskell-2.12.0.0:Language.Haskell.TH.Syntax
+                         text-1.2.2.2:Data.Text text-1.2.2.2:Data.Text.Lazy
+import  -/  QuickCheck-2.10.1:Test.QuickCheck d3b1dbef2e421e48c1bd83f5d63f629a
+import  -/  QuickCheck-2.10.1:Test.QuickCheck.Property 9dc870c807087fa6915da9b589de1b80
+import  -/  base-4.10.1.0:Data.Foldable 9ed87455d68e87ff2b5b8725eae9897e
+import  -/  base-4.10.1.0:GHC.Base 782fd99b5e36f3698a26179a49afca64
+import  -/  base-4.10.1.0:GHC.List e3060fbeb44ce0038e6b4dedf2dd9cf1
+import  -/  base-4.10.1.0:GHC.Num 6e1dc5d36d99a802edb39b92bb1923b8
+import  -/  base-4.10.1.0:GHC.Show 0a8ce2b5e533d1c2cfb7954e6736be45
+import  -/  base-4.10.1.0:Prelude 31945b7d0084063347fc52506d3a4020
+import  -/  ghc-prim-0.5.1.1:GHC.Types b1fd0716441595db508c1a74387bf394
+import  -/  Tests 185072773fcde383c4cfe9522d7b08ed
+  exports: d42f38fe9bda2a42279341d02fbbf1ff
+  tests_infer_app 2c0b09540d154b5801d4864df13c2ca3
+  tests_infer_cond 60c4ddaa2541d03734939d9712fcf2c9
+  tests_infer_const 7f8d7f8f10bd6b43610ddf298a79839e
+  tests_infer_fun 3afab168812241945f8df28cf68ffaa3
+  tests_infer_let f8dece17d5f6918a44f38d384ed55a63
+  tests_infer_op 852326a0bf6ac587dd28c6cddfc88877
+  tests_infer_rec 1e0325866b4ccc670c388b59b7a2ed0a
+  tests_infer_var 2d6f2d8e4d28493daad1db540b666482
+  tests_unify_comp 190bad0385dc3fc521c4e93ee483cd17
+  tests_unify_decomp f22f8dc186adbec6685d44c0cee85f71
+  tests_unify_del 92d2e25d77b54df3e6df1ca72de06f8d
+  tests_unify_elim cfc3b2428d3b1f3660fe3df1ac1b90b0
+  tests_unify_error 728bd6599ab85913119f90c16f5b8105
+  tests_unify_orient d4b4de8dd55d39a11f15c299718a330b
+import  -/  test-framework-0.8.1.1:Test.Framework 3aea90adecc2e42f48ada86a86834b7b
+import  -/  test-framework-0.8.1.1:Test.Framework.Core c2ff54414a74b5ba53c7615776247f7b
+import  -/  test-framework-0.8.1.1:Test.Framework.Runners.Console fca27cb3734096e132ef1ac592168d81
+import  -/  test-framework-quickcheck2-0.3.0.4:Test.Framework.Providers.QuickCheck2 f49737828547c4a19ed26a24c2b365d9
+860388b403997cf4cfd9d6d65b91d97c
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module Spec.$trModule3 Spec.$trModule1) -}
+aea5f29b32c214e7522a39453458d6f4
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Spec.$trModule2) -}
+f6c953644e452e0217b487d58e5681b6
+  $trModule2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Spec"#) -}
+1c830410039b67537d0c3a9ab33e1b16
+  $trModule3 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Spec.$trModule4) -}
+16752b56ee7b2816fb8214ad3719d7bc
+  $trModule4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("main"#) -}
+84ce097e3e42f02734eecfb9df3a122f
+  $wconvert_test ::
+    GHC.Types.Int
+    -> GHC.Base.String
+    -> GHC.Base.String
+    -> GHC.Types.Int
+    -> Test.Framework.Core.Test
+  {- Arity: 4, Strictness: <L,1*U(U)><L,U><L,U><L,1*U(U)>,
+     Inline: [0],
+     Unfolding: (\ (w :: GHC.Types.Int)
+                   (ww :: GHC.Base.String)
+                   (ww1 :: GHC.Base.String)
+                   (ww2 :: GHC.Types.Int) ->
+                 Test.Framework.Core.Test
+                   @ Test.Framework.Providers.QuickCheck2.PropertyTestCount
+                   @ Test.Framework.Providers.QuickCheck2.PropertyResult
+                   @ Test.Framework.Providers.QuickCheck2.Property
+                   Test.Framework.Providers.QuickCheck2.$fTestlikeIntPropertyResultProperty
+                   Test.Framework.Providers.QuickCheck2.testProperty1
+                     `cast`
+                   (Sym (Data.Typeable.Internal.N:Typeable[0]) <*>_N <Test.Framework.Providers.QuickCheck2.Property>_N)
+                   (GHC.CString.unpackAppendCString#
+                      Spec.convert_test4
+                      (case w of ww3 { GHC.Types.I# ww4 ->
+                       case GHC.Show.$wshowSignedInt
+                              0#
+                              ww4
+                              (GHC.Types.[] @ GHC.Types.Char) of ww5 { (#,#) ww6 ww7 ->
+                       GHC.Base.++
+                         @ GHC.Types.Char
+                         (GHC.Types.: @ GHC.Types.Char ww6 ww7)
+                         (GHC.CString.unpackAppendCString#
+                            Spec.convert_test3
+                            (case ww2 of ww8 { GHC.Types.I# ww9 ->
+                             case GHC.Show.$wshowSignedInt
+                                    0#
+                                    ww9
+                                    (GHC.Types.[] @ GHC.Types.Char) of ww10 { (#,#) ww11 ww12 ->
+                             GHC.Base.++
+                               @ GHC.Types.Char
+                               (GHC.Types.: @ GHC.Types.Char ww11 ww12)
+                               Spec.convert_test1 } })) } }))
+                   (Test.Framework.Providers.QuickCheck2.Property
+                      @ Test.QuickCheck.Property.Property
+                      Test.QuickCheck.Property.$fTestableProperty1
+                        `cast`
+                      (Trans
+                           (<Test.QuickCheck.Property.Property>_R
+                            ->_R Trans
+                                     (Sym (Test.QuickCheck.Gen.N:Gen[0]
+                                               <Test.QuickCheck.Property.Prop>_R))
+                                     (Sym (Test.QuickCheck.Property.N:Property[0])))
+                           (Sym (Test.QuickCheck.Property.N:Testable[0]
+                                     <Test.QuickCheck.Property.Property>_N)))
+                      (let {
+                         ds :: Test.QuickCheck.Property.Property
+                         = Test.QuickCheck.Property.counterexample_$scounterexample
+                             (GHC.Base.++
+                                @ GHC.Types.Char
+                                (GHC.Types.:
+                                   @ GHC.Types.Char
+                                   GHC.Show.$fShow(,)3
+                                   (GHC.Show.showLitString ww GHC.Show.$fShow[]1))
+                                (GHC.CString.unpackAppendCString#
+                                   Test.QuickCheck.Property.===1
+                                   (GHC.Types.:
+                                      @ GHC.Types.Char
+                                      GHC.Show.$fShow(,)3
+                                      (GHC.Show.showLitString ww1 GHC.Show.$fShow[]1))))
+                             (GHC.Base.eqString ww ww1)
+                       } in
+                       (\ (r :: Test.QuickCheck.Random.QCGen) (n :: GHC.Types.Int) ->
+                        case r `cast`
+                             (Test.QuickCheck.Random.N:QCGen[0]) of ww3 { System.Random.TF.Gen.TFGen ww4 ww5 ww6 ww7 ww8 ww9 ->
+                        case System.Random.TF.Gen.$wtfGenSplit
+                               ww4
+                               ww5
+                               ww6
+                               ww7 of ww10 { (#,#) ww11 ww12 ->
+                        case Test.QuickCheck.Property.$w$cproperty
+                               (ds
+                                  `cast`
+                                (Trans
+                                     (Test.QuickCheck.Property.N:Property[0])
+                                     (Test.QuickCheck.Gen.N:Gen[0]
+                                          <Test.QuickCheck.Property.Prop>_R))
+                                  ww11 `cast` (Sym (Test.QuickCheck.Random.N:QCGen[0]))
+                                  n) of ww13 { Unit# ww14 ->
+                        Test.QuickCheck.Property.$fApplicativeRose_$cfmap
+                          @ Test.QuickCheck.Property.Result
+                          @ Test.QuickCheck.Property.Result
+                          Test.QuickCheck.Property.once_f
+                          (Test.QuickCheck.Property.IORose
+                             @ Test.QuickCheck.Property.Result
+                             ww14) } } })
+                         `cast`
+                       (Trans
+                            (Sym (Test.QuickCheck.Gen.N:Gen[0]
+                                      (Test.QuickCheck.Property.N:Prop[0])))
+                            (Sym (Test.QuickCheck.Property.N:Property[0])))))) -}
+c39e5243d1b119f886b62948d99138a0
+  convert_test ::
+    GHC.Types.Int
+    -> (GHC.Base.String, GHC.Base.String, GHC.Types.Int)
+    -> Test.Framework.Core.Test
+  {- Arity: 2, Strictness: <L,1*U(U)><S,1*U(U,U,1*U(U))>,
+     Inline: [0],
+     Unfolding: InlineRule (2, True, False)
+                (\ (w :: GHC.Types.Int)
+                   (w1 :: (GHC.Base.String, GHC.Base.String, GHC.Types.Int)) ->
+                 case w1 of ww { (,,) ww1 ww2 ww3 ->
+                 Spec.$wconvert_test w ww1 ww2 ww3 }) -}
+001d8d172d10d7f24edb8d6596585ee2
+  convert_test1 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Spec.convert_test2) -}
+7aace2afd5cd98c31a6fd046d3c76a27
+  convert_test2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: (" points)"#) -}
+a54c9d04e5fd87fd5c1fe944fc9e2eb9
+  convert_test3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: (" ("#) -}
+51e89da69683fc6517722867877291cb
+  convert_test4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("=P= Unit Test #"#) -}
+805b8960a28ec4c821977fcf49030e93
+  main :: GHC.Types.IO ()
+  {- Arity: 1,
+     Unfolding: InlineRule (0, True, True)
+                Spec.main1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
+95297f0c297bef8d15a0c6cc3e06bd6d
+  main1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1,
+     Unfolding: (Test.Framework.Runners.Console.defaultMain1
+                   Spec.tests) -}
+93c9578b1b4b96444d01b4ccaff4caae
+  main2 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1,
+     Unfolding: (GHC.TopHandler.runMainIO1
+                   @ ()
+                   Spec.main1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R))) -}
+ba0eb3238165ee88b8346bdd3710e55c
+  test_group_infer ::
+    [(GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)]
+  {- Unfolding: (GHC.Base.++
+                   @ (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)
+                   Tests.tests_infer_const
+                   Spec.test_group_infer1) -}
+5983425c0f0c3fb60dffb8c709dd55e5
+  test_group_infer1 ::
+    [(GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)]
+  {- Unfolding: (GHC.Base.++
+                   @ (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)
+                   Tests.tests_infer_var
+                   Spec.test_group_infer2) -}
+bb6f54bd481cd0d3b5d3dcb81ad4a867
+  test_group_infer2 ::
+    [(GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)]
+  {- Unfolding: (GHC.Base.++
+                   @ (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)
+                   Tests.tests_infer_let
+                   Spec.test_group_infer3) -}
+6dbab7b04fda5d425480366d0dde7126
+  test_group_infer3 ::
+    [(GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)]
+  {- Unfolding: (GHC.Base.++
+                   @ (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)
+                   Tests.tests_infer_op
+                   Spec.test_group_infer4) -}
+29f8d7e7966a15689ac993640647434c
+  test_group_infer4 ::
+    [(GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)]
+  {- Unfolding: (GHC.Base.++
+                   @ (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)
+                   Tests.tests_infer_cond
+                   Spec.test_group_infer5) -}
+21c2b7d8d6f6cd5af4d9568870c19bf0
+  test_group_infer5 ::
+    [(GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)]
+  {- Unfolding: (GHC.Base.++
+                   @ (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)
+                   Tests.tests_infer_fun
+                   Spec.test_group_infer6) -}
+e20154f90ab616fb3acaca137ff7b1eb
+  test_group_infer6 ::
+    [(GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)]
+  {- Unfolding: (GHC.Base.++
+                   @ (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)
+                   Tests.tests_infer_app
+                   Tests.tests_infer_rec) -}
+35e55571c36c92aaeaef5450a9f8a4c0
+  test_group_unify ::
+    [(GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)]
+  {- Unfolding: (GHC.Base.++
+                   @ (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)
+                   Tests.tests_unify_elim
+                   Spec.test_group_unify1) -}
+0ad4102c93cdd375a310513e34bbe556
+  test_group_unify1 ::
+    [(GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)]
+  {- Unfolding: (GHC.Base.++
+                   @ (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)
+                   Tests.tests_unify_del
+                   Spec.test_group_unify2) -}
+24b9fb80ccf6d6b1989752075188377c
+  test_group_unify2 ::
+    [(GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)
+                   Tests.tests_unify_orient1
+                   Spec.test_group_unify3) -}
+b2caf69be27ce896ae8150db88cfc471
+  test_group_unify3 ::
+    [(GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)]
+  {- Unfolding: (GHC.Base.++
+                   @ (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)
+                   Tests.tests_unify_decomp
+                   Spec.test_group_unify4) -}
+0bbe9482401956ee7d94b44144f4e071
+  test_group_unify4 ::
+    [(GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)]
+  {- Unfolding: (GHC.Base.++
+                   @ (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)
+                   Tests.tests_unify_error
+                   Tests.tests_unify_comp) -}
+13d427351fcd4676f73fc2038fa50f0f
+  tests :: [Test.Framework.Core.Test]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Test.Framework.Core.Test
+                   Spec.tests6
+                   Spec.tests1) -}
+879f14154afb4baf9339a18938ba4443
+  tests1 :: [Test.Framework.Core.Test]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ Test.Framework.Core.Test
+                   Spec.tests2
+                   (GHC.Types.[] @ Test.Framework.Core.Test)) -}
+9672bbe461b4e75803a4485c3d12348f
+  tests2 :: Test.Framework.Core.Test
+  {- Strictness: m2,
+     Unfolding: (Test.Framework.Core.TestGroup
+                   Spec.tests4
+                   Spec.tests3) -}
+8171f6edbf01d458d8f149627f216f4f
+  tests3 :: [Test.Framework.Core.Test]
+  {- Unfolding: (case GHC.List.$wlenAcc
+                        @ (GHC.Base.String, [GHC.Types.Char], GHC.Types.Int)
+                        Spec.test_group_unify
+                        0# of ww2 { DEFAULT ->
+                 Spec.tests_go (GHC.Prim.+# ww2 1#) Spec.test_group_infer }) -}
+364478cebe5a09dd4a59af2bb085dad1
+  tests4 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Spec.tests5) -}
+b1b4c595b78a468cbf43d30b42193f7e
+  tests5 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("=G= Unit Tests for Infer"#) -}
+8f92009c475f90dd0d38aea873df9440
+  tests6 :: Test.Framework.Core.Test
+  {- Strictness: m2,
+     Unfolding: (Test.Framework.Core.TestGroup
+                   Spec.tests8
+                   Spec.tests7) -}
+20115b273976defcfc9f8c05bbbf5d0d
+  tests7 :: [Test.Framework.Core.Test]
+  {- Unfolding: (Spec.tests_go 1# Spec.test_group_unify) -}
+f73d630e9ea6a8df70211782090a0d78
+  tests8 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Spec.tests9) -}
+284ceae9f89fc5584233d6daa2b4100b
+  tests9 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("=G= Unit Tests for Unify"#) -}
+d1c884ed6be5f984ac4c6c63ada2d0c1
+  tests_go ::
+    GHC.Prim.Int#
+    -> [(GHC.Base.String, GHC.Base.String, GHC.Types.Int)]
+    -> [Test.Framework.Core.Test]
+  {- Arity: 2, Strictness: <L,U><S,1*U> -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: none
+require own pkg trusted: False
+

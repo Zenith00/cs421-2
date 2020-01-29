@@ -1,0 +1,1545 @@
+
+==================== FINAL INTERFACE ====================
+2019-04-20 22:52:49.292673 UTC
+
+interface main:Scheme.Eval 8063
+  interface hash: 4b4eb03787150c7de769dd6f216c76cd
+  ABI hash: e768846dbe20ed6130d3182dbeec1b2f
+  export-list hash: 16506239b2a8a5e2fa9f7525a5cea6e2
+  orphan hash: a4059f12e2df5ff343303325736ed589
+  flag hash: 1d96fbd724ca92b981c176d60a421972
+  opt_hash: 6faf2de08de32d19db9870899d88e59a
+  hpc_hash: 93b885adfe0da089cdf634904fd59f71
+  plugin_hash: ad164012d6b1e14942349d58b1132007
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Scheme.Eval.apply
+  Scheme.Eval.eval
+  Scheme.Eval.getBinding
+  Scheme.Eval.getListOf2
+  Scheme.Eval.getSym
+  Scheme.Eval.keywords
+module dependencies: Scheme.Core
+package dependencies: array-0.5.3.0 base-4.12.0.0* binary-0.8.6.0
+                      bytestring-0.10.8.2 containers-0.6.0.1 deepseq-1.4.4.0
+                      ghc-prim-0.5.3 hashable-1.2.7.0 integer-gmp-1.0.2.0 mtl-2.2.2
+                      text-1.2.3.1 transformers-0.5.5.0 unordered-containers-0.2.9.0*
+orphans: hashable-1.2.7.0:Data.Hashable.Generic
+         text-1.2.3.1:Data.Text.Lazy text-1.2.3.1:Data.Text
+         binary-0.8.6.0:Data.Binary.Generic
+         bytestring-0.10.8.2:Data.ByteString.Builder
+         text-1.2.3.1:Data.Text.Show
+         transformers-0.5.5.0:Control.Monad.Trans.Error
+         base-4.12.0.0:GHC.Float base-4.12.0.0:GHC.Base
+family instance modules: base-4.12.0.0:Control.Applicative
+                         base-4.12.0.0:Data.Complex base-4.12.0.0:Data.Functor.Compose
+                         base-4.12.0.0:Data.Functor.Const
+                         base-4.12.0.0:Data.Functor.Identity
+                         base-4.12.0.0:Data.Functor.Product base-4.12.0.0:Data.Functor.Sum
+                         base-4.12.0.0:Data.Monoid base-4.12.0.0:Data.Semigroup
+                         base-4.12.0.0:Data.Semigroup.Internal base-4.12.0.0:Data.Version
+                         base-4.12.0.0:Data.Void base-4.12.0.0:GHC.Exts
+                         base-4.12.0.0:GHC.Generics base-4.12.0.0:GHC.IO.Exception
+                         containers-0.6.0.1:Data.IntMap.Internal
+                         containers-0.6.0.1:Data.IntSet.Internal
+                         containers-0.6.0.1:Data.Map.Internal
+                         containers-0.6.0.1:Data.Sequence.Internal
+                         containers-0.6.0.1:Data.Set.Internal containers-0.6.0.1:Data.Tree
+                         text-1.2.3.1:Data.Text text-1.2.3.1:Data.Text.Lazy
+                         unordered-containers-0.2.9.0:Data.HashMap.Base
+import  -/  base-4.12.0.0:Data.Foldable 00188ddf89c975fee76bdfad479443c1
+import  -/  base-4.12.0.0:Data.Functor 22aac80fdb6c7b7f60b4aaab86afee64
+import  -/  base-4.12.0.0:Data.Traversable 257e9f3b6739f5bfbaaf0ac0abb0ddc5
+import  -/  base-4.12.0.0:GHC.Base cc906f98291a1b830546e99a96674547
+import  -/  base-4.12.0.0:GHC.List 734a72beb76d276fb4a0ba2689a5711f
+import  -/  base-4.12.0.0:GHC.Num 847723f2584d989dac1eada133ac3fb8
+import  -/  base-4.12.0.0:Prelude 5c01365ec01f83bd405ac01cbb9a8d76
+import  -/  ghc-prim-0.5.3:GHC.Classes e0d9c979f6368701f34fa421754d2cce
+import  -/  Scheme.Core bc89137f3b5e21383f319843015d4057
+  exports: e90d159ae09b5b31f08cb156418b2a29
+  Boolean 86fa6bcaf8d96aed65f2571eb655a4ca
+  CannotApply 2954a44d60dbbdeb9fe3fff0e345e3bd
+  DottedList d455ab82fe449e1933007195ee1e8f7e
+  EvalState aafa0315ee62ca72ab74b7129413e93f
+  Func 1d603f4982ee776c872174220ae0553a
+  InvalidExpression 2a54d27357e4d5bc1f35d110682c7fd4
+  InvalidSpecialForm 90790a88de97135a9db3b4c775ee3963
+  List 1e61c5428b58aae69a46121a165b4ba0
+  Macro 1b248d4e583570dd73a0a3ce5bad2efc
+  NotAListOfTwo 45d17d1d906ea4f31adf4768b7c621e2
+  NotASymbol c524c903ab7ed48a1f5ffc88f6e6fcf5
+  Number 05bd78a8879027d5b7e5f6817ee8a849
+  PrimFunc cf8aa9ade8aa834491be2c324f1074de
+  Symbol 5a0dd25e96845d34ab26214ee0aa5b65
+  UndefSymbolError 93cc271b67141828a2b0abf9173cc337
+  UnquoteNotInQuasiquote bc0a7af85e10bdd6209d0aedddb3765d
+  Val aafa0315ee62ca72ab74b7129413e93f
+  Void d75789091bc97092a1d42913dcad585c
+  flattenList ed315d0fb9f4347faa1519415c1c4fd4
+import  -/  mtl-2.2.2:Control.Monad.Error.Class 396bb83814f3ba40535fffb311f79b73
+import  -/  mtl-2.2.2:Control.Monad.Except 50e515fe4eac4821a9bcec9a647f5aa7
+import  -/  mtl-2.2.2:Control.Monad.State d44e211fd4e6fedd1cd68c2f55562f8e
+import  -/  mtl-2.2.2:Control.Monad.State.Class 7b1f06840718b1757a1de559220ba63b
+import  -/  unordered-containers-0.2.9.0:Data.HashMap.Base f8b66a8ac39d506c03f2e1aa73c729b0
+import  -/  unordered-containers-0.2.9.0:Data.HashMap.Strict 382b0fb0c37f914f58f22553760567f2
+eced23341f3265842178fcfaa2114d74
+  $s$wupdateOrConcatWithKey ::
+    (GHC.Base.String -> v -> v -> v)
+    -> Data.HashMap.Array.Array#
+         (Data.HashMap.Base.Leaf GHC.Base.String v)
+    -> Data.HashMap.Array.Array#
+         (Data.HashMap.Base.Leaf GHC.Base.String v)
+    -> Data.HashMap.Array.Array
+         (Data.HashMap.Base.Leaf GHC.Base.String v)
+  {- Arity: 3, Strictness: <L,C(C1(C1(U)))><L,U><S,U>, Inline: [2],
+     Unfolding: (\ @ v
+                   (w1 :: GHC.Base.String -> v -> v -> v)
+                   (ww :: Data.HashMap.Array.Array#
+                            (Data.HashMap.Base.Leaf GHC.Base.String v))
+                   (ww1 :: Data.HashMap.Array.Array#
+                             (Data.HashMap.Base.Leaf GHC.Base.String v)) ->
+                 case GHC.Magic.runRW#
+                        @ ('GHC.Types.TupleRep
+                             '[ 'GHC.Types.TupleRep '[], 'GHC.Types.LiftedRep])
+                        @ (# GHC.Prim.State# GHC.Prim.RealWorld,
+                             Data.HashMap.Array.Array
+                               (Data.HashMap.Base.Leaf GHC.Base.String v) #)
+                        (\ (s1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                         case GHC.Magic.runRW#
+                                @ ('GHC.Types.TupleRep
+                                     '[ 'GHC.Types.TupleRep '[], 'GHC.Types.LiftedRep])
+                                @ (# GHC.Prim.State# GHC.Prim.RealWorld,
+                                     Data.HashMap.Array.Array (GHC.Maybe.Maybe GHC.Types.Int) #)
+                                (\ (s2 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                                 let {
+                                   ipv :: GHC.Prim.Int#
+                                   = GHC.Prim.sizeofSmallArray#
+                                       @ (Data.HashMap.Base.Leaf GHC.Base.String v)
+                                       ww1
+                                 } in
+                                 case GHC.Prim.newSmallArray#
+                                        @ (GHC.Maybe.Maybe GHC.Types.Int)
+                                        @ GHC.Prim.RealWorld
+                                        ipv
+                                        (Data.HashMap.Array.undefinedElem
+                                           @ (GHC.Maybe.Maybe GHC.Types.Int))
+                                        s2 of ds1 { (#,#) ipv1 ipv2 ->
+                                 letrec {
+                                   $wgo2 :: forall s.
+                                            Data.HashMap.Array.Array
+                                              (Data.HashMap.Base.Leaf GHC.Base.String v)
+                                            -> Data.HashMap.Array.MArray
+                                                 s (GHC.Maybe.Maybe GHC.Types.Int)
+                                            -> GHC.Prim.Int#
+                                            -> GHC.Prim.Int#
+                                            -> GHC.Prim.State# s
+                                            -> (# GHC.Prim.State# s,
+                                                  Data.HashMap.Array.MArray
+                                                    s (GHC.Maybe.Maybe GHC.Types.Int) #)
+                                     {- Arity: 5, Strictness: <L,U(U)><L,U(U)><S,U><S,U><S,U>,
+                                        Inline: [2] -}
+                                   = \ @ s
+                                       (w :: Data.HashMap.Array.Array
+                                               (Data.HashMap.Base.Leaf GHC.Base.String v))
+                                       (w2 :: Data.HashMap.Array.MArray
+                                                s (GHC.Maybe.Maybe GHC.Types.Int))
+                                       (ww2 :: GHC.Prim.Int#)
+                                       (ww3 :: GHC.Prim.Int#)
+                                       (w3 :: GHC.Prim.State# s) ->
+                                     case GHC.Prim.>=# ww2 ww3 of lwild {
+                                       DEFAULT
+                                       -> case w2 of wild2 { Data.HashMap.Array.MArray ds ->
+                                          case GHC.Prim.writeSmallArray#
+                                                 @ s
+                                                 @ (GHC.Maybe.Maybe GHC.Types.Int)
+                                                 ds
+                                                 ww2
+                                                 (case w of wild3 { Data.HashMap.Array.Array ds2 ->
+                                                  case GHC.Prim.indexSmallArray#
+                                                         @ (Data.HashMap.Base.Leaf
+                                                              GHC.Base.String v)
+                                                         ds2
+                                                         ww2 of ds3 { Unit# ipv4 ->
+                                                  case ipv4 of wild4 { Data.HashMap.Base.L k1 ds4 ->
+                                                  Scheme.Eval.$wpoly_go1
+                                                    @ v
+                                                    k1
+                                                    ww
+                                                    0#
+                                                    (GHC.Prim.sizeofSmallArray#
+                                                       @ (Data.HashMap.Base.Leaf GHC.Base.String v)
+                                                       ww) } } })
+                                                 w3 of s' { DEFAULT ->
+                                          $wgo2 @ s w wild2 (GHC.Prim.+# ww2 1#) ww3 s' } }
+                                       1# -> (# w3, w2 #) }
+                                 } in
+                                 case $wgo2
+                                        @ GHC.Prim.RealWorld
+                                        (Data.HashMap.Array.Array
+                                           @ (Data.HashMap.Base.Leaf GHC.Base.String v)
+                                           ww1)
+                                        (Data.HashMap.Array.MArray
+                                           @ GHC.Prim.RealWorld
+                                           @ (GHC.Maybe.Maybe GHC.Types.Int)
+                                           ipv2)
+                                        0#
+                                        ipv
+                                        ipv1 of ds2 { (#,#) ipv3 ipv4 ->
+                                 case ipv4 of wild1 { Data.HashMap.Array.MArray ds3 ->
+                                 case GHC.Prim.unsafeFreezeSmallArray#
+                                        @ GHC.Prim.RealWorld
+                                        @ (GHC.Maybe.Maybe GHC.Types.Int)
+                                        ds3
+                                        ipv3 of ds4 { (#,#) ipv5 ipv6 ->
+                                 (# ipv5,
+                                    Data.HashMap.Array.Array
+                                      @ (GHC.Maybe.Maybe GHC.Types.Int)
+                                      ipv6 #) } } } }) of ds1 { (#,#) ipv1 ipv2 ->
+                         case ipv2 of ww2 { Data.HashMap.Array.Array ww3 ->
+                         case Scheme.Eval.$wgo1
+                                ww2
+                                (GHC.Prim.sizeofSmallArray# @ (GHC.Maybe.Maybe GHC.Types.Int) ww3)
+                                0#
+                                0# of ww4 { DEFAULT ->
+                         let {
+                           x :: GHC.Prim.Int#
+                           = GHC.Prim.sizeofSmallArray#
+                               @ (Data.HashMap.Base.Leaf GHC.Base.String v)
+                               ww
+                         } in
+                         case GHC.Prim.newSmallArray#
+                                @ (Data.HashMap.Base.Leaf GHC.Base.String v)
+                                @ GHC.Prim.RealWorld
+                                (GHC.Prim.+# x ww4)
+                                (Data.HashMap.Array.undefinedElem
+                                   @ (Data.HashMap.Base.Leaf GHC.Base.String v))
+                                s1 of ds { (#,#) ipv ipv4 ->
+                         case GHC.Prim.copySmallArray#
+                                @ (Data.HashMap.Base.Leaf GHC.Base.String v)
+                                @ GHC.Prim.RealWorld
+                                ww
+                                0#
+                                ipv4
+                                0#
+                                x
+                                ipv of s2 { DEFAULT ->
+                         let {
+                           n2 :: GHC.Prim.Int#
+                           = GHC.Prim.sizeofSmallArray#
+                               @ (Data.HashMap.Base.Leaf GHC.Base.String v)
+                               ww1
+                         } in
+                         let {
+                           exit :: GHC.Prim.State# GHC.Prim.RealWorld
+                                   -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+                                         Data.HashMap.Array.Array
+                                           (Data.HashMap.Base.Leaf GHC.Base.String v) #)
+                             <join 1> {- Arity: 1, Strictness: <S,U> -}
+                           = \ (w :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                             case GHC.Prim.unsafeFreezeSmallArray#
+                                    @ GHC.Prim.RealWorld
+                                    @ (Data.HashMap.Base.Leaf GHC.Base.String v)
+                                    ipv4
+                                    w of ds2 { (#,#) ipv5 ipv6 ->
+                             (# ipv5,
+                                Data.HashMap.Array.Array
+                                  @ (Data.HashMap.Base.Leaf GHC.Base.String v)
+                                  ipv6 #) }
+                         } in
+                         letrec {
+                           $wgo2 :: GHC.Prim.Int#
+                                    -> GHC.Prim.Int#
+                                    -> GHC.Prim.State# GHC.Prim.RealWorld
+                                    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+                                          Data.HashMap.Array.Array
+                                            (Data.HashMap.Base.Leaf GHC.Base.String v) #)
+                             <join 3> {- Arity: 3, Strictness: <L,U><S,U><S,U>, Inline: [2] -}
+                           = \ (ww5 :: GHC.Prim.Int#)
+                               (ww6 :: GHC.Prim.Int#)
+                               (w :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                             case GHC.Prim.>=# ww6 n2 of lwild {
+                               DEFAULT
+                               -> case GHC.Prim.indexSmallArray#
+                                         @ (GHC.Maybe.Maybe GHC.Types.Int)
+                                         ww3
+                                         ww6 of ds2 { Unit# ipv5 ->
+                                  case ipv5 of wild3 {
+                                    GHC.Maybe.Nothing
+                                    -> case GHC.Prim.indexSmallArray#
+                                              @ (Data.HashMap.Base.Leaf GHC.Base.String v)
+                                              ww1
+                                              ww6 of ds3 { Unit# ipv6 ->
+                                       case GHC.Prim.writeSmallArray#
+                                              @ GHC.Prim.RealWorld
+                                              @ (Data.HashMap.Base.Leaf GHC.Base.String v)
+                                              ipv4
+                                              ww5
+                                              ipv6
+                                              w of s' { DEFAULT ->
+                                       $wgo2 (GHC.Prim.+# ww5 1#) (GHC.Prim.+# ww6 1#) s' } }
+                                    GHC.Maybe.Just i3
+                                    -> case i3 of wild4 { GHC.Types.I# i# ->
+                                       case GHC.Prim.indexSmallArray#
+                                              @ (Data.HashMap.Base.Leaf GHC.Base.String v)
+                                              ww
+                                              i# of ds3 { Unit# ipv6 ->
+                                       case ipv6 of wild5 { Data.HashMap.Base.L k1 v1 ->
+                                       case GHC.Prim.indexSmallArray#
+                                              @ (Data.HashMap.Base.Leaf GHC.Base.String v)
+                                              ww1
+                                              ww6 of ds4 { Unit# ipv7 ->
+                                       case ipv7 of wild6 { Data.HashMap.Base.L ds5 v2 ->
+                                       case GHC.Prim.writeSmallArray#
+                                              @ GHC.Prim.RealWorld
+                                              @ (Data.HashMap.Base.Leaf GHC.Base.String v)
+                                              ipv4
+                                              i#
+                                              (Data.HashMap.Base.L
+                                                 @ GHC.Base.String
+                                                 @ v
+                                                 k1
+                                                 (w1 k1 v1 v2))
+                                              w of s' { DEFAULT ->
+                                       $wgo2 ww5 (GHC.Prim.+# ww6 1#) s' } } } } } } } }
+                               1# -> exit w }
+                         } in
+                         $wgo2 x 0# s2 } } } } }) of ds1 { (#,#) ipv ipv1 ->
+                 ipv1 }) -}
+0cd8a4d530a51e115f844700c3c137d6
+  $s$wupdateOrSnocWithKey ::
+    (GHC.Base.String -> v -> v -> v)
+    -> GHC.Base.String
+    -> v
+    -> Data.HashMap.Array.Array#
+         (Data.HashMap.Base.Leaf GHC.Base.String v)
+    -> Data.HashMap.Array.Array
+         (Data.HashMap.Base.Leaf GHC.Base.String v)
+  {- Arity: 4, Strictness: <L,C(C1(C1(U)))><S,1*U><L,U><S,U>,
+     Inline: [2],
+     Unfolding: (\ @ v
+                   (w1 :: GHC.Base.String -> v -> v -> v)
+                   (w2 :: GHC.Base.String)
+                   (w3 :: v)
+                   (ww :: Data.HashMap.Array.Array#
+                            (Data.HashMap.Base.Leaf GHC.Base.String v)) ->
+                 let {
+                   exit :: v
+                           -> Data.HashMap.Array.Array#
+                                (Data.HashMap.Base.Leaf GHC.Base.String v)
+                           -> GHC.Prim.Int#
+                           -> GHC.Base.String
+                           -> v
+                           -> Data.HashMap.Array.Array
+                                (Data.HashMap.Base.Leaf GHC.Base.String v)
+                     <join 5> {- Arity: 5, Strictness: <L,U><S,U><S,U><L,U><L,U> -}
+                   = \ (w :: v)[OneShot]
+                       (ww1 :: Data.HashMap.Array.Array#
+                                 (Data.HashMap.Base.Leaf GHC.Base.String v))[OneShot]
+                       (ww2 :: GHC.Prim.Int#)[OneShot]
+                       (k2 :: GHC.Base.String)[OneShot]
+                       (y :: v)[OneShot] ->
+                     case GHC.Magic.runRW#
+                            @ ('GHC.Types.TupleRep
+                                 '[ 'GHC.Types.TupleRep '[], 'GHC.Types.LiftedRep])
+                            @ (# GHC.Prim.State# GHC.Prim.RealWorld,
+                                 Data.HashMap.Array.Array
+                                   (Data.HashMap.Base.Leaf GHC.Base.String v) #)
+                            (\ (s1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                             case GHC.Prim.thawSmallArray#
+                                    @ (Data.HashMap.Base.Leaf GHC.Base.String v)
+                                    @ GHC.Prim.RealWorld
+                                    ww1
+                                    0#
+                                    (GHC.Prim.sizeofSmallArray#
+                                       @ (Data.HashMap.Base.Leaf GHC.Base.String v)
+                                       ww1)
+                                    s1 of ds2 { (#,#) ipv4 ipv5 ->
+                             case GHC.Prim.writeSmallArray#
+                                    @ GHC.Prim.RealWorld
+                                    @ (Data.HashMap.Base.Leaf GHC.Base.String v)
+                                    ipv5
+                                    ww2
+                                    (Data.HashMap.Base.L @ GHC.Base.String @ v k2 (w1 k2 w y))
+                                    ipv4 of s' { DEFAULT ->
+                             case GHC.Prim.unsafeFreezeSmallArray#
+                                    @ GHC.Prim.RealWorld
+                                    @ (Data.HashMap.Base.Leaf GHC.Base.String v)
+                                    ipv5
+                                    s' of ds3 { (#,#) ipv6 ipv7 ->
+                             (# ipv6,
+                                Data.HashMap.Array.Array
+                                  @ (Data.HashMap.Base.Leaf GHC.Base.String v)
+                                  ipv7 #) } } }) of ds2 { (#,#) ipv4 ipv5 ->
+                     ipv5 }
+                 } in
+                 letrec {
+                   $wgo2 :: GHC.Base.String
+                            -> v
+                            -> Data.HashMap.Array.Array#
+                                 (Data.HashMap.Base.Leaf GHC.Base.String v)
+                            -> GHC.Prim.Int#
+                            -> GHC.Prim.Int#
+                            -> Data.HashMap.Array.Array
+                                 (Data.HashMap.Base.Leaf GHC.Base.String v)
+                     <join 5> {- Arity: 5, Strictness: <S,1*U><L,U><S,U><S,U><S,U>,
+                                 Inline: [2] -}
+                   = \ (w :: GHC.Base.String)
+                       (w4 :: v)
+                       (ww1 :: Data.HashMap.Array.Array#
+                                 (Data.HashMap.Base.Leaf GHC.Base.String v))
+                       (ww2 :: GHC.Prim.Int#)
+                       (ww3 :: GHC.Prim.Int#) ->
+                     case w of k2 { DEFAULT ->
+                     case GHC.Prim.>=# ww2 ww3 of lwild {
+                       DEFAULT
+                       -> case GHC.Prim.indexSmallArray#
+                                 @ (Data.HashMap.Base.Leaf GHC.Base.String v)
+                                 ww1
+                                 ww2 of ds1 { Unit# ipv3 ->
+                          case ipv3 of wild1 { Data.HashMap.Base.L kx y ->
+                          case GHC.Base.eqString k2 kx of wild2 {
+                            GHC.Types.False -> $wgo2 k2 w4 ww1 (GHC.Prim.+# ww2 1#) ww3
+                            GHC.Types.True -> exit w4 ww1 ww2 k2 y } } }
+                       1#
+                       -> case GHC.Magic.runRW#
+                                 @ ('GHC.Types.TupleRep
+                                      '[ 'GHC.Types.TupleRep '[], 'GHC.Types.LiftedRep])
+                                 @ (# GHC.Prim.State# GHC.Prim.RealWorld,
+                                      Data.HashMap.Array.Array
+                                        (Data.HashMap.Base.Leaf GHC.Base.String v) #)
+                                 (\ (s1 :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                                  case GHC.Prim.newSmallArray#
+                                         @ (Data.HashMap.Base.Leaf GHC.Base.String v)
+                                         @ GHC.Prim.RealWorld
+                                         (GHC.Prim.+# ww3 1#)
+                                         (Data.HashMap.Array.undefinedElem
+                                            @ (Data.HashMap.Base.Leaf GHC.Base.String v))
+                                         s1 of ds { (#,#) ipv3 ipv4 ->
+                                  case GHC.Prim.copySmallArray#
+                                         @ (Data.HashMap.Base.Leaf GHC.Base.String v)
+                                         @ GHC.Prim.RealWorld
+                                         ww1
+                                         0#
+                                         ipv4
+                                         0#
+                                         ww3
+                                         ipv3 of s2 { DEFAULT ->
+                                  case GHC.Prim.writeSmallArray#
+                                         @ GHC.Prim.RealWorld
+                                         @ (Data.HashMap.Base.Leaf GHC.Base.String v)
+                                         ipv4
+                                         ww3
+                                         (Data.HashMap.Base.L @ GHC.Base.String @ v k2 w4)
+                                         s2 of s' { DEFAULT ->
+                                  case GHC.Prim.unsafeFreezeSmallArray#
+                                         @ GHC.Prim.RealWorld
+                                         @ (Data.HashMap.Base.Leaf GHC.Base.String v)
+                                         ipv4
+                                         s' of ds2 { (#,#) ipv5 ipv6 ->
+                                  (# ipv5,
+                                     Data.HashMap.Array.Array
+                                       @ (Data.HashMap.Base.Leaf GHC.Base.String v)
+                                       ipv6 #) } } } }) of ds1 { (#,#) ipv3 ipv4 ->
+                          ipv4 } } }
+                 } in
+                 $wgo2
+                   w2
+                   w3
+                   ww
+                   0#
+                   (GHC.Prim.sizeofSmallArray#
+                      @ (Data.HashMap.Base.Leaf GHC.Base.String v)
+                      ww)) -}
+a755136fc2c257ca3d76e02df5cd9365
+  $sinsert ::
+    GHC.Base.String
+    -> v
+    -> Data.HashMap.Base.HashMap GHC.Base.String v
+    -> Data.HashMap.Base.HashMap GHC.Base.String v
+  {- Arity: 3, Strictness: <S,U><L,U><S,U>,
+     Unfolding: (\ @ v
+                   (k0 :: GHC.Base.String)
+                   (v0 :: v)
+                   (m0 :: Data.HashMap.Base.HashMap GHC.Base.String v) ->
+                 let {
+                   exit :: GHC.Prim.Int#
+                           -> GHC.Prim.Int# -> Data.HashMap.Base.HashMap GHC.Base.String v
+                     <join 2> {- Arity: 2, Strictness: <S,U><S,U> -}
+                   = \ (ww :: GHC.Prim.Int#)[OneShot]
+                       (ww1 :: GHC.Prim.Int#)[OneShot] ->
+                     Scheme.Eval.$wpoly_go4
+                       @ v
+                       (GHC.Prim.int2Word#
+                          (GHC.Prim.xorI# (GHC.Prim.*# ww 16777619#) ww1))
+                       k0
+                       v0
+                       0#
+                       m0
+                 } in
+                 letrec {
+                   $wgo2 :: [GHC.Types.Char]
+                            -> GHC.Prim.Int#
+                            -> GHC.Prim.Int#
+                            -> Data.HashMap.Base.HashMap GHC.Base.String v
+                     <join 3> {- Arity: 3, Strictness: <S,1*U><S,U><S,U>, Inline: [2] -}
+                   = \ (w1 :: [GHC.Types.Char])
+                       (ww :: GHC.Prim.Int#)
+                       (ww1 :: GHC.Prim.Int#) ->
+                     case w1 of wild {
+                       [] -> exit ww ww1
+                       : y ys
+                       -> case y of wild1 { GHC.Types.C# c# ->
+                          $wgo2
+                            ys
+                            (GHC.Prim.xorI# (GHC.Prim.*# ww 16777619#) (GHC.Prim.ord# c#))
+                            (GHC.Prim.+# ww1 1#) } }
+                 } in
+                 $wgo2 k0 -2578643520546668380# 0#) -}
+43c63a46b91829193d730b646ddfc69c
+  $slookup ::
+    GHC.Base.String
+    -> Data.HashMap.Base.HashMap GHC.Base.String v -> GHC.Maybe.Maybe v
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,U><S,U>,
+     Unfolding: (\ @ v
+                   (k0 :: GHC.Base.String)
+                   (m0 :: Data.HashMap.Base.HashMap GHC.Base.String v) ->
+                 let {
+                   exit :: GHC.Prim.Int# -> GHC.Prim.Int# -> GHC.Maybe.Maybe v
+                     <join 2> {- Arity: 2, Strictness: <S,U><S,U> -}
+                   = \ (ww :: GHC.Prim.Int#)[OneShot]
+                       (ww1 :: GHC.Prim.Int#)[OneShot] ->
+                     Scheme.Eval.$wpoly_go5
+                       @ v
+                       (GHC.Prim.int2Word#
+                          (GHC.Prim.xorI# (GHC.Prim.*# ww 16777619#) ww1))
+                       k0
+                       0#
+                       m0
+                 } in
+                 letrec {
+                   $wgo2 :: [GHC.Types.Char]
+                            -> GHC.Prim.Int# -> GHC.Prim.Int# -> GHC.Maybe.Maybe v
+                     <join 3> {- Arity: 3, Strictness: <S,1*U><S,U><S,U>, Inline: [2] -}
+                   = \ (w1 :: [GHC.Types.Char])
+                       (ww :: GHC.Prim.Int#)
+                       (ww1 :: GHC.Prim.Int#) ->
+                     case w1 of wild {
+                       [] -> exit ww ww1
+                       : y ys
+                       -> case y of wild1 { GHC.Types.C# c# ->
+                          $wgo2
+                            ys
+                            (GHC.Prim.xorI# (GHC.Prim.*# ww 16777619#) (GHC.Prim.ord# c#))
+                            (GHC.Prim.+# ww1 1#) } }
+                 } in
+                 $wgo2 k0 -2578643520546668380# 0#) -}
+11157241c68bedb8be556b5ec9771663
+  $sunsafeInsert ::
+    GHC.Base.String
+    -> v
+    -> Data.HashMap.Base.HashMap GHC.Base.String v
+    -> Data.HashMap.Base.HashMap GHC.Base.String v
+  {- Arity: 3, Strictness: <S,U><L,U><S,U>,
+     Unfolding: (\ @ v
+                   (k0 :: GHC.Base.String)
+                   (v0 :: v)
+                   (m0 :: Data.HashMap.Base.HashMap GHC.Base.String v) ->
+                 case GHC.Magic.runRW#
+                        @ ('GHC.Types.TupleRep
+                             '[ 'GHC.Types.TupleRep '[], 'GHC.Types.LiftedRep])
+                        @ (# GHC.Prim.State# GHC.Prim.RealWorld,
+                             Data.HashMap.Base.HashMap GHC.Base.String v #)
+                        (\ (w :: GHC.Prim.State# GHC.Prim.RealWorld)[OneShot] ->
+                         let {
+                           exit :: GHC.Prim.Int#
+                                   -> GHC.Prim.Int#
+                                   -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+                                         Data.HashMap.Base.HashMap GHC.Base.String v #)
+                             <join 2> {- Arity: 2, Strictness: <S,U><S,U> -}
+                           = \ (ww :: GHC.Prim.Int#)[OneShot]
+                               (ww1 :: GHC.Prim.Int#)[OneShot] ->
+                             Scheme.Eval.$wpoly_go6
+                               @ v
+                               (GHC.Prim.int2Word#
+                                  (GHC.Prim.xorI# (GHC.Prim.*# ww 16777619#) ww1))
+                               k0
+                               v0
+                               0#
+                               m0
+                               w
+                         } in
+                         letrec {
+                           $wgo2 :: [GHC.Types.Char]
+                                    -> GHC.Prim.Int#
+                                    -> GHC.Prim.Int#
+                                    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+                                          Data.HashMap.Base.HashMap GHC.Base.String v #)
+                             <join 3> {- Arity: 3, Strictness: <S,1*U><S,U><S,U>, Inline: [2] -}
+                           = \ (w1 :: [GHC.Types.Char])
+                               (ww :: GHC.Prim.Int#)
+                               (ww1 :: GHC.Prim.Int#) ->
+                             case w1 of wild {
+                               [] -> exit ww ww1
+                               : y ys
+                               -> case y of wild1 { GHC.Types.C# c# ->
+                                  $wgo2
+                                    ys
+                                    (GHC.Prim.xorI# (GHC.Prim.*# ww 16777619#) (GHC.Prim.ord# c#))
+                                    (GHC.Prim.+# ww1 1#) } }
+                         } in
+                         $wgo2 k0 -2578643520546668380# 0#) of ds1 { (#,#) ipv ipv1 ->
+                 ipv1 }) -}
+48c107a0fbf5eaa1e5db237d5d244c95
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   Scheme.Eval.$trModule3
+                   Scheme.Eval.$trModule1) -}
+8f16c15bd3474fb9d9cfcb7bb42765c8
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Scheme.Eval.$trModule2) -}
+a6ba24bd34ef0df4b396f7ee20c1c910
+  $trModule2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Scheme.Eval"#) -}
+134de6f09e845f3d8000ea878fb81f57
+  $trModule3 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Scheme.Eval.$trModule4) -}
+20ba40f1d7b579a4e317589edaed8ac4
+  $trModule4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("main"#) -}
+067d3c756bc90ccf51b0b55046da46bc
+  $wgo1 ::
+    Data.HashMap.Array.Array (GHC.Maybe.Maybe GHC.Types.Int)
+    -> GHC.Prim.Int# -> GHC.Prim.Int# -> GHC.Prim.Int# -> GHC.Prim.Int#
+  {- Arity: 4, HasNoCafRefs, Strictness: <L,1*U(U)><S,U><S,U><S,U>,
+     Inline: [2] -}
+f10a012b3c98ee2107eb69df9dbf42a5
+  $wpoly_go1 ::
+    GHC.Base.String
+    -> Data.HashMap.Array.Array#
+         (Data.HashMap.Base.Leaf GHC.Base.String v)
+    -> GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> GHC.Maybe.Maybe GHC.Types.Int
+  {- Arity: 4, HasNoCafRefs, Strictness: <S,1*U><L,U><S,U><S,U>,
+     Inline: [2] -}
+c3f24589358e8777619f5c96fba8f966
+  $wpoly_go2 ::
+    GHC.Base.String
+    -> Data.HashMap.Array.Array#
+         (Data.HashMap.Base.Leaf GHC.Base.String v)
+    -> GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> GHC.Maybe.Maybe v
+  {- Arity: 4, HasNoCafRefs, Strictness: <S,1*U><L,U><S,U><S,U>,
+     Inline: [2] -}
+7167d5e1c390a2cc53efe386c93532f6
+  $wpoly_go3 ::
+    GHC.Prim.Int#
+    -> Data.HashMap.Base.HashMap GHC.Base.String v
+    -> Data.HashMap.Base.HashMap GHC.Base.String v
+    -> Data.HashMap.Base.HashMap GHC.Base.String v
+  {- Arity: 3, Strictness: <L,U><S,U><S,1*U>, Inline: [2] -}
+aa4500ea9156adb16b3c6b2d1e353188
+  $wpoly_go4 ::
+    GHC.Prim.Word#
+    -> GHC.Base.String
+    -> v
+    -> GHC.Prim.Int#
+    -> Data.HashMap.Base.HashMap GHC.Base.String v
+    -> Data.HashMap.Base.HashMap GHC.Base.String v
+  {- Arity: 5, Strictness: <S,U><S,1*U><L,U><L,U><S,1*U>,
+     Inline: [2] -}
+7be7a863af8d7b5fe17f73dbd1d1a01c
+  $wpoly_go5 ::
+    GHC.Prim.Word#
+    -> GHC.Base.String
+    -> GHC.Prim.Int#
+    -> Data.HashMap.Base.HashMap GHC.Base.String v
+    -> GHC.Maybe.Maybe v
+  {- Arity: 4, HasNoCafRefs, Strictness: <L,U><S,1*U><L,U><S,1*U>,
+     Inline: [2] -}
+4af7def62d2da3a949971d77f2143c9c
+  $wpoly_go6 ::
+    GHC.Prim.Word#
+    -> GHC.Base.String
+    -> v
+    -> GHC.Prim.Int#
+    -> Data.HashMap.Base.HashMap GHC.Base.String v
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.HashMap.Base.HashMap GHC.Base.String v #)
+  {- Arity: 6, Strictness: <L,U><S,1*U><L,U><L,U><S,1*U><L,U>,
+     Inline: [2] -}
+9e098f05f42e055a7a505256a3f98da4
+  apply ::
+    Scheme.Core.Val
+    -> [Scheme.Core.Val] -> Scheme.Core.EvalState Scheme.Core.Val
+  {- Arity: 2, Strictness: <S,1*U><L,U>,
+     Unfolding: (\ (ds :: Scheme.Core.Val)
+                   (args :: [Scheme.Core.Val]) ->
+                 case ds of wild {
+                   DEFAULT
+                   -> let {
+                        m1 :: Scheme.Core.Diagnostic = Scheme.Core.CannotApply wild args
+                      } in
+                      let {
+                        lvl15 :: Data.Either.Either
+                                   Scheme.Core.Diagnostic
+                                   (Scheme.Core.Val,
+                                    Data.HashMap.Base.HashMap GHC.Base.String Scheme.Core.Val)
+                        = Data.Either.Left
+                            @ Scheme.Core.Diagnostic
+                            @ (Scheme.Core.Val,
+                               Data.HashMap.Base.HashMap GHC.Base.String Scheme.Core.Val)
+                            m1
+                      } in
+                      (\ (s1 :: Data.HashMap.Base.HashMap
+                                  GHC.Base.String Scheme.Core.Val) ->
+                       lvl15)
+                        `cast`
+                      ((<Data.HashMap.Base.HashMap GHC.Base.String Scheme.Core.Val>_R
+                        ->_R Sym (Data.Functor.Identity.N:Identity[0]
+                                      <Data.Either.Either
+                                         Scheme.Core.Diagnostic
+                                         (Scheme.Core.Val,
+                                          Data.HashMap.Base.HashMap
+                                            GHC.Base.String
+                                            Scheme.Core.Val)>_R) ; Sym (Control.Monad.Trans.Except.N:ExceptT[0]
+                                                                            <Scheme.Core.Diagnostic>_N
+                                                                            <Data.Functor.Identity.Identity>_R
+                                                                            <(Scheme.Core.Val,
+                                                                              Data.HashMap.Base.HashMap
+                                                                                GHC.Base.String
+                                                                                Scheme.Core.Val)>_N)) ; Sym (Control.Monad.Trans.State.Lazy.N:StateT[0]
+                                                                                                                 <Data.HashMap.Base.HashMap
+                                                                                                                    GHC.Base.String
+                                                                                                                    Scheme.Core.Val>_N
+                                                                                                                 <Control.Monad.Trans.Except.ExceptT
+                                                                                                                    Scheme.Core.Diagnostic
+                                                                                                                    Data.Functor.Identity.Identity>_R
+                                                                                                                 <Scheme.Core.Val>_N))
+                   Scheme.Core.PrimFunc p -> p args
+                   Scheme.Core.Func fmls body cenv
+                   -> case GHC.List.$wlenAcc
+                             @ [GHC.Types.Char]
+                             fmls
+                             0# of ww2 { DEFAULT ->
+                      case GHC.List.$wlenAcc
+                             @ Scheme.Core.Val
+                             args
+                             0# of ww1 { DEFAULT ->
+                      case GHC.Prim.==# ww2 ww1 of lwild {
+                        DEFAULT
+                        -> let {
+                             m1 :: Scheme.Core.Diagnostic = Scheme.Core.CannotApply wild args
+                           } in
+                           let {
+                             lvl15 :: Data.Either.Either
+                                        Scheme.Core.Diagnostic
+                                        (Scheme.Core.Val,
+                                         Data.HashMap.Base.HashMap GHC.Base.String Scheme.Core.Val)
+                             = Data.Either.Left
+                                 @ Scheme.Core.Diagnostic
+                                 @ (Scheme.Core.Val,
+                                    Data.HashMap.Base.HashMap GHC.Base.String Scheme.Core.Val)
+                                 m1
+                           } in
+                           (\ (s1 :: Data.HashMap.Base.HashMap
+                                       GHC.Base.String Scheme.Core.Val) ->
+                            lvl15)
+                             `cast`
+                           ((<Data.HashMap.Base.HashMap GHC.Base.String Scheme.Core.Val>_R
+                             ->_R Sym (Data.Functor.Identity.N:Identity[0]
+                                           <Data.Either.Either
+                                              Scheme.Core.Diagnostic
+                                              (Scheme.Core.Val,
+                                               Data.HashMap.Base.HashMap
+                                                 GHC.Base.String
+                                                 Scheme.Core.Val)>_R) ; Sym (Control.Monad.Trans.Except.N:ExceptT[0]
+                                                                                 <Scheme.Core.Diagnostic>_N
+                                                                                 <Data.Functor.Identity.Identity>_R
+                                                                                 <(Scheme.Core.Val,
+                                                                                   Data.HashMap.Base.HashMap
+                                                                                     GHC.Base.String
+                                                                                     Scheme.Core.Val)>_N)) ; Sym (Control.Monad.Trans.State.Lazy.N:StateT[0]
+                                                                                                                      <Data.HashMap.Base.HashMap
+                                                                                                                         GHC.Base.String
+                                                                                                                         Scheme.Core.Val>_N
+                                                                                                                      <Control.Monad.Trans.Except.ExceptT
+                                                                                                                         Scheme.Core.Diagnostic
+                                                                                                                         Data.Functor.Identity.Identity>_R
+                                                                                                                      <Scheme.Core.Val>_N))
+                        1#
+                        -> (\ (s1 :: Data.HashMap.Base.HashMap
+                                       GHC.Base.String Scheme.Core.Val) ->
+                            case (Scheme.Eval.apply1
+                                    fmls
+                                    args
+                                    (Scheme.Eval.$wpoly_go3 @ Scheme.Core.Val 0# cenv s1))
+                                   `cast`
+                                 (Control.Monad.Trans.Except.N:ExceptT[0]
+                                      <Scheme.Core.Diagnostic>_N
+                                      <Data.Functor.Identity.Identity>_R
+                                      <([()],
+                                        Data.HashMap.Base.HashMap
+                                          GHC.Base.String
+                                          Scheme.Core.Val)>_N ; Data.Functor.Identity.N:Identity[0]
+                                                                    <Data.Either.Either
+                                                                       Scheme.Core.Diagnostic
+                                                                       ([()],
+                                                                        Data.HashMap.Base.HashMap
+                                                                          GHC.Base.String
+                                                                          Scheme.Core.Val)>_R) of wild1 {
+                              Data.Either.Left e1
+                              -> (Data.Either.Left
+                                    @ Scheme.Core.Diagnostic
+                                    @ (Scheme.Core.Val,
+                                       Data.HashMap.Base.HashMap GHC.Base.String Scheme.Core.Val)
+                                    e1)
+                                   `cast`
+                                 (Sym (Data.Functor.Identity.N:Identity[0]
+                                           <Data.Either.Either
+                                              Scheme.Core.Diagnostic
+                                              (Scheme.Core.Val,
+                                               Data.HashMap.Base.HashMap
+                                                 GHC.Base.String Scheme.Core.Val)>_R) ; Nth:3
+                                                                                            (<Data.HashMap.Base.HashMap
+                                                                                                GHC.Base.String
+                                                                                                Scheme.Core.Val>_R
+                                                                                             ->_R Sym (Control.Monad.Trans.Except.N:ExceptT[0]
+                                                                                                           <Scheme.Core.Diagnostic>_N
+                                                                                                           <Data.Functor.Identity.Identity>_R
+                                                                                                           <(Scheme.Core.Val,
+                                                                                                             Data.HashMap.Base.HashMap
+                                                                                                               GHC.Base.String
+                                                                                                               Scheme.Core.Val)>_N)))
+                              Data.Either.Right x
+                              -> case ((Scheme.Eval.eval body)
+                                         `cast`
+                                       (Control.Monad.Trans.State.Lazy.N:StateT[0]
+                                            <Data.HashMap.Base.HashMap
+                                               GHC.Base.String Scheme.Core.Val>_N
+                                            <Control.Monad.Trans.Except.ExceptT
+                                               Scheme.Core.Diagnostic
+                                               Data.Functor.Identity.Identity>_R
+                                            <Scheme.Core.Val>_N)
+                                         (case x of wild2 { (,) a1 s' -> s' }))
+                                        `cast`
+                                      (Control.Monad.Trans.Except.N:ExceptT[0]
+                                           <Scheme.Core.Diagnostic>_N
+                                           <Data.Functor.Identity.Identity>_R
+                                           <(Scheme.Core.Val,
+                                             Data.HashMap.Base.HashMap
+                                               GHC.Base.String
+                                               Scheme.Core.Val)>_N ; Data.Functor.Identity.N:Identity[0]
+                                                                         <Data.Either.Either
+                                                                            Scheme.Core.Diagnostic
+                                                                            (Scheme.Core.Val,
+                                                                             Data.HashMap.Base.HashMap
+                                                                               GHC.Base.String
+                                                                               Scheme.Core.Val)>_R) of wild2 {
+                                   Data.Either.Left e1
+                                   -> wild2
+                                        `cast`
+                                      (Sym (Data.Functor.Identity.N:Identity[0]
+                                                <Data.Either.Either
+                                                   Scheme.Core.Diagnostic
+                                                   (Scheme.Core.Val,
+                                                    Data.HashMap.Base.HashMap
+                                                      GHC.Base.String Scheme.Core.Val)>_R) ; Nth:3
+                                                                                                 (<Data.HashMap.Base.HashMap
+                                                                                                     GHC.Base.String
+                                                                                                     Scheme.Core.Val>_R
+                                                                                                  ->_R Sym (Control.Monad.Trans.Except.N:ExceptT[0]
+                                                                                                                <Scheme.Core.Diagnostic>_N
+                                                                                                                <Data.Functor.Identity.Identity>_R
+                                                                                                                <(Scheme.Core.Val,
+                                                                                                                  Data.HashMap.Base.HashMap
+                                                                                                                    GHC.Base.String
+                                                                                                                    Scheme.Core.Val)>_N)))
+                                   Data.Either.Right x1
+                                   -> (Data.Either.Right
+                                         @ Scheme.Core.Diagnostic
+                                         @ (Scheme.Core.Val,
+                                            Data.HashMap.Base.HashMap
+                                              GHC.Base.String Scheme.Core.Val)
+                                         (case x1 of wild3 { (,) a1 s' -> a1 }, s1))
+                                        `cast`
+                                      (Nth:3
+                                           (<Data.HashMap.Base.HashMap
+                                               GHC.Base.String Scheme.Core.Val>_R
+                                            ->_R Sym (Data.Functor.Identity.N:Identity[0]
+                                                          <Data.Either.Either
+                                                             Scheme.Core.Diagnostic
+                                                             (Scheme.Core.Val,
+                                                              Data.HashMap.Base.HashMap
+                                                                GHC.Base.String
+                                                                Scheme.Core.Val)>_R) ; Sym (Control.Monad.Trans.Except.N:ExceptT[0]
+                                                                                                <Scheme.Core.Diagnostic>_N
+                                                                                                <Data.Functor.Identity.Identity>_R
+                                                                                                <(Scheme.Core.Val,
+                                                                                                  Data.HashMap.Base.HashMap
+                                                                                                    GHC.Base.String
+                                                                                                    Scheme.Core.Val)>_N))) } })
+                             `cast`
+                           (Sym (Control.Monad.Trans.State.Lazy.N:StateT[0]
+                                     <Data.HashMap.Base.HashMap GHC.Base.String Scheme.Core.Val>_N
+                                     <Control.Monad.Trans.Except.ExceptT
+                                        Scheme.Core.Diagnostic Data.Functor.Identity.Identity>_R
+                                     <Scheme.Core.Val>_N)) } } } }) -}
+bf0817a2c7e0bae9b786b5e5ef92452f
+  apply1 ::
+    [[GHC.Types.Char]]
+    -> [Scheme.Core.Val]
+    -> Scheme.Core.Env
+    -> Control.Monad.Trans.Except.Except
+         Scheme.Core.Diagnostic ([()], Scheme.Core.Env)
+  {- Arity: 3, Strictness: <S,1*U><L,1*U><L,U> -}
+2381f484a18351068cd387c667269cba
+  eval :: Scheme.Core.Val -> Scheme.Core.EvalState Scheme.Core.Val
+  {- Arity: 1, Strictness: <S,1*U> -}
+12ee8f030f105e0eca8b34fcf76a5188
+  getBinding ::
+    Scheme.Core.Val
+    -> Scheme.Core.EvalState (GHC.Base.String, Scheme.Core.Val)
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: (\ (ds :: Scheme.Core.Val) ->
+                 case ds of wild {
+                   DEFAULT
+                   -> let {
+                        m1 :: Scheme.Core.Diagnostic = Scheme.Core.NotAListOfTwo wild
+                      } in
+                      let {
+                        lvl15 :: Data.Either.Either
+                                   Scheme.Core.Diagnostic
+                                   ((GHC.Base.String, Scheme.Core.Val),
+                                    Data.HashMap.Base.HashMap GHC.Base.String Scheme.Core.Val)
+                        = Data.Either.Left
+                            @ Scheme.Core.Diagnostic
+                            @ ((GHC.Base.String, Scheme.Core.Val),
+                               Data.HashMap.Base.HashMap GHC.Base.String Scheme.Core.Val)
+                            m1
+                      } in
+                      (\ (s1 :: Data.HashMap.Base.HashMap
+                                  GHC.Base.String Scheme.Core.Val) ->
+                       lvl15)
+                        `cast`
+                      ((<Data.HashMap.Base.HashMap GHC.Base.String Scheme.Core.Val>_R
+                        ->_R Sym (Data.Functor.Identity.N:Identity[0]
+                                      <Data.Either.Either
+                                         Scheme.Core.Diagnostic
+                                         ((GHC.Base.String, Scheme.Core.Val),
+                                          Data.HashMap.Base.HashMap
+                                            GHC.Base.String
+                                            Scheme.Core.Val)>_R) ; Sym (Control.Monad.Trans.Except.N:ExceptT[0]
+                                                                            <Scheme.Core.Diagnostic>_N
+                                                                            <Data.Functor.Identity.Identity>_R
+                                                                            <((GHC.Base.String,
+                                                                               Scheme.Core.Val),
+                                                                              Data.HashMap.Base.HashMap
+                                                                                GHC.Base.String
+                                                                                Scheme.Core.Val)>_N)) ; Sym (Control.Monad.Trans.State.Lazy.N:StateT[0]
+                                                                                                                 <Data.HashMap.Base.HashMap
+                                                                                                                    GHC.Base.String
+                                                                                                                    Scheme.Core.Val>_N
+                                                                                                                 <Control.Monad.Trans.Except.ExceptT
+                                                                                                                    Scheme.Core.Diagnostic
+                                                                                                                    Data.Functor.Identity.Identity>_R
+                                                                                                                 <(GHC.Base.String,
+                                                                                                                   Scheme.Core.Val)>_N))
+                   Scheme.Core.List ds1
+                   -> case ds1 of wild1 {
+                        []
+                        -> let {
+                             m1 :: Scheme.Core.Diagnostic = Scheme.Core.NotAListOfTwo wild
+                           } in
+                           let {
+                             lvl15 :: Data.Either.Either
+                                        Scheme.Core.Diagnostic
+                                        ((GHC.Base.String, Scheme.Core.Val),
+                                         Data.HashMap.Base.HashMap GHC.Base.String Scheme.Core.Val)
+                             = Data.Either.Left
+                                 @ Scheme.Core.Diagnostic
+                                 @ ((GHC.Base.String, Scheme.Core.Val),
+                                    Data.HashMap.Base.HashMap GHC.Base.String Scheme.Core.Val)
+                                 m1
+                           } in
+                           (\ (s1 :: Data.HashMap.Base.HashMap
+                                       GHC.Base.String Scheme.Core.Val) ->
+                            lvl15)
+                             `cast`
+                           ((<Data.HashMap.Base.HashMap GHC.Base.String Scheme.Core.Val>_R
+                             ->_R Sym (Data.Functor.Identity.N:Identity[0]
+                                           <Data.Either.Either
+                                              Scheme.Core.Diagnostic
+                                              ((GHC.Base.String, Scheme.Core.Val),
+                                               Data.HashMap.Base.HashMap
+                                                 GHC.Base.String
+                                                 Scheme.Core.Val)>_R) ; Sym (Control.Monad.Trans.Except.N:ExceptT[0]
+                                                                                 <Scheme.Core.Diagnostic>_N
+                                                                                 <Data.Functor.Identity.Identity>_R
+                                                                                 <((GHC.Base.String,
+                                                                                    Scheme.Core.Val),
+                                                                                   Data.HashMap.Base.HashMap
+                                                                                     GHC.Base.String
+                                                                                     Scheme.Core.Val)>_N)) ; Sym (Control.Monad.Trans.State.Lazy.N:StateT[0]
+                                                                                                                      <Data.HashMap.Base.HashMap
+                                                                                                                         GHC.Base.String
+                                                                                                                         Scheme.Core.Val>_N
+                                                                                                                      <Control.Monad.Trans.Except.ExceptT
+                                                                                                                         Scheme.Core.Diagnostic
+                                                                                                                         Data.Functor.Identity.Identity>_R
+                                                                                                                      <(GHC.Base.String,
+                                                                                                                        Scheme.Core.Val)>_N))
+                        : c ds2
+                        -> case ds2 of wild2 {
+                             []
+                             -> let {
+                                  m1 :: Scheme.Core.Diagnostic = Scheme.Core.NotAListOfTwo wild
+                                } in
+                                let {
+                                  lvl15 :: Data.Either.Either
+                                             Scheme.Core.Diagnostic
+                                             ((GHC.Base.String, Scheme.Core.Val),
+                                              Data.HashMap.Base.HashMap
+                                                GHC.Base.String Scheme.Core.Val)
+                                  = Data.Either.Left
+                                      @ Scheme.Core.Diagnostic
+                                      @ ((GHC.Base.String, Scheme.Core.Val),
+                                         Data.HashMap.Base.HashMap GHC.Base.String Scheme.Core.Val)
+                                      m1
+                                } in
+                                (\ (s1 :: Data.HashMap.Base.HashMap
+                                            GHC.Base.String Scheme.Core.Val) ->
+                                 lvl15)
+                                  `cast`
+                                ((<Data.HashMap.Base.HashMap GHC.Base.String Scheme.Core.Val>_R
+                                  ->_R Sym (Data.Functor.Identity.N:Identity[0]
+                                                <Data.Either.Either
+                                                   Scheme.Core.Diagnostic
+                                                   ((GHC.Base.String, Scheme.Core.Val),
+                                                    Data.HashMap.Base.HashMap
+                                                      GHC.Base.String
+                                                      Scheme.Core.Val)>_R) ; Sym (Control.Monad.Trans.Except.N:ExceptT[0]
+                                                                                      <Scheme.Core.Diagnostic>_N
+                                                                                      <Data.Functor.Identity.Identity>_R
+                                                                                      <((GHC.Base.String,
+                                                                                         Scheme.Core.Val),
+                                                                                        Data.HashMap.Base.HashMap
+                                                                                          GHC.Base.String
+                                                                                          Scheme.Core.Val)>_N)) ; Sym (Control.Monad.Trans.State.Lazy.N:StateT[0]
+                                                                                                                           <Data.HashMap.Base.HashMap
+                                                                                                                              GHC.Base.String
+                                                                                                                              Scheme.Core.Val>_N
+                                                                                                                           <Control.Monad.Trans.Except.ExceptT
+                                                                                                                              Scheme.Core.Diagnostic
+                                                                                                                              Data.Functor.Identity.Identity>_R
+                                                                                                                           <(GHC.Base.String,
+                                                                                                                             Scheme.Core.Val)>_N))
+                             : e ds3
+                             -> case ds3 of wild3 {
+                                  []
+                                  -> let {
+                                       m2 :: Control.Monad.Trans.State.Lazy.StateT
+                                               Scheme.Core.Env
+                                               (Control.Monad.Trans.Except.Except
+                                                  Scheme.Core.Diagnostic)
+                                               Scheme.Core.Val
+                                       = Scheme.Eval.eval e
+                                     } in
+                                     let {
+                                       lvl15 :: Scheme.Core.Diagnostic = Scheme.Core.NotASymbol c
+                                     } in
+                                     let {
+                                       lvl16 :: Data.Either.Either
+                                                  Scheme.Core.Diagnostic
+                                                  ((GHC.Base.String, Scheme.Core.Val),
+                                                   Data.HashMap.Base.HashMap
+                                                     GHC.Base.String Scheme.Core.Val)
+                                       = Data.Either.Left
+                                           @ Scheme.Core.Diagnostic
+                                           @ ((GHC.Base.String, Scheme.Core.Val),
+                                              Data.HashMap.Base.HashMap
+                                                GHC.Base.String Scheme.Core.Val)
+                                           lvl15
+                                     } in
+                                     (\ (s1 :: Data.HashMap.Base.HashMap
+                                                 GHC.Base.String Scheme.Core.Val) ->
+                                      case c of wild4 {
+                                        DEFAULT
+                                        -> lvl16
+                                             `cast`
+                                           (Sym (Data.Functor.Identity.N:Identity[0]
+                                                     <Data.Either.Either
+                                                        Scheme.Core.Diagnostic
+                                                        ((GHC.Base.String, Scheme.Core.Val),
+                                                         Data.HashMap.Base.HashMap
+                                                           GHC.Base.String Scheme.Core.Val)>_R))
+                                        Scheme.Core.Symbol x
+                                        -> case (m2
+                                                   `cast`
+                                                 (Control.Monad.Trans.State.Lazy.N:StateT[0]
+                                                      <Data.HashMap.Base.HashMap
+                                                         GHC.Base.String Scheme.Core.Val>_N
+                                                      <Control.Monad.Trans.Except.ExceptT
+                                                         Scheme.Core.Diagnostic
+                                                         Data.Functor.Identity.Identity>_R
+                                                      <Scheme.Core.Val>_N)
+                                                   s1)
+                                                  `cast`
+                                                (Control.Monad.Trans.Except.N:ExceptT[0]
+                                                     <Scheme.Core.Diagnostic>_N
+                                                     <Data.Functor.Identity.Identity>_R
+                                                     <(Scheme.Core.Val,
+                                                       Data.HashMap.Base.HashMap
+                                                         GHC.Base.String
+                                                         Scheme.Core.Val)>_N ; Data.Functor.Identity.N:Identity[0]
+                                                                                   <Data.Either.Either
+                                                                                      Scheme.Core.Diagnostic
+                                                                                      (Scheme.Core.Val,
+                                                                                       Data.HashMap.Base.HashMap
+                                                                                         GHC.Base.String
+                                                                                         Scheme.Core.Val)>_R) of wild5 {
+                                             Data.Either.Left e1
+                                             -> (Data.Either.Left
+                                                   @ Scheme.Core.Diagnostic
+                                                   @ ((GHC.Base.String, Scheme.Core.Val),
+                                                      Data.HashMap.Base.HashMap
+                                                        GHC.Base.String Scheme.Core.Val)
+                                                   e1)
+                                                  `cast`
+                                                (Sym (Data.Functor.Identity.N:Identity[0]
+                                                          <Data.Either.Either
+                                                             Scheme.Core.Diagnostic
+                                                             ((GHC.Base.String, Scheme.Core.Val),
+                                                              Data.HashMap.Base.HashMap
+                                                                GHC.Base.String
+                                                                Scheme.Core.Val)>_R))
+                                             Data.Either.Right x1
+                                             -> (Data.Either.Right
+                                                   @ Scheme.Core.Diagnostic
+                                                   @ ((GHC.Base.String, Scheme.Core.Val),
+                                                      Data.HashMap.Base.HashMap
+                                                        GHC.Base.String Scheme.Core.Val)
+                                                   ((x, case x1 of wild6 { (,) a1 s' -> a1 }),
+                                                    case x1 of wild6 { (,) a1 s' -> s' }))
+                                                  `cast`
+                                                (Sym (Data.Functor.Identity.N:Identity[0]
+                                                          <Data.Either.Either
+                                                             Scheme.Core.Diagnostic
+                                                             ((GHC.Base.String, Scheme.Core.Val),
+                                                              Data.HashMap.Base.HashMap
+                                                                GHC.Base.String
+                                                                Scheme.Core.Val)>_R)) } })
+                                       `cast`
+                                     ((<Data.HashMap.Base.HashMap GHC.Base.String Scheme.Core.Val>_R
+                                       ->_R Sym (Control.Monad.Trans.Except.N:ExceptT[0]
+                                                     <Scheme.Core.Diagnostic>_N
+                                                     <Data.Functor.Identity.Identity>_R
+                                                     <((GHC.Base.String, Scheme.Core.Val),
+                                                       Data.HashMap.Base.HashMap
+                                                         GHC.Base.String
+                                                         Scheme.Core.Val)>_N)) ; Sym (Control.Monad.Trans.State.Lazy.N:StateT[0]
+                                                                                          <Data.HashMap.Base.HashMap
+                                                                                             GHC.Base.String
+                                                                                             Scheme.Core.Val>_N
+                                                                                          <Control.Monad.Trans.Except.ExceptT
+                                                                                             Scheme.Core.Diagnostic
+                                                                                             Data.Functor.Identity.Identity>_R
+                                                                                          <(GHC.Base.String,
+                                                                                            Scheme.Core.Val)>_N))
+                                  : ipv ipv1
+                                  -> let {
+                                       m1 :: Scheme.Core.Diagnostic = Scheme.Core.NotAListOfTwo wild
+                                     } in
+                                     let {
+                                       lvl15 :: Data.Either.Either
+                                                  Scheme.Core.Diagnostic
+                                                  ((GHC.Base.String, Scheme.Core.Val),
+                                                   Data.HashMap.Base.HashMap
+                                                     GHC.Base.String Scheme.Core.Val)
+                                       = Data.Either.Left
+                                           @ Scheme.Core.Diagnostic
+                                           @ ((GHC.Base.String, Scheme.Core.Val),
+                                              Data.HashMap.Base.HashMap
+                                                GHC.Base.String Scheme.Core.Val)
+                                           m1
+                                     } in
+                                     (\ (s1 :: Data.HashMap.Base.HashMap
+                                                 GHC.Base.String Scheme.Core.Val) ->
+                                      lvl15)
+                                       `cast`
+                                     ((<Data.HashMap.Base.HashMap GHC.Base.String Scheme.Core.Val>_R
+                                       ->_R Sym (Data.Functor.Identity.N:Identity[0]
+                                                     <Data.Either.Either
+                                                        Scheme.Core.Diagnostic
+                                                        ((GHC.Base.String, Scheme.Core.Val),
+                                                         Data.HashMap.Base.HashMap
+                                                           GHC.Base.String
+                                                           Scheme.Core.Val)>_R) ; Sym (Control.Monad.Trans.Except.N:ExceptT[0]
+                                                                                           <Scheme.Core.Diagnostic>_N
+                                                                                           <Data.Functor.Identity.Identity>_R
+                                                                                           <((GHC.Base.String,
+                                                                                              Scheme.Core.Val),
+                                                                                             Data.HashMap.Base.HashMap
+                                                                                               GHC.Base.String
+                                                                                               Scheme.Core.Val)>_N)) ; Sym (Control.Monad.Trans.State.Lazy.N:StateT[0]
+                                                                                                                                <Data.HashMap.Base.HashMap
+                                                                                                                                   GHC.Base.String
+                                                                                                                                   Scheme.Core.Val>_N
+                                                                                                                                <Control.Monad.Trans.Except.ExceptT
+                                                                                                                                   Scheme.Core.Diagnostic
+                                                                                                                                   Data.Functor.Identity.Identity>_R
+                                                                                                                                <(GHC.Base.String,
+                                                                                                                                  Scheme.Core.Val)>_N)) } } } }) -}
+8311e1173c43f784dc87bb543e1fa79e
+  getListOf1 ::
+    Scheme.Core.Val
+    -> Scheme.Core.Env
+    -> Control.Monad.Trans.Except.Except
+         Scheme.Core.Diagnostic
+         ((Scheme.Core.Val, Scheme.Core.Val), Scheme.Core.Env)
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><L,U>,
+     Unfolding: (\ (ds :: Scheme.Core.Val) (eta :: Scheme.Core.Env) ->
+                 case ds of wild {
+                   DEFAULT
+                   -> (Data.Either.Left
+                         @ Scheme.Core.Diagnostic
+                         @ ((Scheme.Core.Val, Scheme.Core.Val),
+                            Data.HashMap.Base.HashMap GHC.Base.String Scheme.Core.Val)
+                         (Scheme.Core.NotAListOfTwo wild))
+                        `cast`
+                      (Sym (Data.Functor.Identity.N:Identity[0]
+                                <Data.Either.Either
+                                   Scheme.Core.Diagnostic
+                                   ((Scheme.Core.Val, Scheme.Core.Val),
+                                    Data.HashMap.Base.HashMap
+                                      GHC.Base.String
+                                      Scheme.Core.Val)>_R) ; Sym (Control.Monad.Trans.Except.N:ExceptT[0]
+                                                                      <Scheme.Core.Diagnostic>_N
+                                                                      <Data.Functor.Identity.Identity>_R
+                                                                      <((Scheme.Core.Val,
+                                                                         Scheme.Core.Val),
+                                                                        Data.HashMap.Base.HashMap
+                                                                          GHC.Base.String
+                                                                          Scheme.Core.Val)>_N))
+                   Scheme.Core.List ds1
+                   -> case ds1 of wild1 {
+                        []
+                        -> (Data.Either.Left
+                              @ Scheme.Core.Diagnostic
+                              @ ((Scheme.Core.Val, Scheme.Core.Val),
+                                 Data.HashMap.Base.HashMap GHC.Base.String Scheme.Core.Val)
+                              (Scheme.Core.NotAListOfTwo wild))
+                             `cast`
+                           (Sym (Data.Functor.Identity.N:Identity[0]
+                                     <Data.Either.Either
+                                        Scheme.Core.Diagnostic
+                                        ((Scheme.Core.Val, Scheme.Core.Val),
+                                         Data.HashMap.Base.HashMap
+                                           GHC.Base.String
+                                           Scheme.Core.Val)>_R) ; Sym (Control.Monad.Trans.Except.N:ExceptT[0]
+                                                                           <Scheme.Core.Diagnostic>_N
+                                                                           <Data.Functor.Identity.Identity>_R
+                                                                           <((Scheme.Core.Val,
+                                                                              Scheme.Core.Val),
+                                                                             Data.HashMap.Base.HashMap
+                                                                               GHC.Base.String
+                                                                               Scheme.Core.Val)>_N))
+                        : c ds2
+                        -> case ds2 of wild2 {
+                             []
+                             -> (Data.Either.Left
+                                   @ Scheme.Core.Diagnostic
+                                   @ ((Scheme.Core.Val, Scheme.Core.Val),
+                                      Data.HashMap.Base.HashMap GHC.Base.String Scheme.Core.Val)
+                                   (Scheme.Core.NotAListOfTwo wild))
+                                  `cast`
+                                (Sym (Data.Functor.Identity.N:Identity[0]
+                                          <Data.Either.Either
+                                             Scheme.Core.Diagnostic
+                                             ((Scheme.Core.Val, Scheme.Core.Val),
+                                              Data.HashMap.Base.HashMap
+                                                GHC.Base.String
+                                                Scheme.Core.Val)>_R) ; Sym (Control.Monad.Trans.Except.N:ExceptT[0]
+                                                                                <Scheme.Core.Diagnostic>_N
+                                                                                <Data.Functor.Identity.Identity>_R
+                                                                                <((Scheme.Core.Val,
+                                                                                   Scheme.Core.Val),
+                                                                                  Data.HashMap.Base.HashMap
+                                                                                    GHC.Base.String
+                                                                                    Scheme.Core.Val)>_N))
+                             : e ds3
+                             -> case ds3 of wild3 {
+                                  []
+                                  -> (Data.Either.Right
+                                        @ Scheme.Core.Diagnostic
+                                        @ ((Scheme.Core.Val, Scheme.Core.Val),
+                                           Data.HashMap.Base.HashMap
+                                             GHC.Base.String Scheme.Core.Val)
+                                        ((c, e), eta))
+                                       `cast`
+                                     (Sym (Data.Functor.Identity.N:Identity[0]
+                                               <Data.Either.Either
+                                                  Scheme.Core.Diagnostic
+                                                  ((Scheme.Core.Val, Scheme.Core.Val),
+                                                   Data.HashMap.Base.HashMap
+                                                     GHC.Base.String
+                                                     Scheme.Core.Val)>_R) ; Sym (Control.Monad.Trans.Except.N:ExceptT[0]
+                                                                                     <Scheme.Core.Diagnostic>_N
+                                                                                     <Data.Functor.Identity.Identity>_R
+                                                                                     <((Scheme.Core.Val,
+                                                                                        Scheme.Core.Val),
+                                                                                       Data.HashMap.Base.HashMap
+                                                                                         GHC.Base.String
+                                                                                         Scheme.Core.Val)>_N))
+                                  : ipv ipv1
+                                  -> (Data.Either.Left
+                                        @ Scheme.Core.Diagnostic
+                                        @ ((Scheme.Core.Val, Scheme.Core.Val),
+                                           Data.HashMap.Base.HashMap
+                                             GHC.Base.String Scheme.Core.Val)
+                                        (Scheme.Core.NotAListOfTwo wild))
+                                       `cast`
+                                     (Sym (Data.Functor.Identity.N:Identity[0]
+                                               <Data.Either.Either
+                                                  Scheme.Core.Diagnostic
+                                                  ((Scheme.Core.Val, Scheme.Core.Val),
+                                                   Data.HashMap.Base.HashMap
+                                                     GHC.Base.String
+                                                     Scheme.Core.Val)>_R) ; Sym (Control.Monad.Trans.Except.N:ExceptT[0]
+                                                                                     <Scheme.Core.Diagnostic>_N
+                                                                                     <Data.Functor.Identity.Identity>_R
+                                                                                     <((Scheme.Core.Val,
+                                                                                        Scheme.Core.Val),
+                                                                                       Data.HashMap.Base.HashMap
+                                                                                         GHC.Base.String
+                                                                                         Scheme.Core.Val)>_N)) } } } }) -}
+7516da565bb99f07716317d76f2b3641
+  getListOf2 ::
+    Scheme.Core.Val
+    -> Scheme.Core.EvalState (Scheme.Core.Val, Scheme.Core.Val)
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Scheme.Eval.getListOf1
+                  `cast`
+                (<Scheme.Core.Val>_R
+                 ->_R Sym (Control.Monad.Trans.State.Lazy.N:StateT[0]
+                               <Scheme.Core.Env>_N
+                               <Control.Monad.Trans.Except.Except Scheme.Core.Diagnostic>_R
+                               <(Scheme.Core.Val, Scheme.Core.Val)>_N)) -}
+2a7382820be80216265889e835186d0a
+  getSym :: Scheme.Core.Val -> Scheme.Core.EvalState GHC.Base.String
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Scheme.Eval.getSym1
+                  `cast`
+                (<Scheme.Core.Val>_R
+                 ->_R Sym (Control.Monad.Trans.State.Lazy.N:StateT[0]
+                               <Scheme.Core.Env>_N
+                               <Control.Monad.Trans.Except.Except Scheme.Core.Diagnostic>_R
+                               <GHC.Base.String>_N)) -}
+a2df0acbf334e638a411b15095d9255a
+  getSym1 ::
+    Scheme.Core.Val
+    -> Scheme.Core.Env
+    -> Control.Monad.Trans.Except.Except
+         Scheme.Core.Diagnostic (GHC.Base.String, Scheme.Core.Env)
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><L,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (ds :: Scheme.Core.Val) (eta :: Scheme.Core.Env) ->
+                 case ds of wild {
+                   DEFAULT
+                   -> (Data.Either.Left
+                         @ Scheme.Core.Diagnostic
+                         @ (GHC.Base.String,
+                            Data.HashMap.Base.HashMap GHC.Base.String Scheme.Core.Val)
+                         (Scheme.Core.NotASymbol wild))
+                        `cast`
+                      (Sym (Data.Functor.Identity.N:Identity[0]
+                                <Data.Either.Either
+                                   Scheme.Core.Diagnostic
+                                   (GHC.Base.String,
+                                    Data.HashMap.Base.HashMap
+                                      GHC.Base.String
+                                      Scheme.Core.Val)>_R) ; Sym (Control.Monad.Trans.Except.N:ExceptT[0]
+                                                                      <Scheme.Core.Diagnostic>_N
+                                                                      <Data.Functor.Identity.Identity>_R
+                                                                      <(GHC.Base.String,
+                                                                        Data.HashMap.Base.HashMap
+                                                                          GHC.Base.String
+                                                                          Scheme.Core.Val)>_N))
+                   Scheme.Core.Symbol x
+                   -> (Data.Either.Right
+                         @ Scheme.Core.Diagnostic
+                         @ (GHC.Base.String,
+                            Data.HashMap.Base.HashMap GHC.Base.String Scheme.Core.Val)
+                         (x, eta))
+                        `cast`
+                      (Sym (Data.Functor.Identity.N:Identity[0]
+                                <Data.Either.Either
+                                   Scheme.Core.Diagnostic
+                                   (GHC.Base.String,
+                                    Data.HashMap.Base.HashMap
+                                      GHC.Base.String
+                                      Scheme.Core.Val)>_R) ; Sym (Control.Monad.Trans.Except.N:ExceptT[0]
+                                                                      <Scheme.Core.Diagnostic>_N
+                                                                      <Data.Functor.Identity.Identity>_R
+                                                                      <(GHC.Base.String,
+                                                                        Data.HashMap.Base.HashMap
+                                                                          GHC.Base.String
+                                                                          Scheme.Core.Val)>_N)) }) -}
+a520fce833bb20b6fb20033df23b4ee0
+  keywords :: [GHC.Base.String]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Scheme.Eval.keywords22
+                   Scheme.Eval.keywords1) -}
+84605fde1dc1741c43f4567ac0b09b07
+  keywords1 :: [GHC.Base.String]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Scheme.Eval.keywords20
+                   Scheme.Eval.keywords2) -}
+a19c043b91b4f9238a2d914b16a191fb
+  keywords10 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   Scheme.Eval.keywords11) -}
+b24f7f4059862b50970d35489f654d68
+  keywords11 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("quasiquote"#) -}
+223985e6987f2f4cdcc0db72e3c6a078
+  keywords12 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   Scheme.Eval.keywords13) -}
+d0d31246548689c532eb1496b1541f59
+  keywords13 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("define-macro"#) -}
+c39e62f505ae25a72ffdb4e842b7497a
+  keywords14 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   Scheme.Eval.keywords15) -}
+0a746fa1811853770d5f3a8fa284cc6c
+  keywords15 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("let*"#) -}
+f13fa7de67183eaa5cfafb9e4da4a2bc
+  keywords16 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   Scheme.Eval.keywords17) -}
+d16b5baf54d70fe8d0907e78410fc18c
+  keywords17 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("let"#) -}
+91de825dfc3ceb68086b4ebd6e7e3ce7
+  keywords18 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   Scheme.Eval.keywords19) -}
+165b1c98ab9b1dd59845283a8f20e71a
+  keywords19 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("cond"#) -}
+dd5a4654acd4ed4836fb86046a301cbd
+  keywords2 :: [GHC.Base.String]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Scheme.Eval.keywords18
+                   Scheme.Eval.keywords3) -}
+d501f9a1208c320a866433cb6960be8d
+  keywords20 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   Scheme.Eval.keywords21) -}
+9ca76fc34073f1736ec37dd4b5b4db7c
+  keywords21 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("lambda"#) -}
+1f24fa1b7ed83d464aebfde5367664ed
+  keywords22 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   Scheme.Eval.keywords23) -}
+3ca1a0cd3fe2387717a13f4edad0a50b
+  keywords23 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("define"#) -}
+85c1e7a9fd326bc8666337c7b9d35008
+  keywords3 :: [GHC.Base.String]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Scheme.Eval.keywords16
+                   Scheme.Eval.keywords4) -}
+5f9396033b8b79d27ad68d5d6f3f4388
+  keywords4 :: [GHC.Base.String]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Scheme.Eval.keywords14
+                   Scheme.Eval.keywords5) -}
+a741af6da71cdc926c5284c9915611a8
+  keywords5 :: [GHC.Base.String]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Scheme.Eval.keywords12
+                   Scheme.Eval.keywords6) -}
+1f89241b5f6f33cb3c3f417c37d1e08d
+  keywords6 :: [GHC.Base.String]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Scheme.Eval.keywords10
+                   Scheme.Eval.keywords7) -}
+f512b9779eb4c68a219fbfc9ed6d5150
+  keywords7 :: [GHC.Base.String]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Base.String
+                   Scheme.Eval.keywords8
+                   (GHC.Types.[] @ GHC.Base.String)) -}
+eefea9c9ca5ad1385fbf9fe9718eb3b0
+  keywords8 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Scheme.Eval.keywords9) -}
+ba9ebc9004aa7c2b29ced89162f7f734
+  keywords9 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("unquote"#) -}
+"SPEC/Scheme.Eval $wupdateOrConcatWithKey @ String _" [orphan] [2] forall @ v
+                                                                          (w :: GHC.Classes.Eq
+                                                                                  GHC.Base.String)
+  Data.HashMap.Base.$wupdateOrConcatWithKey @ [GHC.Types.Char] @ v w
+  = Scheme.Eval.$s$wupdateOrConcatWithKey @ v
+"SPEC/Scheme.Eval $wupdateOrSnocWithKey @ String _" [orphan] [2] forall @ v
+                                                                        (w :: GHC.Classes.Eq
+                                                                                GHC.Base.String)
+  Data.HashMap.Base.$wupdateOrSnocWithKey @ [GHC.Types.Char] @ v w
+  = Scheme.Eval.$s$wupdateOrSnocWithKey @ v
+"SPEC/Scheme.Eval insert @ String _" [orphan] forall @ v
+                                                     ($dHashable :: Data.Hashable.Class.Hashable
+                                                                      GHC.Base.String)
+                                                     ($dEq :: GHC.Classes.Eq GHC.Base.String)
+  Data.HashMap.Base.insert @ [GHC.Types.Char] @ v $dEq $dHashable
+  = Scheme.Eval.$sinsert @ v
+"SPEC/Scheme.Eval lookup @ String _" [orphan] forall @ v
+                                                     ($dHashable :: Data.Hashable.Class.Hashable
+                                                                      GHC.Base.String)
+                                                     ($dEq :: GHC.Classes.Eq GHC.Base.String)
+  Data.HashMap.Base.lookup @ [GHC.Types.Char] @ v $dEq $dHashable
+  = Scheme.Eval.$slookup @ v
+"SPEC/Scheme.Eval unsafeInsert @ String _" [orphan] forall @ v
+                                                           ($dHashable :: Data.Hashable.Class.Hashable
+                                                                            GHC.Base.String)
+                                                           ($dEq :: GHC.Classes.Eq GHC.Base.String)
+  Data.HashMap.Base.unsafeInsert @ [GHC.Types.Char]
+                                 @ v
+                                 $dEq
+                                 $dHashable
+  = Scheme.Eval.$sunsafeInsert @ v
+trusted: safe
+require own pkg trusted: False
+module header:
+  Nothing
+declaration docs:
+arg docs:
+

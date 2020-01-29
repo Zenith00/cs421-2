@@ -1,0 +1,418 @@
+
+==================== FINAL INTERFACE ====================
+2019-03-04 05:52:42.61369 UTC
+
+interface main:PropertyTests 8063
+  interface hash: c3976fbc4b239d04ab1aab343f42d588
+  ABI hash: f2571f2e9698cfd4334d0b3e575d38a4
+  export-list hash: 5dbad364fe5ca8270328cd1313d4c703
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: b8416f5a37f8a440ff65b240e54545f2
+  opt_hash: 6faf2de08de32d19db9870899d88e59a
+  hpc_hash: 93b885adfe0da089cdf634904fd59f71
+  plugin_hash: ad164012d6b1e14942349d58b1132007
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  ExpGens.arbAppExp
+  ExpGens.arbBoolConstExp
+  ExpGens.arbBoolOp
+  ExpGens.arbBoolOpExp
+  ExpGens.arbCompOp
+  ExpGens.arbCompOpExp
+  ExpGens.arbConstExp
+  ExpGens.arbEnv
+  ExpGens.arbEnvList
+  ExpGens.arbFunExp
+  ExpGens.arbIfExp
+  ExpGens.arbIntConstExp
+  ExpGens.arbIntOp
+  ExpGens.arbIntOpExp
+  ExpGens.arbLetExp
+  ExpGens.arbLiftBool
+  ExpGens.arbLiftComp
+  ExpGens.arbMostlyBoolExp
+  ExpGens.arbMostlyBoolVal
+  ExpGens.arbMostlyIntExp
+  ExpGens.arbMostlyIntVal
+  ExpGens.arbNestedVarExp
+  ExpGens.arbParam
+  ExpGens.arbParamList
+  ExpGens.arbVal
+  ExpGens.arbVarExp
+  ExpGens.divExn
+  ExpGens.funExn
+  ExpGens.ifExn
+  ExpGens.liftExn
+  ExpGens.varExn
+  PropertyTests.anyExpEnvVal_prop
+  PropertyTests.anyExpVal_prop
+  PropertyTests.anyStmtEnvPEnvVal_prop
+  PropertyTests.liftOp_prop
+  StmtGens.arbCallStmt
+  StmtGens.arbIfStmt
+  StmtGens.arbPEnv
+  StmtGens.arbPrintStmt
+  StmtGens.arbProcStmt
+  StmtGens.arbProcedure
+  StmtGens.arbSeqStmt
+  StmtGens.arbSetStmt
+  StmtGens.funcUpTo
+  StmtGens.procUpTo
+  ExpGens.ExpEnvValUnit{ExpGens.ExpEnvValUnit}
+  ExpGens.ExpValUnit{ExpGens.ExpValUnit}
+  ExpGens.LiftOpUnit{ExpGens.LiftOpUnit arg1 arg2 expResult op}
+  StmtGens.ProcedureUnit{StmtGens.ProcedureUnit}
+  StmtGens.StmtEnvPEnvResultUnit{StmtGens.StmtEnvPEnvResultUnit env penv stmt stmtResult}
+module dependencies: ExpGens StmtGens
+package dependencies: QuickCheck-2.12.6.1 array-0.5.3.0
+                      base-4.12.0.0* binary-0.8.6.0 bytestring-0.10.8.2
+                      containers-0.6.0.1 deepseq-1.4.4.0 erf-2.0.0.0 ghc-boot-th-8.6.3
+                      ghc-prim-0.5.3 hashable-1.2.7.0 integer-gmp-1.0.2.0
+                      interpreter-0.3.0.0 pretty-1.1.3.6 primitive-0.6.4.0 random-1.1
+                      template-haskell-2.14.0.0 text-1.2.3.1 tf-random-0.5 time-1.8.0.2
+                      transformers-0.5.5.0 unordered-containers-0.2.9.0*
+orphans: transformers-0.5.5.0:Control.Monad.Trans.Error
+         time-1.8.0.2:Data.Time.Format.Parse
+         time-1.8.0.2:Data.Time.LocalTime.Internal.ZonedTime
+         time-1.8.0.2:Data.Time.LocalTime.Internal.LocalTime
+         time-1.8.0.2:Data.Time.Calendar.Gregorian
+         hashable-1.2.7.0:Data.Hashable.Generic text-1.2.3.1:Data.Text.Lazy
+         text-1.2.3.1:Data.Text binary-0.8.6.0:Data.Binary.Generic
+         bytestring-0.10.8.2:Data.ByteString.Builder
+         text-1.2.3.1:Data.Text.Show base-4.12.0.0:GHC.Float
+         base-4.12.0.0:GHC.Base
+family instance modules: base-4.12.0.0:Control.Applicative
+                         base-4.12.0.0:Data.Complex base-4.12.0.0:Data.Functor.Compose
+                         base-4.12.0.0:Data.Functor.Const
+                         base-4.12.0.0:Data.Functor.Identity
+                         base-4.12.0.0:Data.Functor.Product base-4.12.0.0:Data.Functor.Sum
+                         base-4.12.0.0:Data.Monoid base-4.12.0.0:Data.Semigroup
+                         base-4.12.0.0:Data.Semigroup.Internal base-4.12.0.0:Data.Version
+                         base-4.12.0.0:Data.Void base-4.12.0.0:GHC.Exts
+                         base-4.12.0.0:GHC.Generics base-4.12.0.0:GHC.IO.Exception
+                         containers-0.6.0.1:Data.IntMap.Internal
+                         containers-0.6.0.1:Data.IntSet.Internal
+                         containers-0.6.0.1:Data.Map.Internal
+                         containers-0.6.0.1:Data.Sequence.Internal
+                         containers-0.6.0.1:Data.Set.Internal containers-0.6.0.1:Data.Tree
+                         ghc-boot-th-8.6.3:GHC.ForeignSrcLang.Type
+                         ghc-boot-th-8.6.3:GHC.LanguageExtensions.Type
+                         pretty-1.1.3.6:Text.PrettyPrint.Annotated.HughesPJ
+                         pretty-1.1.3.6:Text.PrettyPrint.HughesPJ
+                         primitive-0.6.4.0:Control.Monad.Primitive
+                         primitive-0.6.4.0:Data.Primitive.ByteArray
+                         template-haskell-2.14.0.0:Language.Haskell.TH.Syntax
+                         text-1.2.3.1:Data.Text text-1.2.3.1:Data.Text.Lazy
+                         unordered-containers-0.2.9.0:Data.HashMap.Base
+import  -/  QuickCheck-2.12.6.1:Test.QuickCheck 38addeb83ca99bb269a5b885eb60712d
+import  -/  QuickCheck-2.12.6.1:Test.QuickCheck.Function 96178bed6680d0d8ca28999bac4a3f73
+import  -/  QuickCheck-2.12.6.1:Test.QuickCheck.Property 53ae7729b399320a6fe2cdf3d26c77c2
+import  -/  base-4.12.0.0:GHC.Base cc906f98291a1b830546e99a96674547
+import  -/  base-4.12.0.0:GHC.Show 4e438f26d903388cc6c2c5d64ed01b98
+import  -/  base-4.12.0.0:Prelude 5c01365ec01f83bd405ac01cbb9a8d76
+import  -/  interpreter-0.3.0.0:Lib c69877f498ccfcd6618499c528202b68
+import  -/  ExpGens 8326829c9558e24c17d0c2d88ac20bd2
+  exports: 108c724651145f79c99ec07c240fe9e1
+  ExpEnvValUnit 6b9216ba77cad9ceb81194f96a8654fe
+  ExpEnvValUnit 3d3580fdc45b5f5871c6a7b267072247
+  ExpValUnit 3f9bca8eb712882220b819d05cc1ed9a
+  ExpValUnit c62d6a0e773a5dacc5060e14c141eaee
+  LiftOpUnit 6cc82cb15d8d9026416f1ab62db86527
+  LiftOpUnit efbfb9122d04843198cf5974142c6b1c
+  arbAppExp 61b86503c6ae56752e63df2ee506babd
+  arbBoolConstExp 13aab6318b50a0f08acf19f4c8753867
+  arbBoolOp d2bb11741888ca9b0b1e00e2d320b664
+  arbBoolOpExp fbe7b15729244cd15265d34033ba00a4
+  arbCompOp 7fb260e3c5cddf6e25148f6270add649
+  arbCompOpExp d709ba0e59796a05ce6ba90abf298749
+  arbConstExp 9c734ef8eb33bbbcebe0b2d59af479b3
+  arbEnv 10d6ceffba2e13722df2b3c3677add5e
+  arbEnvList 9d3a74d364fc0fdf79b8b69646d872a7
+  arbFunExp 6ea22a335792073301b31d350aafa349
+  arbIfExp 70ebbfc8b3a0f9417119c1859bcea179
+  arbIntConstExp 321c38422216c80a13b92ec024cc6102
+  arbIntOp 05c274bad914dfb4943aca3fcf3c43eb
+  arbIntOpExp 7d1ff7429811046575daf29532c3fe65
+  arbLetExp 1c60956b2d7c30d4b653a56294626769
+  arbLiftBool 2444ec61ee8f3f4a387a1b030aaed2ae
+  arbLiftComp d3b46378cdbc76629a5ae00678e640d6
+  arbMostlyBoolExp 051c67672d8b3db8949c03d7175902d0
+  arbMostlyBoolVal 1ab1897d83326c9c29cb56d1572ba462
+  arbMostlyIntExp 17f488a29b18a3e088028fcbbd27d066
+  arbMostlyIntVal 57375beaefe282c62db4c0f23740e9e4
+  arbNestedVarExp ae50c43f55e43b9ea3dbddb6d191f400
+  arbParam 77041dd35bd7183953b2f084e1bebc90
+  arbParamList df84245741eb16d915a64b4bbb4a87e6
+  arbVal 91e4f6272c94c77cf604ca0a72c53ded
+  arbVarExp cc2daaf606f37ea5a2681e52d83426bd
+  arg1 efbfb9122d04843198cf5974142c6b1c
+  arg2 efbfb9122d04843198cf5974142c6b1c
+  divExn 523ab63c67b20efec2f3b025d2851284
+  expResult efbfb9122d04843198cf5974142c6b1c
+  funExn 1cf0b7feb8895e2e7e96eea3d105ab8c
+  ifExn 137b58fba682a08547d299f3a95f7b87
+  liftExn bd4e5066480ac8bcd8c5906cd734acd6
+  op efbfb9122d04843198cf5974142c6b1c
+  varExn e568532287cc12492dfbb03cad2b93ce
+import  -/  StmtGens 543a8a4655d4c3aa28271cf86926da81
+  exports: 3075a6839f04c493272658ee67027ba6
+  ProcedureUnit 1de30b3792f0415d9840a42cb8f135cb
+  ProcedureUnit ac617b09abaf7504ec7be87d131425da
+  StmtEnvPEnvResultUnit 59ccc89cea4f1fa1a8df60d4b885b8b8
+  StmtEnvPEnvResultUnit fac4934c4f3c80c232fcf05e1b5a0241
+  arbCallStmt e03a5299bf2b1cd6401c6c3cfa271b6c
+  arbIfStmt 98bb8ab67af99a63bcee10417a96b258
+  arbPEnv e4062b7e262944df595f96311ef30ac7
+  arbPrintStmt ab661d97c8a353ab5a42e8de8a1e483c
+  arbProcStmt 0eb5218d3e5db228d8f4cda5f9924220
+  arbProcedure 5e1a0acf252ad29d00c4a7c2ccbf0ebb
+  arbSeqStmt 5b2df7c89dc9a6dea6eade4f6fd26cb0
+  arbSetStmt fd81714020ccaa2fd4ee4503d7853198
+  env fac4934c4f3c80c232fcf05e1b5a0241
+  funcUpTo d36bdfa76d5b52584b17c088d43a45ff
+  penv fac4934c4f3c80c232fcf05e1b5a0241
+  procUpTo d4bcbb211b35fe8e9641b2bcfa5bc120
+  stmt fac4934c4f3c80c232fcf05e1b5a0241
+  stmtResult fac4934c4f3c80c232fcf05e1b5a0241
+import  -/  unordered-containers-0.2.9.0:Data.HashMap.Base f8b66a8ac39d506c03f2e1aa73c729b0
+import  -/  unordered-containers-0.2.9.0:Data.HashMap.Strict 382b0fb0c37f914f58f22553760567f2
+5d93c438d18c4ded499d80e6f9abb965
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   PropertyTests.$trModule3
+                   PropertyTests.$trModule1) -}
+d7d47ab79b2e46b717a5e547edd4c060
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS PropertyTests.$trModule2) -}
+a0003f417d8c2c6de1ee966c0a97ee7a
+  $trModule2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("PropertyTests"#) -}
+2341abaef41504c02d64f5607e128b12
+  $trModule3 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS PropertyTests.$trModule4) -}
+609cecc06b4346d0de9d5a2e484d1fda
+  $trModule4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("main"#) -}
+c69ac3da984e742419d2b0b130a9d47a
+  $wanyExpEnvVal_prop ::
+    Lib.Exp -> Lib.Env -> Lib.Val -> Test.QuickCheck.Property.Property
+  {- Arity: 3, Strictness: <L,U><L,U><S,U>, Inline: [2] -}
+4f6a81f4e3cc2d3339c9ee774e25e208
+  $wanyExpVal_prop ::
+    Lib.Exp -> Lib.Val -> Test.QuickCheck.Property.Property
+  {- Arity: 2, Strictness: <L,U><S,U>, Inline: [2],
+     Unfolding: (\ (ww :: Lib.Exp) (ww1 :: Lib.Val) ->
+                 let {
+                   karg :: Test.QuickCheck.Property.Property
+                   = let {
+                       actualResult :: Lib.Val
+                       = Lib.eval ww (Data.HashMap.Base.Empty @ GHC.Base.String @ Lib.Val)
+                     } in
+                     Test.QuickCheck.Property.counterexample
+                       @ Test.QuickCheck.Property.Property
+                       Test.QuickCheck.Property.$fTestableProperty1
+                         `cast`
+                       ((<Test.QuickCheck.Property.Property>_R
+                         ->_R Sym (Test.QuickCheck.Gen.N:Gen[0]
+                                       <Test.QuickCheck.Property.Prop>_R) ; Sym (Test.QuickCheck.Property.N:Property[0])) ; Sym (Test.QuickCheck.Property.N:Testable[0]
+                                                                                                                                     <Test.QuickCheck.Property.Property>_N))
+                       (GHC.CString.unpackAppendCString#
+                          PropertyTests.anyExpVal_prop7
+                          (GHC.Base.++
+                             @ GHC.Types.Char
+                             (Lib.$w$cshowsPrec 0# ww (GHC.Types.[] @ GHC.Types.Char))
+                             (GHC.CString.unpackAppendCString#
+                                PropertyTests.anyExpVal_prop6
+                                (GHC.Base.++
+                                   @ GHC.Types.Char
+                                   (Lib.$fShowVal_$cshow ww1)
+                                   (GHC.CString.unpackAppendCString#
+                                      PropertyTests.anyExpVal_prop5
+                                      (GHC.Base.++
+                                         @ GHC.Types.Char
+                                         (Lib.$fShowVal_$cshow actualResult)
+                                         PropertyTests.anyExpVal_prop3))))))
+                       (let {
+                          res :: GHC.Types.Bool = Lib.$fEqVal_$c== actualResult ww1
+                        } in
+                        Test.QuickCheck.Property.counterexample_$scounterexample
+                          (GHC.Base.++
+                             @ GHC.Types.Char
+                             (Lib.$fShowVal_$cshow actualResult)
+                             (case res of wild {
+                                GHC.Types.False
+                                -> GHC.Base.++
+                                     @ GHC.Types.Char
+                                     Test.QuickCheck.Property.=/=1
+                                     (Lib.$fShowVal_$cshow ww1)
+                                GHC.Types.True
+                                -> GHC.Base.++
+                                     @ GHC.Types.Char
+                                     Test.QuickCheck.Property.=/=3
+                                     (Lib.$fShowVal_$cshow ww1) }))
+                          res)
+                 } in
+                 case ww1 of wild {
+                   DEFAULT
+                   -> (Test.QuickCheck.Property.$fTestableProperty1 karg)
+                        `cast`
+                      (Sym (Test.QuickCheck.Gen.N:Gen[0]
+                                <Test.QuickCheck.Property.Prop>_R) ; Sym (Test.QuickCheck.Property.N:Property[0]))
+                   Lib.ExnVal ds
+                   -> case PropertyTests.anyExpVal_prop2 of wild1 { () ->
+                      (\ (eta :: Test.QuickCheck.Random.QCGen) (eta1 :: GHC.Types.Int) ->
+                       case eta
+                              `cast`
+                            (Test.QuickCheck.Random.N:QCGen[0]) of ww2 { System.Random.TF.Gen.TFGen ww3 ww4 ww5 ww6 ww7 ww8 ->
+                       case System.Random.TF.Gen.$wtfGenSplit
+                              ww3
+                              ww4
+                              ww5
+                              ww6 of ww9 { (#,#) ww10 ww11 ->
+                       case Test.QuickCheck.Property.$w$cproperty1
+                              (karg
+                                 `cast`
+                               (Test.QuickCheck.Property.N:Property[0] ; Test.QuickCheck.Gen.N:Gen[0]
+                                                                             <Test.QuickCheck.Property.Prop>_R)
+                                 ww10 `cast` (Sym (Test.QuickCheck.Random.N:QCGen[0]))
+                                 eta1) of ww12 { Unit# ww13 ->
+                       Test.QuickCheck.Property.$fApplicativeRose_$cfmap
+                         @ Test.QuickCheck.Property.Result
+                         @ Test.QuickCheck.Property.Result
+                         PropertyTests.anyExpVal_prop_f
+                         (Test.QuickCheck.Property.IORose
+                            @ Test.QuickCheck.Property.Result
+                            ww13) } } })
+                        `cast`
+                      (Sym (Test.QuickCheck.Gen.N:Gen[0]
+                                (Test.QuickCheck.Property.N:Prop[0])) ; Sym (Test.QuickCheck.Property.N:Property[0])) } }) -}
+3ead9ecf8f88bfeed42a5d3d2da8553a
+  $wanyStmtEnvPEnvVal_prop ::
+    Lib.Stmt
+    -> Lib.Env
+    -> Lib.PEnv
+    -> Lib.Result
+    -> Test.QuickCheck.Property.Property
+  {- Arity: 4, Strictness: <L,U><L,U><L,U><L,U(U,U,U)>,
+     Inline: [2] -}
+082ec6d86c346785beffa3e242b39b0f
+  $wliftOp_prop ::
+    GHC.Show.Show lit =>
+    ((lit -> lit -> GHC.Types.Bool) -> Lib.Val -> Lib.Val -> Lib.Val)
+    -> Lib.Val
+    -> Lib.Val
+    -> Test.QuickCheck.Function.Fun (lit, lit) GHC.Types.Bool
+    -> Lib.Val
+    -> Test.QuickCheck.Property.Property
+  {- Arity: 6,
+     Strictness: <L,U(C(C1(C1(U))),A,A)><L,1*C1(C1(C1(U)))><L,U><L,U><L,U(1*U(1*U,U,1*U),C(U))><S,U>,
+     Inline: [2] -}
+c87b2e160c2eaa82aed0c194bd0c4c45
+  anyExpEnvVal_prop ::
+    ExpGens.ExpEnvValUnit -> Test.QuickCheck.Property.Property
+  {- Arity: 1, Strictness: <S(LLS),1*U(U,U,U)>, Inline: [2],
+     Unfolding: InlineRule (1, True, False)
+                (\ (w :: ExpGens.ExpEnvValUnit) ->
+                 case w of ww { ExpGens.ExpEnvValUnit ww1 ww2 ww3 ->
+                 PropertyTests.$wanyExpEnvVal_prop ww1 ww2 ww3 }) -}
+104ddb03ab8762b354ea1459920c5c1e
+  anyExpVal_prop ::
+    ExpGens.ExpValUnit -> Test.QuickCheck.Property.Property
+  {- Arity: 1, Strictness: <S(LS),1*U(U,U)>, Inline: [2],
+     Unfolding: InlineRule (1, True, False)
+                (\ (w :: ExpGens.ExpValUnit) ->
+                 case w of ww { ExpGens.ExpValUnit ww1 ww2 ->
+                 PropertyTests.$wanyExpVal_prop ww1 ww2 }) -}
+7642b0c22bbd23faa04101727c2c63cb
+  anyExpVal_prop1 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Exception"#) -}
+e9b8fc0adc5541316572e16a9020babe
+  anyExpVal_prop2 :: ()
+  {- Unfolding: (Test.QuickCheck.Property.classify_go
+                   PropertyTests.anyExpVal_prop_eta1) -}
+bd74272a8500236ee6892a08dddec47c
+  anyExpVal_prop3 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString#
+                   PropertyTests.anyExpVal_prop4) -}
+b0d0899440cc9b975fa3a3a79df4b901
+  anyExpVal_prop4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'"#) -}
+f38faa172dac68d6e3cf93993eb72636
+  anyExpVal_prop5 :: GHC.Prim.Addr#
+  {- HasNoCafRefs,
+     Unfolding: ("'\n\
+                 \but got: '"#) -}
+1c62f9ce033dcc21153ffd7e76a600a7
+  anyExpVal_prop6 :: GHC.Prim.Addr#
+  {- HasNoCafRefs,
+     Unfolding: ("'.\n\
+                 \Expected: '"#) -}
+2f77e19fe098af0552407e90819042e1
+  anyExpVal_prop7 :: GHC.Prim.Addr#
+  {- HasNoCafRefs,
+     Unfolding: ("eval failed on\n\
+                 \expression: '"#) -}
+2c54631a437b8b9cf243ac112bb15260
+  anyExpVal_prop_eta1 :: GHC.Base.String
+  {- Unfolding: (GHC.CString.unpackCString#
+                   PropertyTests.anyExpVal_prop1) -}
+a7656558609f6ffc8492d0bbf1f2a585
+  anyExpVal_prop_f ::
+    Test.QuickCheck.Property.Result -> Test.QuickCheck.Property.Result
+  {- Arity: 1, Strictness: <S,1*U(U,U,U,U,U,U,U,U,U,U,U,U,U)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (res :: Test.QuickCheck.Property.Result) ->
+                 case res of wild2 { Test.QuickCheck.Property.MkResult ds ds1 ds2 ds3 ds4 ds5 ds6 ds7 ds8 ds9 ds10 ds11 ds12 ->
+                 Test.QuickCheck.Property.MkResult
+                   ds
+                   ds1
+                   ds2
+                   ds3
+                   ds4
+                   ds5
+                   ds6
+                   ds7
+                   (GHC.Types.:
+                      @ GHC.Base.String
+                      PropertyTests.anyExpVal_prop_eta1
+                      ds8)
+                   ds9
+                   ds10
+                   ds11
+                   ds12 }) -}
+61cd5fdca8f57772e77c785eb3dfce36
+  anyStmtEnvPEnvVal_prop ::
+    StmtGens.StmtEnvPEnvResultUnit -> Test.QuickCheck.Property.Property
+  {- Arity: 1, Strictness: <S,1*U(U,U,U,U(U,U,U))>, Inline: [2],
+     Unfolding: InlineRule (1, True, False)
+                (\ (w :: StmtGens.StmtEnvPEnvResultUnit) ->
+                 case w of ww { StmtGens.StmtEnvPEnvResultUnit ww1 ww2 ww3 ww4 ->
+                 PropertyTests.$wanyStmtEnvPEnvVal_prop ww1 ww2 ww3 ww4 }) -}
+72abe45b681a3563940194882474b442
+  liftOp_prop ::
+    GHC.Show.Show lit =>
+    ((lit -> lit -> GHC.Types.Bool) -> Lib.Val -> Lib.Val -> Lib.Val)
+    -> ExpGens.LiftOpUnit lit -> Test.QuickCheck.Property.Property
+  {- Arity: 3,
+     Strictness: <L,U(C(C1(C1(U))),A,A)><L,1*C1(C1(C1(U)))><S(LLLS),1*U(U,U,U(U(U,U,U),C(U)),U)>,
+     Inline: [2],
+     Unfolding: InlineRule (3, True, False)
+                (\ @ lit
+                   (w :: GHC.Show.Show lit)
+                   (w1 :: (lit -> lit -> GHC.Types.Bool)
+                          -> Lib.Val -> Lib.Val -> Lib.Val)
+                   (w2 :: ExpGens.LiftOpUnit lit) ->
+                 case w2 of ww { ExpGens.LiftOpUnit ww1 ww2 ww3 ww4 ->
+                 PropertyTests.$wliftOp_prop @ lit w w1 ww1 ww2 ww3 ww4 }) -}
+trusted: safe
+require own pkg trusted: False
+module header:
+  Nothing
+declaration docs:
+arg docs:
+

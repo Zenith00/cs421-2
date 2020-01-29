@@ -1,0 +1,168 @@
+
+==================== FINAL INTERFACE ====================
+2019-04-19 21:51:37.898786 UTC
+
+interface main:Main 8063
+  interface hash: 026bc9869a4f4c2494a2c61274470291
+  ABI hash: 2af30a12fdd3a57f446a87579318d48a
+  export-list hash: b4f8003f12ca6e4445bbd338a8b228a2
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: dccb1ab82e480d1384cb99cf47cb1e20
+  opt_hash: 6faf2de08de32d19db9870899d88e59a
+  hpc_hash: 93b885adfe0da089cdf634904fd59f71
+  plugin_hash: ad164012d6b1e14942349d58b1132007
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Main.main
+  Main.printLn
+  Main.repl
+module dependencies: Scheme.Core Scheme.Eval Scheme.Parse
+                     Scheme.Runtime
+package dependencies: array-0.5.3.0 base-4.12.0.0* binary-0.8.6.0
+                      bytestring-0.10.8.2 containers-0.6.0.1 deepseq-1.4.4.0
+                      ghc-prim-0.5.3 hashable-1.2.7.0 integer-gmp-1.0.2.0 mtl-2.2.2
+                      parsec-3.1.13.0 text-1.2.3.1 transformers-0.5.5.0
+                      unordered-containers-0.2.9.0
+orphans: hashable-1.2.7.0:Data.Hashable.Generic
+         text-1.2.3.1:Data.Text.Lazy text-1.2.3.1:Data.Text
+         binary-0.8.6.0:Data.Binary.Generic
+         bytestring-0.10.8.2:Data.ByteString.Builder
+         text-1.2.3.1:Data.Text.Show
+         transformers-0.5.5.0:Control.Monad.Trans.Error
+         base-4.12.0.0:GHC.Float base-4.12.0.0:GHC.Base
+family instance modules: base-4.12.0.0:Control.Applicative
+                         base-4.12.0.0:Data.Complex base-4.12.0.0:Data.Functor.Compose
+                         base-4.12.0.0:Data.Functor.Const
+                         base-4.12.0.0:Data.Functor.Identity
+                         base-4.12.0.0:Data.Functor.Product base-4.12.0.0:Data.Functor.Sum
+                         base-4.12.0.0:Data.Monoid base-4.12.0.0:Data.Semigroup
+                         base-4.12.0.0:Data.Semigroup.Internal base-4.12.0.0:Data.Version
+                         base-4.12.0.0:Data.Void base-4.12.0.0:GHC.Exts
+                         base-4.12.0.0:GHC.Generics base-4.12.0.0:GHC.IO.Exception
+                         containers-0.6.0.1:Data.IntMap.Internal
+                         containers-0.6.0.1:Data.IntSet.Internal
+                         containers-0.6.0.1:Data.Map.Internal
+                         containers-0.6.0.1:Data.Sequence.Internal
+                         containers-0.6.0.1:Data.Set.Internal containers-0.6.0.1:Data.Tree
+                         text-1.2.3.1:Data.Text text-1.2.3.1:Data.Text.Lazy
+                         unordered-containers-0.2.9.0:Data.HashMap.Base
+import  -/  base-4.12.0.0:Control.Monad 7bd27be8172a0ce3a579caee3ae14f88
+import  -/  base-4.12.0.0:Data.Either 946a3435d06773e1dbcad1ba5dc18a2c
+import  -/  base-4.12.0.0:Data.Foldable 00188ddf89c975fee76bdfad479443c1
+import  -/  base-4.12.0.0:GHC.Base cc906f98291a1b830546e99a96674547
+import  -/  base-4.12.0.0:GHC.IO.Handle d868141c874ccdd1512041d4944dad09
+import  -/  base-4.12.0.0:GHC.IO.Handle.FD dd20663292d73aaa9673ad694463899f
+import  -/  base-4.12.0.0:GHC.IO.Handle.Text 4231fc7120c9f02ff57f2c2e4e04f397
+import  -/  base-4.12.0.0:GHC.Show 4e438f26d903388cc6c2c5d64ed01b98
+import  -/  base-4.12.0.0:Prelude 5c01365ec01f83bd405ac01cbb9a8d76
+import  -/  base-4.12.0.0:System.IO 7d8c7a747c93b42b043d691b66e1809e
+import  -/  ghc-prim-0.5.3:GHC.Classes e0d9c979f6368701f34fa421754d2cce
+import  -/  ghc-prim-0.5.3:GHC.Types 57064c9f957b09bc2e360061ad5cae0b
+import  -/  Scheme.Core bc89137f3b5e21383f319843015d4057
+  exports: e90d159ae09b5b31f08cb156418b2a29
+  Env aafa0315ee62ca72ab74b7129413e93f
+import  -/  Scheme.Eval e768846dbe20ed6130d3182dbeec1b2f
+  exports: 16506239b2a8a5e2fa9f7525a5cea6e2
+  eval 2381f484a18351068cd387c667269cba
+import  -/  Scheme.Parse 79a798cce5d49985cb79a88322b72b80
+  exports: ab51cfad0b9a4fa0c1acfcf87d3a1688
+  exprP 4009eea83a9215a490eac290eb8eaea9
+import  -/  Scheme.Runtime 522bcbb453beba0f4251c77d60afe845
+  exports: 8a2f1bda104d17b01f918df265ec11cf
+  runtime 3dac289df52f08944958b67b00b04972
+import  -/  mtl-2.2.2:Control.Monad.Except 50e515fe4eac4821a9bcec9a647f5aa7
+import  -/  mtl-2.2.2:Control.Monad.State d44e211fd4e6fedd1cd68c2f55562f8e
+import  -/  parsec-3.1.13.0:Text.Parsec.Prim 005d4d0148a00872f0dd1fb2aa0e44ec
+import  -/  parsec-3.1.13.0:Text.ParserCombinators.Parsec eee8e2801311fdbcd289f8b352d3343f
+import  -/  transformers-0.5.5.0:Control.Monad.Trans.Except 492e1fc9e7bdded285216f81f05ba982
+import  -/  transformers-0.5.5.0:Control.Monad.Trans.State.Lazy e3240683c533154c999a29320b0a7472
+be86c9d078d3acbf19ba91fe74a24273
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module Main.$trModule3 Main.$trModule1) -}
+b09d86f2c49dd5176b544d8d13ddb6c5
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Main.$trModule2) -}
+e5875966b74dad2d29772660b8a75e33
+  $trModule2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Main"#) -}
+23b03bd7d075a00f5ad1ee10e6add7b8
+  $trModule3 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Main.$trModule4) -}
+d026be77cb9ced20e35a61514e0458aa
+  $trModule4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("main"#) -}
+0a90c6b672b090ee23b3e501d0ac527f
+  main :: GHC.Types.IO ()
+  {- Arity: 1,
+     Unfolding: InlineRule (0, True, True)
+                Main.main1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
+747401d0095a702634c5d8b9de69fe88
+  main1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, Unfolding: (Main.main2 Scheme.Runtime.runtime) -}
+a4db0ae7979863eba83e3334dc4dc6b8
+  main2 ::
+    Scheme.Core.Env
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 2, Strictness: <L,U><S,U> -}
+6900d3d534232e4dcf5ac2fc24d9d9fa
+  main3 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1,
+     Unfolding: (GHC.TopHandler.runMainIO1
+                   @ ()
+                   Main.main1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R))) -}
+7fd8caf8a19495802c95d6e154c2b5e7
+  printLn :: GHC.Base.String -> GHC.Types.IO ()
+  {- Arity: 2, Strictness: <L,1*U><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.printLn1
+                  `cast`
+                (<GHC.Base.String>_R ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
+608c490866170556a04c092333555907
+  printLn1 ::
+    GHC.Base.String
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 2, Strictness: <L,1*U><S,U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (str :: GHC.Base.String)
+                   (s :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 case (GHC.IO.Handle.Text.hPutStr'
+                         GHC.IO.Handle.FD.stdout
+                         str
+                         GHC.Types.True)
+                        `cast`
+                      (GHC.Types.N:IO[0] <()>_R)
+                        s of ds1 { (#,#) ipv ipv1 ->
+                 GHC.IO.Handle.Internals.wantWritableHandle1
+                   @ ()
+                   GHC.IO.Handle.hFlush2
+                   GHC.IO.Handle.FD.stdout
+                   GHC.IO.Handle.Internals.flushWriteBuffer1
+                     `cast`
+                   (<GHC.IO.Handle.Types.Handle__>_R
+                    ->_R Sym (GHC.Types.N:IO[0] <()>_R))
+                   ipv }) -}
+b3cc6efd2e925070f5059a76e3af01bd
+  repl :: Scheme.Core.Env -> GHC.Types.IO ()
+  {- Arity: 2, Strictness: <L,U><S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.main2
+                  `cast`
+                (<Scheme.Core.Env>_R ->_R Sym (GHC.Types.N:IO[0] <()>_R)) -}
+trusted: safe
+require own pkg trusted: False
+module header:
+  Nothing
+declaration docs:
+arg docs:
+

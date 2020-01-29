@@ -1,0 +1,7 @@
+Configuring ansi-wl-pprint-0.6.8.1...
+Preprocessing library for ansi-wl-pprint-0.6.8.1..
+Building library for ansi-wl-pprint-0.6.8.1..
+[1 of 2] Compiling Text.PrettyPrint.ANSI.Leijen.Internal ( Text/PrettyPrint/ANSI/Leijen/Internal.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Text/PrettyPrint/ANSI/Leijen/Internal.o )
+[2 of 2] Compiling Text.PrettyPrint.ANSI.Leijen ( Text/PrettyPrint/ANSI/Leijen.hs, .stack-work/dist/x86_64-osx/Cabal-2.0.1.0/build/Text/PrettyPrint/ANSI/Leijen.o )
+Installing library in /Users/kathie/.stack/snapshots/x86_64-osx/lts-10.3/8.2.2/lib/x86_64-osx-ghc-8.2.2/ansi-wl-pprint-0.6.8.1-6pXo22THHmKEAPG4YHprGG
+Registering library for ansi-wl-pprint-0.6.8.1..
